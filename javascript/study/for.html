@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 : for문</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">JavaScript</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="../javascript01.html">데이터 저장하기</a></li>
+                <li><a href="../javascript02.html">데이터 불러오기</a></li>
+                <li><a href="../javascript03.html">데이터 실행하기</a></li>
+                <li><a href="../javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="../javascript05.html">문자열 객체</a></li>
+                <li><a href="../javascript06.html">배열 객체</a></li>
+                <li><a href="../javascript07.html">수학 객체</a></li>
+                <li><a href="../javascript08.html">숫자 객체</a></li>
+                <li><a href="../javascript09.html">브라우저 객체</a></li>
+                <li><a href="../javascript10.html">요소 객체</a></li>
+                <li><a href="../javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="effect">
+                <li><a href="../effect/searchEffect01.html">검색 효과</a></li>
+                <li><a href="../effect/quizEffect01.html">퀴즈 효과</a></li>
+                <li><a href="../effect/textEffect01.html">텍스트 효과</a></li>
+                <li><a href="../effect/mouseEffect01.html">마우스 효과</a></li>
+                <li><a href="../effect/sliderEffect01.html">슬라이드 효과</a></li>
+                <li><a href="../effect/parallaxEffect01.html">패랠랙스 효과</a></li>
+                <li><a href="../effect/gameEffect01.html">게임 효과</a></li>
+            </ul>
+            <ul class="study">
+                <li><a href="basic.html">기본 규칙</a></li>
+                <li><a href="operator.html">연산자</a></li>
+                <li><a href="for.html">반복문</a></li>
+                <li><a href="if.html">조건문</a></li>
+                <li><a href="type.html">데이터 타입</a></li>
+                <li><a href="function.html">함수</a></li>
+                <li><a href="var.html">지역변수·전역변수</a></li>
+                <li><a href="element.html">요소 선택</a></li>
+                <li><a href="quiz01.html">퀴즈 만들기 01</a></li>
+                <li><a href="quiz02.html">퀴즈 만들기 02</a></li>
+                <li><a href="quiz03.html">퀴즈 만들기 03</a></li>
+                <li><a href="quiz04.html">퀴즈 만들기 04</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- // header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">반복문</h2>
+            <p class="t_desc2">
+                프로그램에서 필요한 결과 값을 도출하기 위해 실행문의 순서를
+                <i>여러번 반복시킬 때 사용</i>하는 문법입니다.
+                while문, do while문, for문 등이 있지만 <i>for문이 가장 많이 쓰입니다.</i>
+            </p>
+            <p class="t_box">
+                for (초기 값; 조건식; 증감값) {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;실행문;<br>
+                }
+            </p>
+
+     <!-- // 반복문이란?  -->
+
+            <hr>
+
+            <div id="sample01" class="sample">
+                <h3 class="t_tit2">01. while문</h3>
+                <p class="t_desc">
+                    <i>조건식이 true일 경우에 계속해서 반복</i>하는 반복문입니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">/*
+초기 값
+while (조건식) {
+    실행문;
+    증가감식;
+}
+*/
+
+var n = 1;
+var sum = 0;
+while(n &lt; 8) {
+    sum += n;
+    n++;
+}
+console.log(sum);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample01_result">
+                            28
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 01. while문 -->
+
+            <div id="sample02" class="sample">
+                <h3 class="t_tit2">02. do while문</h3>
+                <p class="t_desc">
+                    조건에 따라 반복을 계속할지를 결정할 때 사용하는 것은 while문과 같지만
+                    무조건 <i>중괄호{ } 안의 실행문을 실행한 후 조건을 검사하여 반복을 결정</i>합니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">/*
+초기 값
+do {
+    실행문;
+    증가감식;
+} while (조건식)
+*/
+
+var n = 1;
+var sum = 0;
+do {
+    sum += n;
+    n++;
+} while (n &lt; 8);
+console.log(sum);
+
+// do while문은 do를 먼저 실행하기 때문에 첫 번째 실행은 조건에 상관없이 실행.
+
+var n = 10;
+do {
+    n++;
+} while (n &lt; 8);
+console.log(n);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample02_result">
+                            28<br>
+                            11
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 02. do while문 -->
+
+
+            <div id="sample03" class="sample">
+                <h3 class="t_tit2">03. for문 : 짝수 출력</h3>
+                <p class="t_desc">
+                    짝수만 출력할 때는 <i>let i = 2</i>로 지정합니다. (2에서 2씩 더하면 4, 6, 8, 10, …)
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">// i+=2 는 i = i + 2 를 의미함
+
+for(let i = 2; i &lt;= 100; i+=2){
+    document.write(i);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample03_result">
+                            2<br>
+                            4<br>
+                            6<br>
+                            8<br>
+                            10<br>
+                            12<br>
+                            14<br>
+                            16<br>
+                            18<br>
+                            20<br>
+                            22<br>
+                            24<br>
+                            26<br>
+                            28<br>
+                            30<br>
+                            32<br>
+                            34<br>
+                            36<br>
+                            38<br>
+                            40<br>
+                            42<br>
+                            44<br>
+                            46<br>
+                            48<br>
+                            50<br>
+                            52<br>
+                            54<br>
+                            56<br>
+                            58<br>
+                            60<br>
+                            62<br>
+                            64<br>
+                            66<br>
+                            68<br>
+                            70<br>
+                            72<br>
+                            74<br>
+                            76<br>
+                            78<br>
+                            80<br>
+                            82<br>
+                            84<br>
+                            86<br>
+                            88<br>
+                            90<br>
+                            92<br>
+                            94<br>
+                            96<br>
+                            98<br>
+                            100<br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 03. for문 : 짝수 출력 -->
+
+            <div id="sample04" class="sample">
+                <h3 class="t_tit2">04. for문 : 홀수 출력</h3>
+                <p class="t_desc">
+                    홀수만 출력할 때는 <i>let i = 1</i>로 지정합니다. (1에서 2씩 더하면 3, 5, 7, 9, …)
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">// i+=2 는 i = i + 2 를 의미함
+
+for(let i = 1; i &lt;= 100; i+=2){
+    document.write(i);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample04_result">
+                            1<br>
+                            3<br>
+                            5<br>
+                            7<br>
+                            9<br>
+                            11<br>
+                            13<br>
+                            15<br>
+                            17<br>
+                            19<br>
+                            21<br>
+                            23<br>
+                            25<br>
+                            27<br>
+                            29<br>
+                            31<br>
+                            33<br>
+                            35<br>
+                            37<br>
+                            39<br>
+                            41<br>
+                            43<br>
+                            45<br>
+                            47<br>
+                            49<br>
+                            51<br>
+                            53<br>
+                            55<br>
+                            57<br>
+                            59<br>
+                            61<br>
+                            63<br>
+                            65<br>
+                            67<br>
+                            69<br>
+                            71<br>
+                            73<br>
+                            75<br>
+                            77<br>
+                            79<br>
+                            81<br>
+                            83<br>
+                            85<br>
+                            87<br>
+                            89<br>
+                            91<br>
+                            93<br>
+                            95<br>
+                            97<br>
+                            99<br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 04. for문 : 홀수 출력 -->
+
+            <div id="sample05" class="sample">
+                <h3 class="t_tit2">05. for문 : 0부터 99까지 출력</h3>
+                <p class="t_desc">
+                    let i 값을 0부터 시작하여 100보다 작을 때까지 반복
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">for(let i = 0; i &lt; 100; i++) {
+    document.write(i);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample05_result">
+                            0<br>
+                            1<br>
+                            2<br>
+                            3<br>
+                            4<br>
+                            5<br>
+                            6<br>
+                            7<br>
+                            8<br>
+                            9<br>
+                            10<br>
+                            11<br>
+                            12<br>
+                            13<br>
+                            14<br>
+                            15<br>
+                            16<br>
+                            17<br>
+                            18<br>
+                            19<br>
+                            20<br>
+                            21<br>
+                            22<br>
+                            23<br>
+                            24<br>
+                            25<br>
+                            26<br>
+                            27<br>
+                            28<br>
+                            29<br>
+                            30<br>
+                            31<br>
+                            32<br>
+                            33<br>
+                            34<br>
+                            35<br>
+                            36<br>
+                            37<br>
+                            38<br>
+                            39<br>
+                            40<br>
+                            41<br>
+                            42<br>
+                            43<br>
+                            44<br>
+                            45<br>
+                            46<br>
+                            47<br>
+                            48<br>
+                            49<br>
+                            50<br>
+                            51<br>
+                            52<br>
+                            53<br>
+                            54<br>
+                            55<br>
+                            56<br>
+                            57<br>
+                            58<br>
+                            59<br>
+                            60<br>
+                            61<br>
+                            62<br>
+                            63<br>
+                            64<br>
+                            65<br>
+                            66<br>
+                            67<br>
+                            68<br>
+                            69<br>
+                            70<br>
+                            71<br>
+                            72<br>
+                            73<br>
+                            74<br>
+                            75<br>
+                            76<br>
+                            77<br>
+                            78<br>
+                            79<br>
+                            80<br>
+                            81<br>
+                            82<br>
+                            83<br>
+                            84<br>
+                            85<br>
+                            86<br>
+                            87<br>
+                            88<br>
+                            89<br>
+                            90<br>
+                            91<br>
+                            92<br>
+                            93<br>
+                            94<br>
+                            95<br>
+                            96<br>
+                            97<br>
+                            98<br>
+                            99<br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 05. for문 : 0부터 99까지 출력 -->
+
+            <div id="sample06" class="sample">
+                <h3 class="t_tit2">06. for문 : 1부터 100까지 출력</h3>
+                <p class="t_desc">
+                    let i 값을 1부터 시작하여 100보다 작거나 같을 때까지 반복
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">for(let i = 1; i &lt;= 100; i++) {
+    document.write(i);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample06_result">
+                            1<br>
+                            2<br>
+                            3<br>
+                            4<br>
+                            5<br>
+                            6<br>
+                            7<br>
+                            8<br>
+                            9<br>
+                            10<br>
+                            11<br>
+                            12<br>
+                            13<br>
+                            14<br>
+                            15<br>
+                            16<br>
+                            17<br>
+                            18<br>
+                            19<br>
+                            20<br>
+                            21<br>
+                            22<br>
+                            23<br>
+                            24<br>
+                            25<br>
+                            26<br>
+                            27<br>
+                            28<br>
+                            29<br>
+                            30<br>
+                            31<br>
+                            32<br>
+                            33<br>
+                            34<br>
+                            35<br>
+                            36<br>
+                            37<br>
+                            38<br>
+                            39<br>
+                            40<br>
+                            41<br>
+                            42<br>
+                            43<br>
+                            44<br>
+                            45<br>
+                            46<br>
+                            47<br>
+                            48<br>
+                            49<br>
+                            50<br>
+                            51<br>
+                            52<br>
+                            53<br>
+                            54<br>
+                            55<br>
+                            56<br>
+                            57<br>
+                            58<br>
+                            59<br>
+                            60<br>
+                            61<br>
+                            62<br>
+                            63<br>
+                            64<br>
+                            65<br>
+                            66<br>
+                            67<br>
+                            68<br>
+                            69<br>
+                            70<br>
+                            71<br>
+                            72<br>
+                            73<br>
+                            74<br>
+                            75<br>
+                            76<br>
+                            77<br>
+                            78<br>
+                            79<br>
+                            80<br>
+                            81<br>
+                            82<br>
+                            83<br>
+                            84<br>
+                            85<br>
+                            86<br>
+                            87<br>
+                            88<br>
+                            89<br>
+                            90<br>
+                            91<br>
+                            92<br>
+                            93<br>
+                            94<br>
+                            95<br>
+                            96<br>
+                            97<br>
+                            98<br>
+                            99<br>
+                            100
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 06. for문 : 1부터 100까지 출력 -->
+
+            <div id="sample07" class="sample">
+                <h3 class="t_tit2">07. for문 : 1부터 100까지 출력(짝수)</h3>
+                <p class="t_desc">
+                    let i 값을 2부터 시작하여 2씩 더해줌으로써 1부터 100까지의 
+                    짝수가 출력된다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">// i+=2 는 i = i + 2 를 의미함
+
+for(let i = 2; i &lt;= 100; i+=2){
+    document.write(i);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                        <div class="sample07_result">
+                            2<br>
+                            4<br>
+                            6<br>
+                            8<br>
+                            10<br>
+                            12<br>
+                            14<br>
+                            16<br>
+                            18<br>
+                            20<br>
+                            22<br>
+                            24<br>
+                            26<br>
+                            28<br>
+                            30<br>
+                            32<br>
+                            34<br>
+                            36<br>
+                            38<br>
+                            40<br>
+                            42<br>
+                            44<br>
+                            46<br>
+                            48<br>
+                            50<br>
+                            52<br>
+                            54<br>
+                            56<br>
+                            58<br>
+                            60<br>
+                            62<br>
+                            64<br>
+                            66<br>
+                            68<br>
+                            70<br>
+                            72<br>
+                            74<br>
+                            76<br>
+                            78<br>
+                            80<br>
+                            82<br>
+                            84<br>
+                            86<br>
+                            88<br>
+                            90<br>
+                            92<br>
+                            94<br>
+                            96<br>
+                            98<br>
+                            100<br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 07. for문 : 1부터 100까지 출력(짝수) -->
+
+            <div id="sample08" class="sample">
+                <h3 class="t_tit2">08. for문 : 1부터 100까지 출력(5의 배수)</h3>
+                <p class="t_desc">
+                    %를 통해 아래와 같이 나머지를 구하여 5의 배수가 출력되도록 합니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">for(let i = 1; i &lt;= 100; i++) {
+    if(i % 5 == 0) {
+        document.write(i);
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                            <div class="sample08_result">
+                                5<br>
+                                10<br>
+                                15<br>
+                                20<br>
+                                25<br>
+                                30<br>
+                                35<br>
+                                40<br>
+                                45<br>
+                                50<br>
+                                55<br>
+                                60<br>
+                                65<br>
+                                70<br>
+                                75<br>
+                                80<br>
+                                85<br>
+                                90<br>
+                                95<br>
+                                100
+                            </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 08. for문 : 1부터 100까지 출력(5의 배수) -->
+
+            <div id="sample09" class="sample">
+                <h3 class="t_tit2">09. for문 : 구구단 출력하기</h3>
+                <p class="t_desc">
+                    for문을 중첩시켜 구구단을 출력할 수 있습니다. <br>
+                    첫 번째 for문의 <i>i에 2부터 9까지</i>를, 두 번째 for문의 <i>j에는 1부터 9까지</i>를 반복시킨 다음 <br>
+                    그 <i>i와 j를 곱한 값을 sum에 저장</i>시키고 최종적으로 아래 예시와 같이 document.write를 통해 구구단을 출력시킵니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">/* 
+(2, 3, 4, 5, 6, 7, 8, 9) - 8번 반복
+(1, 2, 3, 4, 5, 6, 7, 8, 9) - 9번 반복
+
+i * j = sum
+
+2 * 1 = 2       3 * 1 = 3       4 * 1 = 4
+2 * 2 = 4       
+2 * 3 = 6
+2 * 4 = 8
+2 * 5 = 10
+2 * 6 = 12
+2 * 7 = 14
+2 * 8 = 16
+2 * 9 = 18
+*/
+
+for(let i = 2; i &lt;= 9; i++) {
+    for(let j = 1; j &lt;= 9; j++) {
+        let sum = i * j
+        document.write(i + "*" + j + "=" + sum);
+    }
+}
+</code></pre>              
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                            <div class="sample09_result">
+                                2*1=2<br>
+                                2*2=4<br>
+                                2*3=6<br>
+                                2*4=8<br>
+                                2*5=10<br>
+                                2*6=12<br>
+                                2*7=14<br>
+                                2*8=16<br>
+                                2*9=18<br>
+                                3*1=3<br>
+                                3*2=6<br>
+                                3*3=9<br>
+                                3*4=12<br>
+                                3*5=15<br>
+                                3*6=18<br>
+                                3*7=21<br>
+                                3*8=24<br>
+                                3*9=27<br>
+                                4*1=4<br>
+                                4*2=8<br>
+                                4*3=12<br>
+                                4*4=16<br>
+                                4*5=20<br>
+                                4*6=24<br>
+                                4*7=28<br>
+                                4*8=32<br>
+                                4*9=36<br>
+                                5*1=5<br>
+                                5*2=10<br>
+                                5*3=15<br>
+                                5*4=20<br>
+                                5*5=25<br>
+                                5*6=30<br>
+                                5*7=35<br>
+                                5*8=40<br>
+                                5*9=45<br>
+                                6*1=6<br>
+                                6*2=12<br>
+                                6*3=18<br>
+                                6*4=24<br>
+                                6*5=30<br>
+                                6*6=36<br>
+                                6*7=42<br>
+                                6*8=48<br>
+                                6*9=54<br>
+                                7*1=7<br>
+                                7*2=14<br>
+                                7*3=21<br>
+                                7*4=28<br>
+                                7*5=35<br>
+                                7*6=42<br>
+                                7*7=49<br>
+                                7*8=56<br>
+                                7*9=63<br>
+                                8*1=8<br>
+                                8*2=16<br>
+                                8*3=24<br>
+                                8*4=32<br>
+                                8*5=40<br>
+                                8*6=48<br>
+                                8*7=56<br>
+                                8*8=64<br>
+                                8*9=72<br>
+                                9*1=9<br>
+                                9*2=18<br>
+                                9*3=27<br>
+                                9*4=36<br>
+                                9*5=45<br>
+                                9*6=54<br>
+                                9*7=63<br>
+                                9*8=72<br>
+                                9*9=81
+                            </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 09. for문 : 구구단 출력하기 -->
+
+            <div id="sample10" class="sample">
+                <h3 class="t_tit2">10. 1부터 100까지 출력 (5의 배수 빨간색, 7의 배수 파란색)</h3>
+                <p class="t_desc">
+                    이런 식으로 5의 배수는 빨간색으로, 7의 배수는 파란색으로 출력 가능합니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">for(let i = 1; i &lt;= 100; i++) {
+    if(i % 5 == 0) {
+        document.write("&lt;span style='color: red'&gt;"+ i +"&lt;/span&gt;");
+    } 
+    if(i % 7 == 0) {
+        document.write("&lt;span style='color: blue'&gt;"+ i +"&lt;/span&gt;");
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 보기</summary>
+                            <div class="sample10_result">
+                                <span style='color: red;'>5</span><br>
+                                <span style='color: blue;'>7</span><br>
+                                <span style='color: red;'>10</span><br>
+                                <span style='color: blue;'>14</span><br>
+                                <span style='color: red;'>15</span><br>
+                                <span style='color: red;'>20</span><br>
+                                <span style='color: blue;'>21</span><br>
+                                <span style='color: red;'>25</span><br>
+                                <span style='color: blue;'>28</span><br>
+                                <span style='color: red;'>30</span><br>
+                                <span style='color: red;'>35</span><br>
+                                <span style='color: blue;'>35</span><br>
+                                <span style='color: red;'>40</span><br>
+                                <span style='color: blue;'>42</span><br>
+                                <span style='color: red;'>45</span><br>
+                                <span style='color: blue;'>49</span><br>
+                                <span style='color: red;'>50</span><br>
+                                <span style='color: red;'>55</span><br>
+                                <span style='color: blue;'>56</span><br>
+                                <span style='color: red;'>60</span><br>
+                                <span style='color: blue;'>63</span><br>
+                                <span style='color: red;'>65</span><br>
+                                <span style='color: red;'>70</span><br>
+                                <span style='color: blue;'>70</span><br>
+                                <span style='color: red;'>75</span><br>
+                                <span style='color: blue;'>77</span><br>
+                                <span style='color: red;'>80</span><br>
+                                <span style='color: blue;'>84</span><br>
+                                <span style='color: red;'>85</span><br>
+                                <span style='color: red;'>90</span><br>
+                                <span style='color: blue;'>91</span><br>
+                                <span style='color: red;'>95</span><br>
+                                <span style='color: blue;'>98</span><br>
+                                <span style='color: red;'>100</span>
+                            </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 10. 1부터 100까지 출력 (5의 배수 빨간색, 7의 배수 파란색) -->
+
+            <div id="sample11" class="sample">
+                <h3 class="t_tit2">11. for문을 이용하여 테이블 출력</h3>
+                <p class="t_desc">
+                    중첩 for문을 이용하여 테이블을 만들 수 있습니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">let table = "&lt;table&gt;";
+            
+    for(let i = 0; i &lt; 10; i++){
+        table += "&lt;tr&gt;";
+
+        for(let j = 0; j &lt; 10; j++){
+            table += "&lt;td&gt;안녕&lt;/td&gt;"
+        }
+
+    table += "&lt;/tr&gt;";
+    }
+
+    table += "&lt;/table&gt;";
+
+document.write(i);
+</code></pre>              
+                </div>     
+                <div class="t_result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div class="result01">
+                            <style>
+                                .testTable tr td {
+                                    border: 1px solid #000;
+                                }
+                            </style>
+                            <script>
+                                let table = "<table class='testTable'>";
+                                    
+                                    for(let i = 0; i < 10; i++){
+                                        table += "<tr>";
+                        
+                                        for(let j = 0; j < 10; j++){
+                                            table += "<td>안녕</td>"
+                                        }
+                        
+                                        table += "</tr>";
+                                    }
+                        
+                                    table += "</table>";
+                        
+                                document.querySelector(".result01").innerHTML = table;
+                            </script>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- // 11. for문을 이용하여 테이블 출력 -->
+
+            <div id="sample12" class="sample">
+                <h3 class="t_tit2">12. for문을 이용하여 테이블 출력 (1~100)</h3>
+                <p class="t_desc">
+                    중첩 for문을 이용하여 테이블을 만들 수 있습니다. 1부터 100까지 출력합니다.
+                </p>
+                <div class="t_code">
+<pre><code class="language-js">let table = "&lt;table class='testTable'&gt;";
+let s = 0;
+            
+//1~100까지 표로 나오게 하기
+for(let i = 1; i &lt;= 10; i++) {
+    table += "&lt;tr&gt;"
+
+    for(let j = 1; j &lt;= 10; j++) {
+        s++
+        table += "&lt;td&gt;"+s+"&lt;/td&gt;";
+    }
+
+    table += "&lt;/tr&gt;";
+}
+
+table += "&lt;/table&gt;";
+
+document.write(table);
+</code></pre>              
+                </div>     
+                <div class="t_result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div class="result12">
+                            <style>
+                                .testTable tr td {
+                                    border: 1px solid #000;
+                                }
+                            </style>
+                            <script>
+                                {
+                                    let table = "<table class='testTable'>";
+                                    let s = 0;
+                        
+                                    for(let i = 1; i <= 10; i++) {
+                                        table += "<tr>"
+        
+                                        for(let j = 1; j <= 10; j++) {
+                                            s++
+                                            table += "<td>"+s+"</td>";
+                                        }
+        
+                                        table += "</tr>";
+                                    }
+        
+                                    table += "</table>";
+        
+                                    document.write(table);
+                                }
+                        
+                                document.querySelector(".result02").innerHTML = table;
+                            </script>    
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- // main -->
+
+    <footer id="footer">
+        <a href="mailto:kde66034@gmail.com">kde66034@gmail.com</a>
+    </footer>
+    <!-- // footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+    <script>
+        //for문 이용해서 1~100 출력 (5의 배수, 7의 배수)
+        // {
+        //     for(let i = 1; i <= 100; i++) {
+        //         if(i % 5 == 0) {
+        //             document.write("<span style='color: red'>"+ i +"</span>", "<br>");
+        //         } 
+        //         if(i % 7 == 0) {
+        //             document.write("<span style='color: blue'>"+ i +"</span>", "<br>");
+        //         }
+        //     }
+        // }
+
+        //for문을 이용해서 1~100 출력 (짝수는 빨간색, 홀수 파란색)
+        // {
+        //     for(let i = 1; i <= 100; i++) {
+        //         if (i % 2 == 0) {
+        //             document.write("<span style='color: red'>"+ i +"</span>", "<br>");
+        //         } else {
+        //             document.write("<span style='color: blue'>"+ i +"</span>", "<br>");
+        //         }
+        //     } 
+        // }
+
+        //for문을 이용해서 1~100 출력 (짝수는 빨간색, 홀수 파란색) : 조건부 연산자
+        // {
+        //     for(let i = 1; i <= 100; i++) {
+        //         (i % 2 == 0) ? document.write("<span style='color: red'>"+ i +"</span>", "<br>") : document.write("<span style='color: blue'>"+ i +"</span>", "<br>")
+        //     } 
+        // }
+
+        //for문 이용해서 구구단 출력
+        // (2, 3, 4, 5, 6, 7, 8, 9) - 8번 반복
+        // (1, 2, 3, 4, 5, 6, 7, 8, 9) - 9번 반복
+
+        // i * j = sum
+
+        // 2 * 1 = 2       3 * 1 = 3       4 * 1 = 4
+        // 2 * 2 = 4
+        // 2 * 3 = 6
+        // 2 * 4 = 8
+        // 2 * 5 = 10
+        // 2 * 6 = 12
+        // 2 * 7 = 14
+        // 2 * 8 = 16
+        // 2 * 9 = 18
+        // {
+        //     for(let i = 2; i <= 9; i++) {
+        //         for(let j = 1; j <= 9; j++) {
+        //             let sum = i * j
+        //             document.write(i + "*" + j + "=" + sum);
+        //             document.write("<br>");
+        //         }
+        //     }
+
+        //     document.write("<br>");
+        // }
+
+        //for문 이용해서 테이블 만들기
+        // {   
+        //     //데이터 타입(자료형)
+        //     // let table = 1; //숫자
+        //     // let table1 = "1"; //문자
+        //     // let table11 = true; //불린(true, false)
+        //     // let table2 = []; //배열
+        //     // let table3 = {}; //객체
+        //     // let table4 = null; //특수값(null, undefined)
+
+        //     let table = "<table class='testTable'>";
+        //     let s = 0;
+                
+        //         //10번 반복 (for문 이용) 1~100까지 표로 나오게 하기
+        //         for(let i = 1; i <= 10; i++) {
+        //             table += "<tr>"
+
+        //             for(let j = 1; j <= 10; j++) {
+        //                 s++
+        //                 table += "<td>"+s+"</td>";
+        //             }
+
+        //             table += "</tr>";
+        //         }
+
+        //     table += "</table>";
+
+        //     document.write(table);
+        // }
+    </script>
+
+</body>
+</html>

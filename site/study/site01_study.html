@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기 - 실전 유형 01</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dracula.css">
+    
+</head>
+<body>
+    <header id="header">
+        <h1><a href="../index.html">사이트 만들기 - 실전 유형 01</a></h1>
+        <nav class="header_nav">
+            <ul>
+                <li><a href="cardType_study01.html">카드 유형 01</a></li>
+                <li><a href="cardType_study02.html">카드 유형 02</a></li>
+                <li><a href="cardType_study03.html">카드 유형 03</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- // header -->
+
+    <main id="main">
+        <div class="document">
+            <h2 class="t_tit">사이트 만들기 : 실전 유형 01</h2>
+            <p class="t_desc2">
+                그동안 배웠던 헤더(반응형 전용 메뉴바 포함), 카드, 이미지, 이미지/텍스트, 텍스트, 슬라이드, 푸터 유형을 한 곳에 모아
+                본격적으로 웹 페이지를 만들어보도록 하겠습니다.
+            </p>
+
+            <!-- // 사이트 만들기 : 실전 유형 01 -->
+
+            <hr>
+
+            <h3 class="t_tit2">Figma</h3>
+            <div class="t_iframe">     
+                <iframe src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FtnsaEM1JocXMMqYyaoWru4%2F%25EC%2582%25AC%25EC%259D%25B4%25ED%258A%25B8-%25EB%25A7%258C%25EB%2593%25A4%25EA%25B8%25B0%3Fnode-id%3D1943%253A754" allowfullscreen></iframe>
+            </div>
+
+            <h3 class="t_tit2">HTML 소스</h3>
+            <p class="t_desc">
+                <i>헤더, 슬라이드, 이미지, 이미지/텍스트, 카드, 배너, 텍스트, 푸터</i>  순으로 영역이 이루어져 있다. (※ 스압주의!)
+            </p>
+            <div class="result">
+                <details>
+                    <summary>코드 펼쳐보기</summary>
+                    <div class="sample01_result">
+                        <div class="t_code">
+<pre><code lang="language-html">&lt;body&gt;
+    &lt;div id="skip">
+        &lt;a href="#headerType">헤더 영역 바로가기&lt;/a>
+        &lt;a href="#sliderType">슬라이드 영역 바로가기&lt;/a>
+        &lt;a href="#imageType">이미지 영역 바로가기&lt;/a>
+        &lt;a href="#imgTextType">이미지/텍스트 영역 바로가기&lt;/a>
+        &lt;a href="#cardType">카드 영역 바로가기&lt;/a>
+        &lt;a href="#bannerType">배너 영역 바로가기&lt;/a>
+        &lt;a href="#textType">텍스트 영역 바로가기&lt;/a>
+        &lt;a href="#footerType">푸터 영역 바로가기&lt;/a>
+    &lt;/div>
+    &lt;!-- // skip : 웹표준 준수 위해 만들어줌 -->
+
+    &lt;header id="headerType">
+        &lt;h1>web site&lt;/h1>
+    &lt;/header>
+    &lt;!-- // headerType -->
+
+    &lt;main id="mainType">
+        &lt;section id="headerType" class="header__wrap nexon">
+            &lt;div class="header__inner">
+                &lt;h1 class="header__logo">
+                    &lt;a href="#">별빛제빵교실 &lt;em>Baking Class&lt;/em>&lt;/a>
+                &lt;/h1>
+                &lt;div class="header__menu">
+                    &lt;ul>
+                        &lt;li class="active">&lt;a href="#headerType">MAIN&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#imageType">NOTICE&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#imgTextType">CERTIFICATION&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#cardType">CLASS&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#bannerType">YOUTUBE&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#textType">GOAL&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+                &lt;div class="header__member">
+                    &lt;a href="#">SIGN IN&lt;/a>
+                &lt;/div>
+                &lt;div class="header__ham">
+                    &lt;span>&lt;/span>
+                    &lt;span>&lt;/span>
+                    &lt;span>&lt;/span>
+                &lt;/div>
+            &lt;/div>
+        &lt;/section>
+
+        &lt;section id="sliderType" class="slider__wrap scroll">
+            &lt;h2 class="blind">슬라이드 영역&lt;/h2>
+            &lt;!-- &lt;div class="slider__inner">
+                &lt;div class="slider">
+                    &lt;div class="slider__img">
+                        &lt;div class="desc container">
+                            &lt;span>BAKING CLASS&lt;/span>
+                            &lt;h3>AWESOME BAKING CLASS&lt;/h3>
+                            &lt;p>
+                                훌륭한 제빵사가 되고 싶으신가요? &lt;br>
+                                별빛제빵교실에 오신 것을 환영합니다!
+                            &lt;/p>
+                            &lt;div class="btn">
+                                &lt;a href="#">자세히 보기&lt;/a>
+                                &lt;a href="#" class="black">사이트 보기&lt;/a>
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="slider__arrow">
+                        &lt;a href="#" class="left">&lt;span class="ir">이전 이미지&lt;/span>&lt;/a>
+                        &lt;a href="#" class="right">&lt;span class="ir">다음 이미지&lt;/span>&lt;/a>
+                    &lt;/div>
+                    &lt;div class="slider__dot">
+                        &lt;a href="#" class="dot active">&lt;span class="ir">1&lt;/span>&lt;/a>
+                        &lt;a href="#" class="dot">&lt;span class="ir">2&lt;/span>&lt;/a>
+                        &lt;a href="#" class="dot">&lt;span class="ir">3&lt;/span>&lt;/a>
+                        &lt;a href="#" class="play">&lt;span class="ir">플레이&lt;/span>&lt;/a>
+                        &lt;a href="#" class="stop">&lt;span class="ir">정지&lt;/span>&lt;/a>
+                    &lt;/div>
+                &lt;/div>
+            &lt;/div> --&gt;
+
+            &lt;!-- Swiper -->
+            &lt;div class="swiper mySwiper">
+                &lt;div class="swiper-wrapper">
+                    &lt;div class="swiper-slide">
+                        &lt;div class="desc container">
+                            &lt;span>BAKING CLASS&lt;/span>
+                            &lt;h3>AWESOME BAKING&lt;/h3>
+                            &lt;p>
+                                훌륭한 제빵사가 되고 싶으신가요? &lt;br>
+                                별빛제빵교실에 오신 것을 환영합니다!
+                            &lt;/p>
+                            &lt;div class="btn">
+                                &lt;a href="#">자세히 보기&lt;/a>
+                                &lt;a href="#" class="black">사이트 보기&lt;/a>
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="swiper-slide">
+                        &lt;div class="desc container">
+                            &lt;span>BAKING CLASS&lt;/span>
+                            &lt;h3>AWESOME BAKING&lt;/h3>
+                            &lt;p>
+                                훌륭한 제빵사가 되고 싶으신가요? &lt;br>
+                                별빛제빵교실에 오신 것을 환영합니다!
+                            &lt;/p>
+                            &lt;div class="btn">
+                                &lt;a href="#">자세히 보기&lt;/a>
+                                &lt;a href="#" class="black">사이트 보기&lt;/a>
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                    &lt;div class="swiper-slide">
+                        &lt;div class="desc container">
+                            &lt;span>BAKING CLASS&lt;/span>
+                            &lt;h3>AWESOME BAKING&lt;/h3>
+                            &lt;p>
+                                훌륭한 제빵사가 되고 싶으신가요? &lt;br>
+                                별빛제빵교실에 오신 것을 환영합니다!
+                            &lt;/p>
+                            &lt;div class="btn">
+                                &lt;a href="#">자세히 보기&lt;/a>
+                                &lt;a href="#" class="black">사이트 보기&lt;/a>
+                            &lt;/div>
+                        &lt;/div>
+                    &lt;/div>
+                &lt;/div>
+                &lt;div class="swiper-pagination">&lt;/div>
+                &lt;div class="swiper-button-next">&lt;/div>
+                &lt;div class="swiper-button-prev">&lt;/div>
+            &lt;/div>
+        &lt;/section>
+        &lt;!-- // sliderType -->
+
+        &lt;section id="imageType" class="image__wrap nexon section scroll container">
+            &lt;h2>별빛제빵교실 개강 소식🍞&lt;/h2>
+            &lt;p>별빛제빵교실이 올 겨울에 개강합니다. 수강신청 기회는 지금 뿐이니 서두르세요!&lt;/p>
+            &lt;div class="image__inner">
+                &lt;article class="image img1">
+                    &lt;h3 class="image__title">Class A&lt;/h3>
+                    &lt;p class="image__desc">
+                        12월 17일부터 23년 3월 18일까지 약 3개월동안 진행되며, 
+                        입문자 눈높이에 맞춰 제빵의 기초에 포커스를 두고 차근차근 수업이 이루어집니다.
+                    &lt;/p>
+                    &lt;a class="image__btn" href="#" title="자세히 보기">
+                        자세히 보기
+                    &lt;/a>
+                &lt;/article>
+                &lt;article class="image img2">
+                    &lt;h3 class="image__title">Class B&lt;/h3>
+                    &lt;p class="image__desc">
+                        12월 22일부터 23년 6월 21일까지 약 6개월동안 진행되며, 
+                        베이킹 입문 제과+제빵 기능사와 실무에서의 기본기, 제조 기술 습득 과정인 디저트 '올베이직',
+                        케이크디자인 자격증 과정까지 실무 끝판왕 '올마스터' 교육을 목표로 하는 파티셰 완성 과정입니다.
+                    &lt;/p>
+                    &lt;a class="image__btn" href="#" title="자세히 보기">
+                        자세히 보기
+                    &lt;/a>
+                &lt;/article>
+            &lt;/div>
+        &lt;/section>
+        &lt;!-- // imageType -->
+
+        &lt;section id="imgTextType" class="imgText__wrap nexon section scroll gray">
+            &lt;h2 class="blind">자격증 과정&lt;/h2>
+            &lt;div class="imgText__inner container">
+                &lt;div class="imgText__txt">
+                    &lt;span>CERTIFICATION&lt;/span>
+                    &lt;h3>자격증 과정&lt;/h3>
+                    &lt;p>수강 중, 취득 가능한 자격증 목록입니다.&lt;/p>
+                    &lt;ul>
+                        &lt;li>&lt;a href="#">조리기능사 필기&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">제과·제빵기능사&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">커피 바리스타&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">산업기사/기능장&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">양식조리기능사&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">한식조리기능사&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+                &lt;div class="imgText__img img1">
+                    &lt;a href="#">자세히 보러가기&lt;/a>
+                &lt;/div>
+                &lt;div class="imgText__img img2">
+                    &lt;a href="#" class="blue">큐넷 바로가기&lt;/a>
+                &lt;/div>
+            &lt;/div>
+        &lt;/section>
+        &lt;!-- // imgTextType -->
+
+        &lt;section id="cardType" class="card__wrap nexon section scroll container">
+            &lt;h2>과정 소개&lt;/h2>
+            &lt;p>기초 과정부터 심화 과정까지, 그리고 나만의 제빵 포트폴리오를 만들기까지의 과정을 소개합니다.&lt;/p>
+            &lt;div class="card__inner">
+                &lt;article class="card">
+                    &lt;!-- 이미지 넣을 때 그냥 img태그 쓰지말고 figure 태그 안에 넣어서 써야 웹표준 준수한거임 -->
+                    &lt;figure class="card__header">
+                        &lt;img src="assets/img/cardType/card_bg01.jpg" alt="제빵 기초 강의">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="title">제빵 기초 강의&lt;/h3>
+                        &lt;p class="desc">
+                            제빵의 기초가 되는 강의입니다. 초심자도 이해하기 쉽게 강의가 진행되며 
+                            초반에는 이론 강의부터 시작해 중반부터는 실습을 시작하여 제빵의 기초를 익히도록 합니다.
+                        &lt;/p>
+                        &lt;a class="btn" href="#">
+                            더 자세히 보기
+                            &lt;span aria-hidden="true">   &lt;!-- 시각장애인용 스크린리더기가 필요없는 부분을 읽지 못하도록 막아주는 기능 -->
+                                &lt;svg width="65" height="8" viewBox="0 0 65 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    &lt;path d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z" fill="black"/>
+                                &lt;/svg>
+                            &lt;/span>
+                        &lt;/a>
+                    &lt;/div>
+                &lt;/article>
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="assets/img/cardType/card_bg02.jpg" alt="제빵 심화 과정">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="title">제빵 심화 과정&lt;/h3>
+                        &lt;p class="desc">
+                            이제 기초 강의가 너무 쉬워 시시하다고 느껴질 즈음 심화과정에 들어가게 될 겁니다.
+                            시중에 판매되고 있는 제과점 빵들을 직접 만들어보는 시간을 갖게 됩니다.
+                        &lt;/p>
+                        &lt;a class="btn" href="#">
+                            더 자세히 보기
+                            &lt;span aria-hidden="true">
+                                &lt;svg width="65" height="8" viewBox="0 0 65 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    &lt;path d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z" fill="black"/>
+                                &lt;/svg>
+                            &lt;/span>
+                        &lt;/a>
+                    &lt;/div>
+                &lt;/article>
+                &lt;article class="card">
+                    &lt;figure class="card__header">
+                        &lt;img src="assets/img/cardType/card_bg03.jpg" alt="나만의 제빵 포트폴리오 만들기">
+                    &lt;/figure>
+                    &lt;div class="card__body">
+                        &lt;h3 class="title">나만의 제빵 포트폴리오 만들기&lt;/h3>
+                        &lt;p class="desc">
+                            이제 빵집 창업해도 문제 없을 정도의 실력을 갖추게 되셨을 겁니다! 이제는 능숙해진 제빵 실력에
+                            나만의 개성을 더하여 튼튼한 포트폴리오를 만들어보아요!
+                        &lt;/p>
+                        &lt;a class="btn" href="#">
+                            더 자세히 보기
+                            &lt;span aria-hidden="true">
+                                &lt;svg width="65" height="8" viewBox="0 0 65 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    &lt;path d="M64.3536 4.35355C64.5488 4.15829 64.5488 3.84171 64.3536 3.64645L61.1716 0.464466C60.9763 0.269204 60.6597 0.269204 60.4645 0.464466C60.2692 0.659728 60.2692 0.976311 60.4645 1.17157L63.2929 4L60.4645 6.82843C60.2692 7.02369 60.2692 7.34027 60.4645 7.53553C60.6597 7.7308 60.9763 7.7308 61.1716 7.53553L64.3536 4.35355ZM0 4.5H64V3.5H0V4.5Z" fill="black"/>
+                                &lt;/svg>
+                            &lt;/span>
+                        &lt;/a>
+                    &lt;/div>
+                &lt;/article>
+            &lt;/div>
+        &lt;/section>
+        &lt;!-- // cardType -->
+
+        &lt;section id="bannerType" class="banner__wrap nexon section scroll">
+            &lt;h2 class="blind">배너 영역&lt;/h2>
+            &lt;div class="banner__inner">
+                &lt;h3 class="title">김제빵 유튜브&lt;/h3>
+                &lt;p class="desc">
+                    별빛제빵교실 유명 강사 김제빵의 유튜브 채널입니다!
+                    &lt;a href="https://www.youtube.com/c/CozyRain" title="유튜브 페이지로 이동">https://www.youtube.com/c/kim_baking&lt;/a>
+                &lt;/p>
+            &lt;/div>
+        &lt;/section>
+        &lt;!-- // bannerType -->
+
+        &lt;section id="textType" class="text__wrap nexon section scroll container">
+            &lt;span>GOAL&lt;/span>
+            &lt;h2 class="mb70">강의 목표에 대해 설명합니다.&lt;/h2>
+            &lt;div class="text__inner">
+                &lt;div class="text t1">
+                    &lt;h3 class="text__title">형태와 맛 표현&lt;/h3>
+                    &lt;p class="text__desc">
+                        빵과 과자의 고유 형태와 맛을
+                        표현하는 방법을 습득하고 레시피를
+                        정확하게 이해하며 기초 조리 기술을
+                        습득할 수 있습니다. 
+                    &lt;/p>
+                    &lt;a class="text__btn" href="#">더보기&lt;/a>
+                &lt;/div>
+                &lt;div class="text t2">
+                    &lt;h3 class="text__title">제과/제빵사 자격증 취득&lt;/h3>
+                    &lt;p class="text__desc">
+                        시험대비에 맞춘 체계적인 실기 수업
+                        진행으로 제과/제빵사 자격증 합격을
+                        위한 취득 노하우를 확실하게
+                        전수합니다.
+                    &lt;/p>
+                    &lt;a class="text__btn" href="#">더보기&lt;/a>
+                &lt;/div>
+                &lt;div class="text t3">
+                    &lt;h3 class="text__title">1시간 이내에 빠르게 만들기&lt;/h3>
+                    &lt;p class="text__desc">
+                        지급된 재료로 요구하는 품목을
+                        시험기간(1시간이내)에 1인분을
+                        만들어내는 실기 시험 형태로 진행할
+                        수 있게 준비합니다.
+                    &lt;/p>
+                    &lt;a class="text__btn" href="#">더보기&lt;/a>
+                &lt;/div>
+                &lt;div class="text t4">
+                    &lt;h3 class="text__title">훌륭한 파티시에로 성장하기&lt;/h3>
+                    &lt;p class="text__desc">
+                        디저트 문화를 이끌어 갈 파티시에
+                        양성을 목표로 최선의 교육을
+                        제공하여 수강생 모두가 원하는 꿈을
+                        이루실 수 있습니다.
+                    &lt;/p>
+                    &lt;a class="text__btn" href="#">더보기&lt;/a>
+                &lt;/div>
+                &lt;div class="text t5">
+                    &lt;h3 class="text__title">창업 노하우 학습&lt;/h3>
+                    &lt;p class="text__desc">
+                        훌륭한 제빵사로 일하는 것도 물론 좋지만
+                        자본이 모이게 된다면 제과점을 차리는 것도
+                        좋지요. 저희 학원에서 창업 노하우도 알려드립니다.
+                    &lt;/p>
+                    &lt;a class="text__btn" href="#">더보기&lt;/a>
+                &lt;/div>
+                &lt;div class="text t6">
+                    &lt;h3 class="text__title">맛나게 먹기&lt;/h3>
+                    &lt;p class="text__desc">
+                        맛있게 만든 빵을 맛나게 먹는 것도 중요합니다. 
+                        여기까지 오셨다면 '내가 만든 게 맞나?' 싶을 정도로
+                        빵의 맛이 무척 맛있을 것입니다. 
+                    &lt;/p>
+                    &lt;a class="text__btn" href="#">더보기&lt;/a>
+                &lt;/div>
+            &lt;/div>
+        &lt;/section>
+        &lt;!-- // textType -->
+    &lt;/main>
+    &lt;!-- // mainType -->
+
+    &lt;footer id="footerType" class="footer__wrap nexon section gray">
+        &lt;h2 class="blind">푸터 영역&lt;/h2>
+        &lt;div class="footer__inner container">
+            &lt;div class="footer__menu">
+                &lt;div>
+                    &lt;h3>상담신청&lt;/h3>
+                    &lt;ul>
+                        &lt;li>&lt;a href="#">방문 상담신청&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">온라인 상담신청&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">1:1 문의&lt;/a>&lt;/li>
+                    &lt;/ul>    
+                &lt;/div>
+                &lt;div>
+                    &lt;h3>시간표 조회&lt;/h3>
+                    &lt;ul>
+                        &lt;li>&lt;a href="#">클래스A&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">클래스B&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">클래스C&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">클래스D&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+                &lt;div>
+                    &lt;h3>아카데미 찾기&lt;/h3>
+                    &lt;ul>
+                        &lt;li>&lt;a href="#">강남 캠퍼스&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">종로 캠퍼스&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">구로 캠퍼스&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">안산 캠퍼스&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">수원 캠퍼스&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+                &lt;div>
+                    &lt;h3>문의 게시판&lt;/h3>
+                    &lt;ul>
+                        &lt;li>&lt;a href="#">질문하기&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">건의사항&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+                &lt;div>
+                    &lt;h3>수강료문의&lt;/h3>
+                    &lt;ul>
+                        &lt;li>&lt;a href="#">방문 상담신청&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">온라인 상담신청&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">전화 상담신청&lt;/a>&lt;/li>
+                        &lt;li>&lt;a href="#">카카오톡 상담신청&lt;/a>&lt;/li>
+                    &lt;/ul>
+                &lt;/div>
+            &lt;/div>
+            &lt;div class="footer__right">
+                ⓒ2022 Byeolbit Jeppang Kyoshil&lt;br>
+                All rights reserved.
+            &lt;/div>
+        &lt;/div>
+    &lt;/footer>
+    &lt;!-- // footerType -->
+&lt;/body&gt;
+</code></pre>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- // HTML 소스 -->
+
+            <h3 class="t_tit2">CSS 소스</h3>
+            <p class="t_desc">
+                각 영역별 CSS 코드이다. <br>
+                <i>common 요소 등의 CSS 코드는 하단의 [원본 사이트 보기] 버튼을 눌러 페이지 소스를 참조</i>할 것. <br>
+            </p>
+            <div class="result">
+                <details>
+                    <summary>헤더 & 반응형 전용 메뉴바 영역</summary>
+                    <div class="sample02_result">
+                        <div class="t_code">
+<pre><code class="language-css">/* headerType */
+.header__inner {
+    /* height: 70px; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content:space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    background: #fff;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 4px #999;
+}
+.header__logo {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.header__logo a {
+    color: rgb(80, 80, 80);
+}
+.header__logo em {
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(130, 130, 130);
+}
+.header__menu {
+    text-align: center;
+}
+.header__menu li {
+    display: inline;
+}
+.header__menu li a {
+    padding: 8px 30px;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+}
+.header__menu li.active a {
+    background: rgb(80, 80, 80);
+    border-radius: 5px;
+    color: #fff;
+}
+.header__menu li a:hover {
+    background: rgb(130, 130, 130);
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* 로그인 버튼 */
+.header__member {
+    text-align: right;
+}
+.header__member a {
+    font-size: 16px;
+    border: 1px solid rgb(80, 80, 80);
+    padding: 8px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+.header__member a:hover {
+    background: rgb(80, 80, 80);
+    color: #fff;
+}
+
+/* 햄버거 모양 메뉴 버튼 */
+.header__ham {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    display: none;
+    cursor: pointer;
+}
+.header__ham span {
+    display: block;
+    background: rgb(80, 80, 80);;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    margin-left: 10px;
+    margin-top: 5px;
+    transition: 0.25s margin 0.25s, 0.25s transform;    /* margin에 딜레이 */
+}
+.header__ham span:nth-child(1) {
+    margin-top: 18px;
+}
+.header__ham.active span {
+    transition: 0.25s margin, 0.25s transform 0.25s;    /* transform에 딜레이 */
+}
+
+.header__ham.active span:nth-child(1) {
+    margin-top: 25px;
+    margin-bottom: -7px;
+    transform: rotate(45deg);
+}
+.header__ham.active span:nth-child(2) {
+    transform: rotate(45deg);
+}
+.header__ham.active span:nth-child(3) {
+    transform: rotate(135deg);
+    margin-top: -2px;
+}
+
+/* 반응형 */
+@media (max-width: 1300px) {
+    .header__ham {
+        display: block;
+    }
+    .header__member {
+        margin-right: 50px;
+    }
+    .header__menu {
+        position: fixed;
+        right: -100%;
+        top: 69px;
+        background: #fff;
+        width: 60%;
+        height: 100vh;
+        padding: 20px;
+        text-align: right;
+        transition: right 0.4s ease-in;
+        font-size: 16px;
+    }
+    .header__menu ul li {
+        display: block;
+        margin: 20px;
+    }
+    .header__menu ul li a {
+        padding: 10px;
+        white-space: nowrap;
+    }
+    .header__menu.active {
+        right: 0;
+    }
+    .header__menu.overlay {
+
+    }
+}
+
+@media (max-width: 600px) {
+    .header__logo {
+        font-size: 24px;
+    }
+    .header__logo em {
+        display: none;
+    }
+    .header__member {
+        width: 40%;
+    }
+    .header__member a {
+        padding: 8px 20px;
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- // 헤더 영역 -->
+
+            <div class="result">
+                <details>
+                    <summary>슬라이드(swiper) 영역</summary>
+                    <div class="sample03_result">
+                        <div class="t_code">
+<pre><code class="language-css">/* swiper */
+.swiper-slide {
+    background: url(../img/sliderType/slider_bg01.jpg) no-repeat center / cover;
+}
+.swiper-slide .desc {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    box-sizing: border-box;
+}
+.swiper-slide .desc span {
+    font-size: 16px;
+    background: #fff;
+    padding: 1px 14px 0 14px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: inline-block;
+}
+.swiper-slide .desc h3 {
+    font-size: 85px;
+    font-weight: 300;
+    line-height: 1;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    margin-left: -8px;
+    text-shadow: 0 0 5px #666;
+}
+.swiper-slide .desc p {
+    font-size: 20px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1.35;
+    margin-bottom: 60px;
+    text-shadow: 0 0 5px #666;
+}
+.swiper-slide .desc .btn a {
+    font-size: 16px;
+    background: #fff;
+    padding: 12px 40px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+.swiper-slide .desc .btn a.black {
+    background: rgb(60, 60, 60);
+    color: #fff;
+}
+.swiper-slide .desc .btn a:hover {
+    border-radius: 50px;
+}
+
+.swiper-button-next {
+    background-position: -50px 0;
+}
+.swiper-button-next, .swiper-button-prev {
+    width: 30px !important;
+    height: 56px !important;
+    background-image: url(../img/sliderType/slider_icon.svg);
+}
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+    opacity: 0;
+}
+
+.swiper-pagination-bullet {
+    width: 16px !important;
+    height: 16px !important;
+    background-image: url(../img/sliderType/slider_icon.svg) !important;
+    background-position: -20px -70px !important;
+    background-color: transparent !important;
+    opacity: 1 !important;
+}
+.swiper-pagination-bullet-active {
+    background-position: 0 -70px !important;
+}
+
+/* 반응형 */
+@media (max-width: 960px) {
+    .swiper-slide .desc {
+        width: 100%;
+        text-align: center;
+    }
+    .swiper-slide .desc h3 {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .swiper-slide .desc {
+        padding: 80px 0;
+    }
+    .swiper-slide .desc h3 {
+        font-size: 40px;
+    }
+    .swiper-slide .desc p {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+    .swiper-slide .desc .btn a {
+        padding: 10px 25px;
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- // 슬라이드 영역 -->
+
+            <div class="result">
+                <details>
+                    <summary>이미지 영역</summary>
+                    <div class="sample04_result">
+                        <div class="t_code">
+<pre><code class="language-css">/* imageType */
+#imageType > p {
+    font-size: 22px;
+    padding: 0 20px;
+    word-break: keep-all;
+    line-height: 1.6;
+}
+
+.image__inner {
+    display: flex;
+    justify-content: space-between;     /* 간격 떨어뜨리기 */
+    flex-wrap: wrap;
+    width: 100%;
+}
+.image {
+    width: 49%;
+    height: 370px;
+    padding: 200px 30px 30px 30px;
+    color: #fff;
+    box-sizing: border-box;
+}
+.image.img1 {
+    background-image: url(../img/imageType/imageType01_bg01.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.image.img2 {
+    background-image: url(../img/imageType/imageType01_bg02.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.image__title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 4px rgb(80,80,80);
+    /* 1줄 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.image__desc {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-shadow: 0 0 4px rgb(80,80,80);
+    /* 2줄효과 : 글이 넘쳐도 2줄을 넘지 않도록 해줌 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    padding-right: 30px;
+}
+.image__btn {
+    background: rgb(80,80,80);
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 300;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+.image__btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* 반응형 */
+@media (max-width: 960px) {
+    .image__inner .image {
+        margin: 0 auto;
+        width: 98%;
+    }
+    .image:first-child {
+        margin-bottom: 30px;
+    }
+    #imageType > h2 {
+        font-size: 40px;
+    }
+    #imageType > p {
+        font-size: 18px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    #imageType > h2 {
+        font-size: 30px;
+    }
+    #imageType > p {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+    .image__inner .image {
+        width: 96%;
+        margin: 0 auto;
+        padding: 210px 20px 20px 20px;
+    }
+    .image:first-child {
+        margin-bottom: 20px;
+    }
+    .image__title {
+        font-size: 24px;
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- // 이미지 영역 -->
+
+            <div class="result">
+                <details>
+                    <summary>이미지/텍스트 영역</summary>
+                    <div class="sample05_result">
+                        <div class="t_code">
+<pre><code class="language-css">/* imgTextType */
+.imgText__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.imgText__inner > div {
+    width: 32%;
+    /* height: 500px; */
+}
+.imgText__txt {}
+.imgText__txt span {
+    font-size: 16px;
+    color: #666;
+    text-decoration: underline;
+    text-underline-position: under;
+    margin-bottom: 20px;
+    display: block;
+}
+.imgText__txt h3 {
+    font-size: 50px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.imgText__txt p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 40px;
+}
+.imgText__txt ul {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 2;
+}
+.imgText__txt ul li {        
+    position: relative;
+    padding-left: 20px;
+}
+.imgText__txt ul li a {
+    color: #666;
+}
+.imgText__txt ul li a:hover {
+    text-decoration: underline;
+}
+.imgText__txt ul li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: #666;
+}
+.imgText__img {
+    border-radius: 10px;
+    position: relative;
+}
+.imgText__img a {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    background-color: rgb(136, 119, 74);
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 25px;
+    border-radius: 30px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+.imgText__img a.blue {
+    background-color: rgb(45, 83, 69);
+    color: #fff;
+}
+.imgText__img a:hover, 
+.imgText__img a.blue:hover {
+    background-color: #fff;
+    color: rgb(80, 80, 80);
+}
+
+.imgText__img.img1 {
+    background: url(../img/imgTextType/imgText_bg01.jpg) no-repeat center / cover;
+}
+.imgText__img.img2 {
+    background: url(../img/imgTextType/imgText_bg02.jpg) no-repeat center / cover;
+}
+
+/* 반응형 */
+@media (max-width: 960px) {
+    .imgText__inner {
+        flex-wrap: wrap;
+    }
+    .imgText__inner > .imgText__txt {
+        width: 96%;
+        height: auto;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .imgText__inner > .imgText__img {
+        width: 48%;
+        height: 300px;
+        padding: 10px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    .imgText__txt > h3 {
+        font-size: 40px;
+    }
+    .imgText__txt > p {
+        margin-bottom: 60px;
+    }
+    .imgText__txt ul {
+        display: none;
+    }
+    .imgText__txt ul li::before {
+        display: none;
+    }
+    .imgText__img a {
+        left: 20px;
+        bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .imgText__inner > .imgText__txt {
+        margin-bottom: 20px;
+    }
+    .imgText__inner > .imgText__img {
+        width: 96%;
+        height: 200px;
+    }
+    .imgText__inner > .imgText__img.img1 {
+        margin-bottom: 20px;
+    }
+    .imgText__txt > span {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    .imgText__txt > h3 {
+        font-size: 30px;
+    }
+    .imgText__txt > p {
+        font-size: 16px;
+    }
+    .imgText__txt ul {
+        font-size: 16px;
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- // 이미지/텍스트 영역 -->
+
+            <div class="result">
+                <details>
+                    <summary>카드 영역</summary>
+                    <div class="sample06_result">
+                        <div class="t_code">
+<pre><code class="language-css">/* cardType */
+.card__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;     /* 간격 떨어뜨리기 */
+}
+.card {
+    width: 32%;
+    background: #fff;
+}
+.card__body {
+    padding: 24px;
+    background: #f5f5f5;
+}
+.card__body .title {
+    font-size: 22px;
+    padding-bottom: 10px;
+    /* 한 줄 효과 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-right: 30px;    /* 제목 길어져도 한 줄 유지 */
+}
+.card__body .desc {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+    padding-bottom: 20px;
+    color: #666;
+    /* 4줄효과 : 글이 넘쳐도 4줄을 넘지 않도록 해줌 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;  /* 4줄까지 제한 */
+    -webkit-box-orient: vertical;
+}
+
+/* 반응형 */
+@media (max-width: 960px) {
+    .card__inner {
+        justify-content: space-around;
+    }
+    #cardType > h2 {
+        font-size: 40px;
+    }
+    #cardType > p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .card__body .desc {
+        margin-bottom: 16px;
+        /* 3줄효과 */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #cardType > h2 {
+        font-size: 30px;
+    }
+    #cardType > p {
+        font-size: 16px;
+        padding: 0px 20px;
+    }
+    .card__inner .card {
+        width: 96%;
+        margin-bottom: 20px;
+    }
+    .card__body {
+        padding: 20px;
+    }
+    .card__body .title {
+        font-size: 20px;
+    }
+    .card__body .desc {
+        font-size: 16px;
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- // 카드 영역 -->
+
+            <div class="result">
+                <details>
+                    <summary>배너 영역</summary>
+                    <div class="sample07_result">
+                        <div class="t_code">
+<pre><code class="language-css">/* bannerType */
+.banner__inner {
+    background-image: url(../img/bannerType/banner_bg01.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 120px 0;
+    color: #fff;
+}
+.banner__inner .title {
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+.banner__inner .desc {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 300;
+}
+.banner__inner .desc a {
+    color: #fff;
+    display: block;
+}
+.banner__inner .desc a:hover {
+    text-decoration: underline;
+}
+.banner__inner .small {
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+@media (max-width: 960px) {
+    .banner__inner {
+        padding: 100px 0;
+    }
+    .banner__inner .title {
+        font-size: 40px;
+    }
+    .banner__inner .desc {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .banner__inner {
+        padding: 80px 0;
+    }
+    .banner__inner .title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .banner__inner .desc {
+        font-size: 16px;
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- // 배너 영역 -->
+
+            <div class="result">
+                <details>
+                    <summary>텍스트 영역</summary>
+                    <div class="sample08_result">
+                        <div class="t_code">
+<pre><code class="language-css">/* textType */
+.text__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.text {
+    width: 32%;
+    margin-bottom: 2%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: background-color 0.4s ease;
+}
+.text:hover {
+    background-color: #f5f5f5;
+}
+.text__title {
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    position: relative;
+    padding-top: 75px;
+}
+.text__title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: url(../img/textType/text_icon.svg);
+}
+.text.t1 .text__title::before {
+    background-position: 0 0;
+}
+.text.t2 .text__title::before {
+    background-position: -60px 0;
+}
+.text.t3 .text__title::before {
+    background-position: -120px 0;
+}
+.text.t4 .text__title::before {
+    background-position: -180px 0;
+}
+.text.t5 .text__title::before {
+    background-position: -240px 0;
+}
+.text.t6 .text__title::before {
+    background-position: -300px 0;
+}
+.text__desc {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+
+    /* 3줄효과 : 글이 넘쳐도 4줄을 넘지 않도록 해줌 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;  /* 3줄까지 제한 */
+    -webkit-box-orient: vertical;
+
+    color: #666;
+    margin-bottom: 20px;
+}
+.text__btn {
+    font-size: 16px;
+    line-height: 1;
+    text-decoration: underline;
+    text-underline-position: under; /* 텍스트와 언더라인 간격 벌려줌 */
+    color: #666;
+}
+
+/* 반응형 */
+@media (max-width: 960px) {
+    .text {
+        width: 48%;
+        margin: 10px auto;
+        background: #f5f5f5;
+    }
+    #textType > h2 {
+        font-size: 40px;
+    }
+    .text__title {
+        font-size: 22px;
+    }
+    .text__desc {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    #textType > h2 {
+        font-size: 30px;
+    }
+    .text__title {
+        font-size: 20px;
+    }
+    .text__desc {
+        font-size: 16px;
+    }
+    .text {
+        width: 96%;
+        margin: 10px auto;
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- // 텍스트 영역 -->
+
+            <div class="result">
+                <details>
+                    <summary>푸터 영역</summary>
+                    <div class="sample09_result">
+                        <div class="t_code">
+<pre><code class="language-css">/* footerType */
+.footer__menu {
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__menu > div h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.footer__menu li a {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    display: block;
+}
+.footer__right {
+    border-top: 1px solid #d9d9d9;
+    text-align: center;
+    padding-top: 40px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* 반응형 */
+@media (max-width: 960px) {
+    .footer__menu {
+        display: none;
+    }
+    .footer__right {
+        padding-top: 0;
+        border-top: 0;
+    }
+    .footer__wrap {
+        padding: 40px 0;
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </details>
+            </div>
+            <!-- // 푸터 영역 -->
+
+            <h3 class="t_tit2">CSS 소스 : 반응형 버그 해결하기</h3>
+            <p class="t_desc">
+                반응형(모바일, 태블릿 PC 전용 화면) 버그를 해결하기 위해 아래와 같은 코드를 입력해주었다. 
+                
+            </p>
+            <div class="t_code">
+<pre><code lang="language-css">&lt;style&gt;
+    /* Windows에서 페이지 이동 시 웹뷰화면 흔들림 버그 없애줌 */
+    body{
+        overflow: overlay;
+    }
+
+    /* 햄버거 모양 메뉴 클릭 시 스크롤바를 없애줌 */
+    body.fixed {
+        overflow: hidden;
+        height: 100vh;
+    }
+&lt;/style&gt;
+</code></pre>
+            </div>
+            <!-- // CSS 소스 -->
+
+            <h3 class="t_tit2">JS 소스</h3>
+            <p class="t_desc">
+                첫번째로는 스크롤을 이동할 때마다 현재 위치한 메뉴에 active 효과를 적용시키는 스크립트를 입력하였고, 
+                두번째는 스크롤 이동을 부드럽게 하기 위해 behavior:"smooth"를 적용하였으며, 
+                마지막으로는 반응형 전용 햄버거 모양 메뉴 버튼과 해당 버튼을 클릭(또는 터치)하면 메뉴 바를 나타나게 하고, 
+                X 버튼을 누르면 사라지게 하도록 스크립트를 짜 놓았다.
+            </p>
+            <div class="t_code">
+<pre><code lang="language-js">&lt;script&gt;
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+        document.querySelectorAll(".scroll").forEach((element, index) => {
+            if(scrollTop >= element.offsetTop-500){
+                document.querySelectorAll(".header__menu li").forEach(li => {
+                    li.classList.remove("active");
+                });
+                document.querySelector(".header__menu li:nth-child("+(index+1)+")").classList.add("active");
+            };
+        });
+    });
+
+    // 스크롤 이동
+    document.querySelectorAll("#headerType .header__inner .header__menu li a").forEach(li => {
+        li.addEventListener("click", (e) => {
+            e.preventDefault();
+            document.querySelector(li.getAttribute("href")).scrollIntoView({
+                behavior: "smooth"  // 이동 부드럽게
+            });
+        });
+    });
+
+    // 메뉴 버튼 (반응형)
+    const btnHam = document.querySelector(".header__ham");
+    const btnMenu = document.querySelector(".header__menu");
+    const btnMenuList = btnMenu.querySelectorAll(".header__menu ul li a");
+
+    btnHam.addEventListener("click", () => {
+        btnHam.classList.toggle("active");
+        btnMenu.classList.toggle("active");
+        document.body.classList.toggle("fixed");
+    });
+
+    // 반응형에서 메뉴 버튼 누르는 즉시 메뉴창 닫히게 하기
+    btnMenuList.forEach((list) => {
+        list.addEventListener("click", () => {
+            document.body.classList.remove("fixed");
+            btnHam.classList.remove("active");
+            btnMenu.classList.remove("active");
+        });
+    });
+&lt;/script&gt;
+</code></pre>
+            </div>
+            <!-- // JS 소스 -->
+
+            <h3 class="t_tit2">최종 결과</h3>
+            <div class="t_iframe" style="height: 1000px; padding-top: 0;">
+                <iframe src="https://kde66034.github.io/coding/site/site1/index.html" frameborder="0"></iframe>
+            </div>
+            <div class="t_link">
+                <a href="https://kde66034.github.io/coding/site/site1/index.html">원본 사이트 보기</a>
+            </div>
+            <div class="t_link">
+                <a href="https://github.com/kde66034/coding/blob/main/site/site1/index.html">원본 소스 보기</a>
+            </div>
+            <!-- // 최종 결과 -->
+
+        </div>
+    </main>
+    <!-- // main -->
+
+    <footer id="footer">
+        <a href="mailto:kde66034@gmail.com">kde66034@gmail.com</a>
+    </footer>
+    <!-- // footer -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>
