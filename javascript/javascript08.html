@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>자바스크립트 : 숫자 객체</title>
+    <title>자바스크립트 : 숫자·데이트 객체</title>
     
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dracula.css">
@@ -23,7 +23,7 @@
                 <li><a href="javascript05.html">문자열 객체</a></li>
                 <li><a href="javascript06.html">배열 객체</a></li>
                 <li><a href="javascript07.html">수학 객체</a></li>
-                <li class="active"><a href="javascript08.html">숫자 객체</a></li>
+                <li class="active"><a href="javascript08.html">숫자·데이트 객체</a></li>
                 <li><a href="javascript09.html">브라우저 객체</a></li>
                 <li><a href="javascript10.html">요소 객체</a></li>
                 <li><a href="javascript11.html">이벤트 객체</a></li>
@@ -46,47 +46,47 @@
         <div class="container">
             <div class="main_menu">
                 <ul>
-                    <li><a href="#">01. 숫자 메서드 : Number.MAX_VALUE</a></li>
-                    <li><a href="#">01. 숫자 메서드 : Number.MIN_VALUE</a></li>
-                    <li><a href="#">01. 숫자 메서드 : Number.MAX_SAFE_INTEGER</a></li>
-                    <li><a href="#">01. 숫자 메서드 : Number.MIN_SAFE_INTEGER</a></li>
-                    <li><a href="#">01. 숫자 메서드 : Number.Nan</a></li>
-                    <li><a href="#">01. 숫자 메서드 : Number.isFinite</a></li>
-                    <li><a href="#">01. 숫자 메서드 : Number.isInteger</a></li>
-                    <li><a href="#">01. 숫자 메서드 : Number.isNan</a></li>
-                    <li><a href="#">01. 숫자 메서드 : Number.prototype.toFixed</a></li>
-                    <li><a href="#">01. 숫자 메서드 : Number.prototype.toPrecision</a></li>
-                    <li><a href="#">01. 숫자 메서드 : Number.prototype.toString</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.MAX_VALUE : 표현 가능한 최대 숫자 값을 나타냄 : 반환(숫자)</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.MIN_VALUE : 표현 가능한 최소 숫자 값을 나타냄 : 반환(숫자)</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.MAX_SAFE_INTEGER : 최대 안전 정수를 나타냄 : 반환(숫자)</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.MIN_SAFE_INTEGER : 최소 안전 정수를 나타냄 : 반환(숫자)</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.NaN : 속성이 숫자가 아님(Not-A-Number)을 나타냄 : 반환(숫자)</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.isFinite : 주어진 값이 유한수인지를 판별함 : 반환(불린)</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.isInteger : 주어진 값이 정수인지를 판별함 : 반환(문자)</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.isNan : 주어진 값이 숫자가 아닌지(Not-A-Number)를 판별함 : 반환(NaN/Number NaN)</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.prototype.toFixed : 숫자를 고정 소수점 표기법으로 표시함 : 반환(숫자)</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.prototype.toPrecision : Number 객체를 지정된 정밀도로 나타내는 문자열을 반환함 : 반환(문자)</a></li>
+                    <li><a href="#">01. 숫자 메서드 : Number.prototype.toString : 특정한 Number 객체를 나타내는 문자열을 반환함 : 반환(문자)</a></li>
                 </ul>
                 <br><br>
                 <ul>
-                    <li><a href="#">01. 데이트 메서드 : new Date()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.now()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.parse()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.UTC()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getFullYear()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setFullYear()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getMonth()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setMonth()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getDate()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setDate()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getDay()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getHours()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setHours()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getMinutes()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setMinutes()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getSeconds()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setSeconds()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getMilliseconds()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setMilliseconds()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getTime()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setTime()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getTimezoneOffset()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.toDateString()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.toTimeString()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.toISOString()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.toLocaleString()</a></li>
-                    <li><a href="#">01. 데이트 메서드 : Date.prototype.toLocaleTimeString()</a></li>
+                    <li><a href="#">01. 데이트 메서드 : new Date() : 시간과 날짜를 표현하는 객체(여러 형태로 초기화 가능)</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.now() : UTC 기준 1970년 1월 1일부터 현재까지 경과된 밀리 초를 반환</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.parse() : 날짜의 문자열 표현을 구문 분석, 밀리초수 반환 / 인식X 또는 잘못된 날짜값(NaN 반환)</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.UTC() : Date 생성자와 비슷한 매개변수를 받지만 모두 UTC로 취급함</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getFullYear() : 4자리 연도를 출력</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setFullYear() : 현지 시간에 따라 지정된 날짜의 전체 연도를 설정</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getMonth() : 월(月) 출력 : 0(1월) ~ 11(12월)</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setMonth() : 현재 설정된 연도에 따라 지정된 날짜의 월을 설정</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getDate() : 날짜 출력</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setDate() : 현재 설정된 월의 시작 부분을 기준으로 Date 객체의 날짜를 설정</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getDay() : 요일(曜日) 출력 : 0(일요일) ~ 6(토요일)</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getHours() : 시(時) 출력</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setHours() : 현지 시간에 따라 지정된 날짜의 시간을 설정 : 밀리초 반환</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getMinutes() : 분(分) 출력</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setMinutes() : 현지 시간에 따라 지정된 날짜의 분을 설정</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getSeconds() : 초(秒) 출력</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setSeconds() : 현지 시간에 따라 지정된 날짜의 초를 설정</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getMilliseconds() : Date 인스턴스의 밀리초를 현지 시간 기준으로 반환</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setMilliseconds() : 현지 시간에 따라 지정된 날짜의 밀리 초를 설정</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getTime() : 표준시에 따라 지정된 날짜의 시간에 해당하는 숫자 값을 반환</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.setTime() : Date 객체를 1970년 1월 1일부터 밀리 초 단위로 나타내는 시간으로 설정</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.getTimezoneOffset() : 현재 로케일에 대한 시간대 오프셋(UTC)을 분 단위로 반환</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.toDateString() : 미국 영어로 사람이 읽을 수있는 형태로 Date 객체의 날짜 부분을 반환</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.toTimeString() : 현지 시간대에서 해석된 객체의 시간 부분을 영어로 반환</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.toISOString() : 단순화한 확장 ISO 형식의 문자열을 반환</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.toLocaleString() : 배열의 요소를 나타내는 문자열을 반환</a></li>
+                    <li><a href="#">01. 데이트 메서드 : Date.prototype.toLocaleTimeString() : 날짜의 시간 부분을 언어에 따라 다르게 표현한 문자열을 반환</a></li>
                 </ul>
             </div>
             <div class="main_script"></div>

@@ -24,7 +24,7 @@
                 <li><a href="javascript05.html">문자열 객체</a></li>
                 <li><a href="javascript06.html">배열 객체</a></li>
                 <li><a href="javascript07.html">수학 객체</a></li>
-                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript08.html">숫자·데이트 객체</a></li>
                 <li><a href="javascript09.html">브라우저 객체</a></li>
                 <li><a href="javascript10.html">요소 객체</a></li>
                 <li><a href="javascript11.html">이벤트 객체</a></li>
@@ -905,21 +905,21 @@ document.write(func());
 <pre><code class="language-js">{
     // 동기:동시실행
     function funcA() {
-        document.write("funcA가 실행되었습니다.<br>");
+        document.write("funcA가 실행되었습니다.");
     }
     function funcB() {
-        document.write("funcB가 실행되었습니다.<br>");
+        document.write("funcB가 실행되었습니다.");
     }
     funcA();
     funcB();
 
     function funcA() {
         setTimeout(() => {
-            console.log("funcA가 실행되었습니다.<br>");
+            console.log("funcA가 실행되었습니다.");
         },1000);
     }
     function funcB() {
-        console.log("funcB가 실행되었습니다.<br>");
+        console.log("funcB가 실행되었습니다.");
     }
     funcA();
     funcB();
@@ -928,12 +928,12 @@ document.write(func());
     // 비동기:동시실행X(필요한것만가져옴)
     function funcA(callback) {
         setTimeout(() => {
-            console.log("funcA가 실행되었습니다.<br>");
+            console.log("funcA가 실행되었습니다.");
             callback();
         }, 1000);
     }
     function funcB() {
-        console.log("funcB가 실행되었습니다.<br>");
+        console.log("funcB가 실행되었습니다.");
     }
     funcA(function(){
         funcB();
@@ -943,25 +943,25 @@ document.write(func());
     //
     function funcA(callback) {
         setTimeout(() => {
-            console.log("funcA가 실행되었습니다.<br>");
+            console.log("funcA가 실행되었습니다.");
             callback();
         }, 1000);
     }
     function funcB(callback) {
         setTimeout(() => {
-            console.log("funcB가 실행되었습니다.<br>");
+            console.log("funcB가 실행되었습니다.");
             callback();
         }, 1000);
     }
     function funcC(callback) {
         setTimeout(() => {
-            console.log("funcC가 실행되었습니다.<br>");
+            console.log("funcC가 실행되었습니다.");
             callback();
         }, 1000);
     }
     function funcD(callback) {
         setTimeout(() => {
-            console.log("funcD가 실행되었습니다.<br>");
+            console.log("funcD가 실행되었습니다.");
         }, 1000);
     }
 
@@ -1145,7 +1145,7 @@ document.write(func());
     <!-- // main -->
 
     <div id="parallax__top">
-        Top
+        TOP
     </div>
     <!-- // parallax__top -->
 
