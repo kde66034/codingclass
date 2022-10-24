@@ -34,6 +34,7 @@ https://kde66034.github.io/codingclass/javascript/effect/searchEffect03.html
 https://kde66034.github.io/codingclass/javascript/effect/searchEffect04.html   
 https://kde66034.github.io/codingclass/javascript/effect/searchEffect05.html   
 https://kde66034.github.io/codingclass/javascript/effect/searchEffect06.html   
+https://kde66034.github.io/codingclass/javascript/effect/searchEffect07.html   
 
 ## 퀴즈 이펙트   
 https://kde66034.github.io/codingclass/javascript/effect/quizEffect01.html   https://kde66034.github.io/codingclass/javascript/effect/quizEffect02.html   https://kde66034.github.io/codingclass/javascript/effect/quizEffect03.html   https://kde66034.github.io/codingclass/javascript/effect/quizEffect04.html   https://kde66034.github.io/codingclass/javascript/effect/quizEffect05.html   
