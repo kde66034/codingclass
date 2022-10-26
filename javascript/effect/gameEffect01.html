@@ -413,18 +413,15 @@
             printAgent();
         }
 
-        // 서치 게임 열기
+        // 뮤직 플레이어 열기/닫기
+        document.querySelector(".icon_box .icon1").addEventListener("click", () => {
+            document.querySelector(".music__wrap").classList.toggle("show");
+        });
+
+        // 서치 게임 열기/닫기
         document.querySelector(".icon_box .icon2").addEventListener("click", () => {
-            document.querySelector(".search__wrap").classList.add("show");
+            document.querySelector(".search__wrap").classList.toggle("show");
         });
-
-        // 서치 게임 닫기
-        document.querySelector(".search__info .close").addEventListener("click", () => {
-            quitQuiz();
-            document.querySelector(".search__wrap").classList.remove('show');
-        });
-
-        
     </script>
     <script>
         //모달
