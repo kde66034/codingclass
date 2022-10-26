@@ -263,11 +263,11 @@ body {
 }
 .t_iframe iframe {
   position: absolute;
-  top: 170px;
-  left: 130px;
+  top: 20px;
+  left: 20px;
   border: 1px solid rgba(0,0,0,0.1);
-  width: 80%;
-  height: 70%;
+  width: 110%;
+  height: 85%;
 }
 
 /* 모달 애니메이션 */
