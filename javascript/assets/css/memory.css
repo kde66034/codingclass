@@ -1,0 +1,134 @@
+/* .memory__wrap {
+    display: none;
+}
+.memory__wrap.show {
+    display: block;
+} */
+.memory__wrap {}
+.memory__inner {
+    width: 700px;
+    /* height: 700px; */
+    border: 3px solid rgb(247, 222, 255);
+    border-radius: 10px;
+    background: #000;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    animation: flicker 0.5s infinite alternate;
+}
+.memory__header {
+    text-align: center;
+    color: #fff;
+    padding-top: 30px;
+}
+
+.memory__card {
+    padding: 30px;
+}
+.memory__card .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;  
+}
+.memory__card .cards li {
+    list-style: none;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    transform-style:preserve-3d;
+    perspective: 500px;
+}
+.memory__card .cards li img {
+    width: 100%;
+    border-radius: 15px;
+}
+.memory__card .cards li .view {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(239, 220, 255);
+    backface-visibility: hidden;
+    padding: 5%;
+    border-radius: 20px;
+    transition: all 0.5s;
+    user-select: none;
+    pointer-events: none;
+}
+.memory__card .cards li .front {
+    transform: rotateY(0deg);
+}
+.memory__card .cards li.flip .front {
+    transform: rotateY(180deg);
+}
+.memory__card .cards li .back {
+    transform: rotateY(-180deg);
+}
+.memory__card .cards li.flip .back {
+    transform: rotateY(0deg);
+}
+.memory__card .cards li.shakeX {
+    animation: shakeX 1s;
+}
+.memory__card .cards li.shakeY {
+    animation: shakeY 1s;
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem rgb(119, 0, 255),
+            inset 0 0 2rem rgb(119, 0, 255),
+            0 0 4rem rgb(119, 0, 255),
+            inset 0 0 4rem rgb(119, 0, 255);
+    }
+}
+@keyframes shakeX {
+    from,
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: translate3d(-10px, 0, 0);
+      transform: translate3d(-10px, 0, 0);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      -webkit-transform: translate3d(10px, 0, 0);
+      transform: translate3d(10px, 0, 0);
+    }
+  }
+  @keyframes shakeY {
+    from,
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: translate3d(0, -10px, 0);
+      transform: translate3d(0, -10px, 0);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      -webkit-transform: translate3d(0, 10px, 0);
+      transform: translate3d(0, 10px, 0);
+    }
+  }
