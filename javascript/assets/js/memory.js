@@ -4,6 +4,8 @@
 
 const memoryWrap = document.querySelector(".memory__wrap");
 const memoryCards = memoryWrap.querySelectorAll(".cards li");
+const memoryStart = document.querySelector(".memory__start");
+const memoryTotal = document.querySelector(".memory__total span");
 
 let cardOne, cardTwo;
 let disableDeck = false;    
@@ -47,6 +49,9 @@ function matchCards(img1, img2){
         matchedCard++;      // 매치된카드수 늘리기
         // alert("이미지가 일치합니다.");
 
+        // 점수 출력
+        memoryTotal.innerHTML = matchedCard;
+
         // 카드를 모두 클릭한 경우
         if (matchedCard == 8){
             alert("GAME OVER");
@@ -76,30 +81,34 @@ function matchCards(img1, img2){
 }
 
 // 카드 섞기
-function shuffledCard(){
-    cardOne = cardTwo = "";
-    disableDeck = false;
-    matchedCard = 0;
-
-    let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
-    let result = arr.sort(() => Math.random() > 0.5 ? 1 : -1);
-
-    memoryCards.forEach((card, index) => {
-        card.classList.remove("flip");
-
-        setTimeout(() => {
-            card.classList.add("flip");
-        }, 200 * index);
-
-        setTimeout(() => {
+memoryStart.addEventListener("click", () => {
+    function shuffledCard(){
+        cardOne = cardTwo = "";
+        disableDeck = false;
+        matchedCard = 0;
+        // 점수 출력
+        memoryTotal.innerHTML = matchedCard;
+    
+        let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
+        let result = arr.sort(() => Math.random() > 0.5 ? 1 : -1);
+    
+        memoryCards.forEach((card, index) => {
             card.classList.remove("flip");
-        }, 5000);
-
-        let imgTag = card.querySelector(".back img");
-        imgTag.src = `../assets/img/memory/game_card0${arr[index]}.png`;
-    })
-}
-shuffledCard();
+    
+            setTimeout(() => {
+                card.classList.add("flip");
+            }, 200 * index);
+    
+            setTimeout(() => {
+                card.classList.remove("flip");
+            }, 5000);
+    
+            let imgTag = card.querySelector(".back img");
+            imgTag.src = `../assets/img/memory/game_card0${arr[index]}.png`;
+        })
+    }
+    shuffledCard();
+})
 
 // 카드 클릭
 memoryCards.forEach(card => {

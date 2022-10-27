@@ -45,6 +45,7 @@ li {
 
 .search__wrap.show {
     display: block;
+    width: 1300px;
     max-width: 70%;
     margin: auto auto;
     border: 10px solid #000;

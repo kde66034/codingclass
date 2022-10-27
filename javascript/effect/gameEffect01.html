@@ -540,7 +540,9 @@
         <div class="memory__wrap">
             <div class="memory__inner">
                 <div class="memory__header">
-                    <h2>메모리 게임</h2>
+                    <h2>MEMORY GAME</h2>
+                    <p class="memory__total">맞춘 개수 : <span>0</span></p>
+                    <div class="memory__start">카드 섞기</div>
                 </div>
                 <div class="memory__card">
                     <ul class="cards">
@@ -761,9 +763,9 @@
         });
 
         // 메모리 게임 열기/닫기
-        // document.querySelector(".icon_box .icon3").addEventListener("click", () => {
-        //     document.querySelector(".memory__wrap").classList.toggle("show");
-        // });
+        document.querySelector(".icon_box .icon3").addEventListener("click", () => {
+            document.querySelector(".memory__wrap").classList.toggle("show");
+        });
     </script>
     <script>
         //모달
