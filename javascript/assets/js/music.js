@@ -88,7 +88,6 @@ function loadMusic(num){
     musicView.alt = allMusic[num-1].name;       // 뮤직 이미지 alt 태그 로드
     musicAudio.src = `../assets/audio/${allMusic[num-1].audio}.mp3`;    // 뮤직 파일 로드
 }
-musicAudio.play();
 
 // 재생 버튼
 function playMusic() {
@@ -128,6 +127,7 @@ function nextMusic() {
 musicPlay.addEventListener("click", () => {
     const isMusicPaused = musicWrap.classList.contains("paused");   // 음악이 재생중
     isMusicPaused ? pauseMusic() : playMusic();
+    playListMusic();
 });
 
 // 이전곡 버튼 클릭
@@ -203,8 +203,8 @@ function clicked(el){
 }
 
 // 뮤직 진행바
-musicAudio.addEventListener("timeupdate", e => {
-    // console.log(e);
+musicAudio.addEventListener("timeupdate", (e) => {
+    // console.log(timeupdate);
 
     const currentTime = e.target.currentTime;   // 현재 재생되는 시간
     const duration = e.target.duration;         // 오디오의 총 길이

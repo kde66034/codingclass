@@ -35,6 +35,9 @@ li {
     background-color: #000;
     padding: 10px 0;
 }
+.search__headerTitle {
+    font-size: 14px;
+}
 .search__header > div {
     color: #fff;
 }
@@ -48,7 +51,9 @@ li {
     width: 1300px;
     max-width: 70%;
     margin: auto auto;
-    border: 10px solid #000;
+    border-right: 10px solid #000;
+    border-left: 10px solid #000;
+    border-bottom: 10px solid #000;
     background-color: #f1f3f6;
     padding: 30px;
     text-align: center;
