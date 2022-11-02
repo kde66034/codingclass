@@ -78,6 +78,9 @@ const musicListBtn = musicWrap.querySelector("#control-list");
 const musicList = musicWrap.querySelector(".music__list");
 const musicListUl = musicList.querySelector(".music__list ul");
 
+const btnPlay = document.querySelector("#control-play");
+const btnStop = document.querySelector("#control-stop");
+
 let musicIndex = 1;     // 현재 음악 인덱스
 
 // 음악 재생
@@ -283,9 +286,6 @@ musicAudio.addEventListener("ended", () => {
 });
 
 // 버튼 바꿔주기
-const btnPlay = document.querySelector("#control-play");
-const btnStop = document.querySelector("#control-stop");
-
 btnStop.style.display = "none";
 
 btnPlay.addEventListener("click", () => {

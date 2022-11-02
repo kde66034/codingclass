@@ -696,6 +696,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="../assets/js/gsap.min.js"></script>
     <script src="../assets/js/music.js"></script>
+    <script src="../assets/js/searchGame.js"></script>
     <script src="../assets/js/memory.js"></script>
     <script>
         $(function () {
@@ -764,16 +765,34 @@
         // 뮤직 플레이어 열기/닫기
         document.querySelector(".icon_box .icon1").addEventListener("click", () => {
             document.querySelector(".music__wrap").classList.toggle("show");
+            document.querySelector(".search__wrap").classList.remove("show");
+            searchAudio.pause();
+            searchAudioPlay.style.display = "none";
+            searchAudioStop.style.display = "block";
+            document.querySelector(".memory__wrap").classList.remove("show");
         });
 
         // 서치 게임 열기/닫기
         document.querySelector(".icon_box .icon2").addEventListener("click", () => {
             document.querySelector(".search__wrap").classList.toggle("show");
+            document.querySelector(".music__wrap").classList.remove("show");
+            pauseMusic();
+            btnStop.style.display = "none";
+            btnPlay.style.display = "block";
+            document.querySelector(".memory__wrap").classList.remove("show");
         });
 
         // 메모리 게임 열기/닫기
         document.querySelector(".icon_box .icon3").addEventListener("click", () => {
             document.querySelector(".memory__wrap").classList.toggle("show");
+            document.querySelector(".music__wrap").classList.remove("show");
+            pauseMusic();
+            btnStop.style.display = "none";
+            btnPlay.style.display = "block";
+            document.querySelector(".search__wrap").classList.remove("show");
+            searchAudio.pause();
+            searchAudioPlay.style.display = "none";
+            searchAudioStop.style.display = "block";
         });
     </script>
     <script>
@@ -813,7 +832,7 @@
             });
         });
     </script>
-    <script src="../assets/js/searchGame.js"></script>
+    
 </body>
 
 </html>
