@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패럴럭스 이펙트 : Apple 컨셉 (포폴용)</title>
+
+    <style>
+        /* web fonts */
+        @font-face {
+            font-family: 'ChosunNm';
+            font-weight: normal;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.eot?#iefix') format('embedded-opentype'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.woff') format('woff'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/ChosunNm/ChosunNm.ttf') format("truetype");
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'NanumBrush';
+            font-weight: normal; 
+            font-style: normal; 
+            src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/NanumBrush.woff2) format('woff2');
+            font-display: swap;
+        }
+
+        * {
+            font-family: 'ChosunNm';
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .scrollTop {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.3);
+            text-align: center;
+            line-height: 40px;
+            z-index: 100000;
+        }
+        /* layout */
+        #contents {}
+        #section1 {
+            height: 10000px;
+            background: #dbdbdb;
+        }
+        #section2 {}
+        #section3 {}
+        #section4 {}
+        #section5 {}
+        #section6 {}
+
+        /* sec1 */
+        .sec1_text1 {
+            font-size: 7vw;
+            white-space: nowrap;
+            background: #E95C43;
+            color: #fff;
+            padding: 0 0.5vw;
+        }
+        .sec1_text2 {
+            font-size: 5vw;
+            white-space: nowrap;
+            background: #E95C43;
+            color: #fff;
+            padding: 0 0.5vw;
+        }
+        .sec1_text3 {
+            width: 100%;
+            height: 100vh;
+            background: url(https://images.unsplash.com/photo-1605241841795-c6cfde126135?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+            background-size: cover;
+            background-position: center;
+        }
+        .sec1_text4 {
+            width: 30vw;
+            height: 30vw;
+            border-radius: 50%;
+            background: rgb(71, 68, 54);
+            color: rgb(228, 227, 211);
+            text-align: center;
+            padding-top: 12vw;
+            /* line-height: 25vw; */
+            font-size: 4vw;
+        }
+        .sec1_text5 {
+            background: #dbdbdb;
+            width: 100%;
+            height: 100vh;
+        }
+        .sec1_text6 {
+            width: 100%;
+            height: 100vh;
+            padding-left: 30vw;
+            padding-top: 20vw;
+        }
+        .introduce__wrap {
+            display: flex;
+            align-items: center;
+        }
+        .sec1_text6 .profile__img img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+        }
+        .sec1_text6 .introInfo__wrap {
+            padding-left: 20px;
+        }
+        .sec1_text6 h4 {
+            font-size: 1.6vw;
+            margin-bottom: 20px;
+        }
+        .sec1_text6 .desc {
+            font-size: 1vw;
+            line-height: 1.6;
+        }
+        .sec1_text6 .writer {
+            font-size: 1.5vw;
+            padding-left: 24vw;
+            font-family: 'NanumBrush';
+        }
+        .sec1_text7 {
+
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollTop">0</div>
+    <!-- //scrollTop -->
+
+    <main id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <div class="sec1_text1 fixed"
+                    data-0=     "top: 50%; opacity: 1"
+                    data-500=   "top: 30%; opacity: 0"
+                >HELLO!</div>
+                <div class="sec1_text2 fixed"
+                    data-500=   "opacity: 0; top: 70%; transform: translate(-50%, -50%) scale(1)"
+                    data-1000=  "opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1)"
+                    data-1500=  "opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(0)"
+                >WELCOME TO KDE's<br>FRONTEND PORTFOLIO</div>
+                <div class="sec1_text3 fixed"
+                    data-1300=  "opacity: 0; width: 0%;    transform: translate(-50%, -50%) rotate(180deg);"
+                    data-2300=  "opacity: 1; width: 100%;  transform: translate(-50%, -50%) rotate(0deg);"
+                >
+                </div>
+                <div class="sec1_text4 fixed"
+                    data-2000=  "transform: translate(-50%, -50%) scale(0) rotate(360deg)"
+                    data-3000=  "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                >INTRODUCE<br>MYSELF</div>
+                <div class="sec1_text5 fixed"
+                    data-3000=  "opcacity: 0;   top: -50%;   transform: translate(-50%, -50%);"
+                    data-4000=  "opcacity: 1;   top: 50%;    transform: translate(-50%, -50%);"
+                >
+                </div>
+                <div class="sec1_text6 fixed"
+                    data-3800=  "opacity: 0;   right: -50%;       top: 100%;   transform: translate(-50%, -50%) scale(0);"
+                    data-4300=  "opacity: 1;   right: 50%;       top: 50%;    transform: translate(-50%, -50%) scale(1);"
+                    data-4800=  "opacity: 1;   right: 100%;    top: 50%;    transform: translate(-50%, -50%) scale(1);"
+                >
+                    <div class="introduce__wrap fixed">
+                        <figure class="profile__img">
+                            <img src="../../assets/ico/icon.jpg" alt="프로필 이미지">
+                        </figure>
+                        <div class="introInfo__wrap">
+                            <h4>포트폴리오를 만들며…</h4>
+                            <p class="desc">
+                                어떠한 일이라도 노력하고 즐긴다면 그 결과는 빛을 발한다고 생각합니다. <br>
+                                어려움도 있었지만 배우는 즐거움도 컸고, 노력으로 극복하고자 하였습니다. <br>
+                                앞으로도 꾸준히 학습하는 개발자가 되겠습니다.
+                            </p>
+                            <p class="writer">
+                                개발자 김동언
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec1_text7 fixed"
+                    data-4600=  "opacity: 0;   right: -50%;   transform: translate(-50%, -50%);"
+                    data-5600=  "opacity: 1;   right: 50%;   transform: translate(-50%, -50%);"
+                >
+                    안뇽
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3">
+
+        </section>
+        <!-- //section3 -->
+
+        <section id="section4">
+
+        </section>
+        <!-- //section4 -->
+
+        <section id="section5">
+
+        </section>
+        <!-- //section5 -->
+
+        <section id="section6">
+
+        </section>
+        <!-- //section6 -->
+    </main>
+    <!-- //contents -->
+
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script>
+        const s = skrollr.init();
+
+        function scroll() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+
+            // document.querySelector(".sec1_text1").style.marginLeft = scrollTop + "px";
+
+            requestAnimationFrame(scroll);
+          }
+          scroll();
+    </script>
+</body>
+</html>
