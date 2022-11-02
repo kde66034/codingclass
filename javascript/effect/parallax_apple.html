@@ -26,12 +26,51 @@
             src: url(https://cdn.jsdelivr.net/gh/webfontworld/naver/NanumBrush.woff2) format('woff2');
             font-display: swap;
         }
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 500;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+            font-display: swap;
+        } 
+        @font-face {
+            font-family: 'GmarketSans';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+                 url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+            font-display: swap;
+        } 
 
         * {
             font-family: 'ChosunNm';
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
         }
         .fixed {
             position: fixed;
@@ -53,7 +92,7 @@
         /* layout */
         #contents {}
         #section1 {
-            height: 10000px;
+            height: 12000px;
             background: #dbdbdb;
         }
         #section2 {}
@@ -129,10 +168,167 @@
         .sec1_text6 .writer {
             font-size: 1.5vw;
             padding-left: 24vw;
-            font-family: 'NanumBrush';
+            font-family: "NanumBrush";
         }
-        .sec1_text7 {
-
+        .sec1_text7, 
+        .sec1_text8,
+        .sec1_text9,
+        .sec1_text10,
+        .sec1_text11 {
+            width: 100%;
+            height: 100vh;
+            padding-top: 15vw;
+        }
+        .sec1_text7 .card__wrap, 
+        .sec1_text8 .card__wrap,
+        .sec1_text9 .card__wrap,
+        .sec1_text10 .card__wrap,
+        .sec1_text11 .card__wrap {
+            width: 60%;
+            margin: 0 auto;
+            padding-top: 20px;
+            border: 1px solid #000;
+        }
+        .sec1_text7 .card__title, 
+        .sec1_text8 .card__title,
+        .sec1_text9 .card__title,
+        .sec1_text10 .card__title,
+        .sec1_text11 .card__title {
+            border-bottom: 1px solid #000;
+            font-size: 2vw;
+            padding-left: 20px;
+            padding-bottom: 20px;
+            font-family: 'GmarketSans';
+            font-weight: 700;
+            /* font-size: 2.5vw; */
+            -webkit-text-stroke-color: #000;
+            -webkit-text-stroke-width: 0.02em;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            background-repeat: no-repeat;
+            /* position: relative; */
+            transition: background-color 0.3s ease;
+        }
+        .sec1_text7 .card__title:hover, 
+        .sec1_text8 .card__title:hover,
+        .sec1_text9 .card__title:hover,
+        .sec1_text10 .card__title:hover,
+        .sec1_text11 .card__title:hover {
+            background-color: #E95C43;
+        }
+        .sec1_text7 .cardInfo, 
+        .sec1_text8 .cardInfo,
+        .sec1_text9 .cardInfo,
+        .sec1_text10 .cardInfo,
+        .sec1_text11 .cardInfo {
+            display: flex;
+            padding: 20px;
+        }
+        .sec1_text7 .card__desc, 
+        .sec1_text8 .card__desc,
+        .sec1_text9 .card__desc,
+        .sec1_text10 .card__desc,
+        .sec1_text11 .card__desc {
+            width: 70%;
+            line-height: 1.6;
+            font-size: 1vw;
+        }
+        .sec1_text7 .card__img {
+            width: 30%;
+            border: 1px solid #999;
+            height: 200px;
+            background: url(https://images.unsplash.com/photo-1483366774565-c783b9f70e2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+            background-size: cover;
+            background-position: center;
+        }
+        .sec1_text8 .card__img {
+            width: 30%;
+            border: 1px solid #999;
+            height: 200px;
+            background: url(https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+            background-size: cover;
+            background-position: center;
+        }
+        .sec1_text9 .card__img {
+            width: 30%;
+            border: 1px solid #999;
+            height: 200px;
+            background: url(https://images.unsplash.com/photo-1523217582562-09d0def993a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80);
+            background-size: cover;
+            background-position: center;
+        }
+        .sec1_text10 .card__img {
+            width: 30%;
+            border: 1px solid #999;
+            height: 200px;
+            background: url(https://images.unsplash.com/photo-1663924633656-e5ab87a4eddd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+            background-size: cover;
+            background-position: center;
+        }
+        .sec1_text11 .card__img {
+            width: 30%;
+            border: 1px solid #999;
+            height: 200px;
+            background: url(https://images.unsplash.com/photo-1653843752091-7f54b74656d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80);
+            background-size: cover;
+            background-position: center;
+        }
+        .sec1_text7 .card__btn, 
+        .sec1_text8 .card__btn,
+        .sec1_text9 .card__btn,
+        .sec1_text10 .card__btn,
+        .sec1_text11 .card__btn {
+            display: inline-block;
+            text-align: center;
+            font-size: 18px;
+            padding: 7px 15px;
+            background: #E95C43;
+            color: #fff;
+            border-radius: 20px;
+            margin-top: 150px;
+            margin-left: 20px;
+        }
+        .sec1_text12 {
+            font-size: 5vw;
+            white-space: nowrap;
+            background: #E95C43;
+            color: #fff;
+            padding: 0 0.5vw;
+        }
+        .sec1_text13 {
+            width: 100%;
+            height: 100vh;
+            background: url(https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+            background-size: cover;
+            background-position: center;
+            filter: brightness(75%);
+        }
+        .sec1_text14 h3 {
+            display: inline-block;
+            font-size: 1.8vw;
+            white-space: nowrap;
+            background: #E95C43;
+            color: #fff;
+            padding: 0 0.5vw;
+            margin-bottom: 20px;
+        }
+        .sec1_text14 p, .sec1_text14 ul {
+            margin-bottom: 40px;
+        }
+        .sec1_text14 ul li {
+            line-height: 1.6;
+            font-size: 1vw;
+            color: #fff;
+        }
+        .sec1_text15 {
+            width: 50vw;
+            height: 50vw;
+            border-radius: 50%;
+            background: rgb(71, 68, 54);
+            color: rgb(228, 227, 211);
+            text-align: center;
+            line-height: 50vw;
+            font-size: 6vw;
         }
     </style>
 </head>
@@ -160,16 +356,16 @@
                 <div class="sec1_text4 fixed"
                     data-2000=  "transform: translate(-50%, -50%) scale(0) rotate(360deg)"
                     data-3000=  "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
-                >INTRODUCE<br>MYSELF</div>
+                >INTRODUCE<br>PORTFOLIO</div>
                 <div class="sec1_text5 fixed"
                     data-3000=  "opcacity: 0;   top: -50%;   transform: translate(-50%, -50%);"
                     data-4000=  "opcacity: 1;   top: 50%;    transform: translate(-50%, -50%);"
                 >
                 </div>
                 <div class="sec1_text6 fixed"
-                    data-3800=  "opacity: 0;   right: -50%;       top: 100%;   transform: translate(-50%, -50%) scale(0);"
-                    data-4300=  "opacity: 1;   right: 50%;       top: 50%;    transform: translate(-50%, -50%) scale(1);"
-                    data-4800=  "opacity: 1;   right: 100%;    top: 50%;    transform: translate(-50%, -50%) scale(1);"
+                    data-3800=  "opacity: 0;   left: 50%;    top: 100%;   transform: translate(-50%, -50%) scale(0);"
+                    data-4300=  "opacity: 1;   left: 50%;     top: 50%;    transform: translate(-50%, -50%) scale(1);"
+                    data-4800=  "opacity: 1;   left: 120%;    top: 50%;    transform: translate(-50%, -50%) scale(1);"
                 >
                     <div class="introduce__wrap fixed">
                         <figure class="profile__img">
@@ -189,11 +385,137 @@
                     </div>
                 </div>
                 <div class="sec1_text7 fixed"
-                    data-4600=  "opacity: 0;   right: -50%;   transform: translate(-50%, -50%);"
-                    data-5600=  "opacity: 1;   right: 50%;   transform: translate(-50%, -50%);"
+                    data-4400=  "opacity: 0;   left: -50%;   transform: translate(-50%, -50%);"
+                    data-4900=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
+                    data-5400=  "opacity: 0;   left: 150%;   transform: translate(-50%, -50%);"
                 >
-                    안뇽
+                    <div class="card__wrap">
+                        <a href="https://github.com/kde66034" target="_blank"><div class="card__title">01. MY GITHUB</div></a>
+                        <div class="cardInfo">
+                            <p class="card__desc">
+                                저의 JavaScript, HTML, CSS, Effect 포트폴리오 작업물이 모두 담긴 Github 입니다.<br>
+                                index 페이지에 가시면 모든 작업물로 갈 수 있는 링크들이 준비되어 있습니다. <br>
+                                약 6개월간 열심히 만든 저의 작업물을 부디 봐주셨으면 좋겠어요!<br>
+                            </p>
+                            <div class="card__img"><a href="https://github.com/kde66034" target="_blank"><div class="card__btn">보러가기</div></a></div>
+                        </div>
+                    </div>
                 </div>
+                <div class="sec1_text8 fixed"
+                    data-5200=  "opacity: 0;   left: -50%;   transform: translate(-50%, -50%);"
+                    data-5700=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
+                    data-6200=  "opacity: 0;   left: 150%;   transform: translate(-50%, -50%);"
+                >
+                    <div class="card__wrap">
+                        <a href="https://kde66034.tistory.com/" target="_blank"><div class="card__title">02. MY BLOG</div></a>
+                        <div class="cardInfo">
+                            <p class="card__desc">
+                                그동안 배웠던 JavaScript 문법이나 작업물을 만드는 과정과 노하우 등이 담긴 티스토리 블로그입니다.
+                                카테고리는 JavaScript, 알고리즘, HTML, CSS, jQuery, MySQL, VSCode, Layout, Effect, Site, Illust, UX로
+                                총 12가지이며 스킨 디자인은 티스토리에서 제공하는 기본 북클럽 스킨을 저의 입맛에 맞게 심플하게 리디자인했습니다.<br>
+                            </p>
+                            <div class="card__img"><a href="https://kde66034.tistory.com/" target="_blank"><div class="card__btn">보러가기</div></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec1_text9 fixed"
+                    data-6000=  "opacity: 0;   left: -50%;   transform: translate(-50%, -50%);"
+                    data-6500=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
+                    data-7000=  "opacity: 0;   left: 150%;   transform: translate(-50%, -50%);"
+                >
+                    <div class="card__wrap">
+                        <a href="http://kde66034.dothome.co.kr/javascript/index.html" target="_blank"><div class="card__title">03. JS REFERENCE BOOK</div></a>
+                        <div class="cardInfo">
+                            <p class="card__desc">
+                                그동안 공부했던 JavaScript 데이터 저장, 데이터 불러오기, 데이터 실행, 데이터 제어하기 문법과
+                                문자열, 배열, 수학, 숫자, 브라우저, 요소, 이벤트 객체 문법을 상세히 정리해둔 JS 레퍼런스 북입니다. 
+                                검색, 퀴즈, 데이터, 마우스, 슬라이드, 패럴랙스, 게임 효과도 확인해 보실 수 있습니다. 
+                            </p>
+                            <div class="card__img"><a href="http://kde66034.dothome.co.kr/javascript/index.html" target="_blank"><div class="card__btn">보러가기</div></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec1_text10 fixed"
+                    data-6800=  "opacity: 0;   left: -50%;   transform: translate(-50%, -50%);"
+                    data-7300=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
+                    data-7800=  "opacity: 0;   left: 150%;   transform: translate(-50%, -50%);"
+                >
+                    <div class="card__wrap">
+                        <a href="http://kde66034.dothome.co.kr/html/alphabet.html" target="_blank"><div class="card__title">04. HTML REFERENCE BOOK</div></a>
+                        <div class="cardInfo">
+                            <p class="card__desc">
+                                그동안 공부했던 HTML 태그 총 134개의 속성명과 설명, 중요도를 정리한 레퍼런스 북입니다. 
+                                이 레퍼런스 북을 통해서 가장 중요한 HTML 태그에 어떠한 것들이 있으며, 어떠한 용도로 쓰이는지, 
+                                그리고 현재 쓰이지 않는 중요도가 떨어지는 속성들을 알 수 있습니다.
+                            </p>
+                            <div class="card__img"><a href="http://kde66034.dothome.co.kr/html/alphabet.html" target="_blank"><div class="card__btn">보러가기</div></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec1_text11 fixed"
+                    data-7600=  "opacity: 0;   left: -50%;   transform: translate(-50%, -50%);"
+                    data-8100=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
+                    data-8600=  "opacity: 0;   left: 150%;   transform: translate(-50%, -50%);"
+                >
+                    <div class="card__wrap">
+                        <a href="http://kde66034.dothome.co.kr/css/index.html" target="_blank"><div class="card__title">05. CSS REFERENCE BOOK</div></a>
+                        <div class="cardInfo">
+                            <p class="card__desc">
+                                그동안 공부했던 CSS 속성 총 386개의 속성명과 설명, 중요도를 정리한 레퍼런스 북입니다. 
+                                이 레퍼런스 북을 통해서 가장 중요한 CSS 속성에는 어떠한 것들이 있으며, 어떠한 용도로 쓰이는지, 
+                                그리고 현재 쓰이지 않는 중요도가 떨어지는 속성들을 알 수 있습니다.
+                            </p>
+                            <div class="card__img"><a href="http://kde66034.dothome.co.kr/css/index.html" target="_blank"><div class="card__btn">보러가기</div></a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec1_text12 fixed"
+                    data-8400=  "opacity: 0; top: 70%; transform: translate(-50%, -50%) scale(1)"
+                    data-8900=  "opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1)"
+                    data-9400=  "opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(0)"
+                >
+                    INTRODUCE MYSELF
+                </div>
+                <div class="sec1_text13 fixed"
+                    data-9200=  "opacity: 0; width: 0%;    transform: translate(-50%, -50%) rotate(180deg);"
+                    data-10200=  "opacity: 1; width: 100%;  transform: translate(-50%, -50%) rotate(0deg);"
+                >
+                </div>
+                <div class="sec1_text14 fixed"
+                    data-10000=  "opacity: 0; top: 70%; transform: translate(-50%, -50%) scale(1)"
+                    data-11000=  "opacity: 1; top: 50%; transform: translate(-50%, -50%) scale(1)"
+                >
+                    <h3>#01. TECHNOLOGY STACK</h3>
+                    <p>
+                        <a href="#"><img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=JavaScript&logoColor=white"></a>
+                        <a href="#"><img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?logo=HTML5&logoColor=white"></a>
+                        <a href="#"><img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?logo=CSS3&logoColor=white"></a>
+                        <a href="#"><img alt="PHP" src="https://img.shields.io/badge/PHP-777BB4?logo=PHP&logoColor=white"></a>
+                        <a href="#"><img alt="Node.js" src="https://img.shields.io/badge/Node.js-339933?logo=Node.js&logoColor=white"></a>
+                        <a href="#"><img alt="jQuery" src="https://img.shields.io/badge/jQuery-0769AD?logo=jQuery&logoColor=white"></a>
+                        <a href="#"><img alt="Vue.js" src="https://img.shields.io/badge/Vue.js-4FC08D?logo=Vue.js&logoColor=white"></a>
+                        <a href="#"><img alt="React" src="https://img.shields.io/badge/React-61DAFB?logo=React&logoColor=white"></a>
+                    </p>
+
+                    <h3>#02. SOFTWARE & TOOL SKILL</h3>
+                    <ul>
+                        <li>ADOBE PHOTOSHOP : 87%</li>
+                        <li>ADOBE ILLUSTRATOR : 82%</li>
+                        <li>VISUAL STUDIO CODE : 95%</li>
+                        <li>ADOBE FIGMA : 95%</li>
+                        <li>CODEPEN : 90%</li>
+                    </ul>
+
+                    <h3>#03. CONTACT</h3>
+                    <ul>
+                        <li>PHONE : 010-0000-0000</li>
+                        <li>EMAIL : kde66034@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="sec1_text15 fixed"
+                    data-10800=  "transform: translate(-50%, -50%) scale(0) rotate(360deg)"
+                    data-11800=  "transform: translate(-50%, -50%) scale(1) rotate(0deg)"
+                >THANK YOU:)</div>
             </div>
         </section>
         <!-- //section1 -->
@@ -237,8 +559,8 @@
             // document.querySelector(".sec1_text1").style.marginLeft = scrollTop + "px";
 
             requestAnimationFrame(scroll);
-          }
-          scroll();
+        }
+        scroll();
     </script>
 </body>
 </html>
