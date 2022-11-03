@@ -28,37 +28,41 @@
     background: #c4c4c4;
     width: 100%;
 }
+
+.volume__wrap {
+    padding-bottom: 15px;
+}
 .music__contents .volume_icon {
     position: absolute;
     top: 40px;
-    right: 170px;
+    left: 30px;
 }
 .music__contents .volumeOff_icon {
     display: none;
     position: absolute;
     top: 40px;
-    right: 170px;
+    left: 30px;
 }
 .music__contents .volume_icon.hide {
     display: none;
     position: absolute;
     top: 40px;
-    right: 170px;
+    left: 30px;
 }
 .music__contents .volumeOff_icon.show {
     display: block;
     position: absolute;
     top: 40px;
-    right: 170px;
+    left: 30px;
 }
 .music__contents .volume_bar {
     position: absolute;
-    right: 25px;
+    left: 70px;
     top: 40px;
 }
 .music__view {
     display: flex;
-    padding: 20px;
+    padding: 0 20px 20px 20px;
 }
 .music__view .img {
     width: 30%;
@@ -192,6 +196,20 @@
     width: 24px;
     height: 24px;
 }
+
+.music__closeBtn {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-right: 20px;
+}
+.music__closeBtn .close-btn {
+    background: url(../img/musicListClose-btn.svg);
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
 .music__list ul {
     max-height: 200px;
     overflow-y: scroll;

@@ -77,6 +77,7 @@ const musicRepeat = musicWrap.querySelector("#control-repeat");
 const musicListBtn = musicWrap.querySelector("#control-list");
 const musicList = musicWrap.querySelector(".music__list");
 const musicListUl = musicList.querySelector(".music__list ul");
+const musicWrapClose = musicWrap.querySelector("#musicWrap-close");
 
 const btnPlay = document.querySelector("#control-play");
 const btnStop = document.querySelector("#control-stop");
@@ -336,4 +337,12 @@ audioVolume.addEventListener("change", function (e) {
         volumeIcon.classList.remove("hide");
         volumeOffIcon.classList.remove("show");
     }
+});
+
+// 뮤직 플레이어 닫기
+musicWrapClose.addEventListener("click", () => {
+    musicWrap.classList.remove("show");
+    pauseMusic();
+    btnStop.style.display = "none";
+    btnPlay.style.display = "block";
 });

@@ -46,6 +46,19 @@ li {
     margin-bottom: 10px;
 }
 
+.search__closeBtn {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.search__closeBtn .close-btn {
+    background: url(../img/musicListClose-btn.svg);
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
 .search__wrap.show {
     display: block;
     width: 1300px;

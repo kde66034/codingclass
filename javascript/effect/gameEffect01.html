@@ -96,6 +96,11 @@
             <p class="search__headerTitle">SEARCH GAME</p>
             <div>***</div>
         </div>
+
+        <div class="search__closeBtn">
+            <span class="close-btn" id="searchWrap-close"></span>
+        </div>
+
         <div class="search__audio">
             <span class="play">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -117,6 +122,7 @@
 
         <span>CSS 속성 검색 이벤트</span>
         <h2>2분 동안 CSS 속성 검색하기</h2>
+        
         <div class="time">
             <span>2:00</span>
         </div>
@@ -483,6 +489,9 @@
                     <div>***</div>
                 </div>
                 <div class="music__contents">
+                    <div class="music__closeBtn">
+                        <span class="close-btn" id="musicWrap-close"></span>
+                    </div>
                     <div class="volume__wrap">
                         <img class="volume_icon" src="../assets/img/volume.svg" alt="볼륨" />
                         <img class="volumeOff_icon" src="../assets/img/volumeoff.svg" alt="볼륨" />
@@ -782,6 +791,14 @@
             document.querySelector(".memory__wrap").classList.remove("show");
         });
 
+        // 서치 게임 닫기
+        document.querySelector("#searchWrap-close").addEventListener("click", () => {
+            document.querySelector(".search__wrap").classList.remove("show");
+            searchAudio.pause();
+            searchAudioPlay.style.display = "none";
+            searchAudioStop.style.display = "block";
+        });
+
         // 메모리 게임 열기/닫기
         document.querySelector(".icon_box .icon3").addEventListener("click", () => {
             document.querySelector(".memory__wrap").classList.toggle("show");
@@ -804,6 +821,15 @@
         modalBtn.addEventListener("click", () => {
             modalCont.classList.add("show");
             modalCont.classList.remove("hide");
+            document.querySelector(".search__wrap").classList.remove("show");
+            searchAudio.pause();
+            searchAudioPlay.style.display = "none";
+            searchAudioStop.style.display = "block";
+            document.querySelector(".music__wrap").classList.remove("show");
+            pauseMusic();
+            btnStop.style.display = "none";
+            btnPlay.style.display = "block";
+            document.querySelector(".memory__wrap").classList.remove("show");
         });
         modalClose.addEventListener("click", () => {
             modalCont.classList.add("hide");
