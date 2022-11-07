@@ -12,7 +12,7 @@
     background: #000;
     position: absolute;
     left: 550px;
-    top: 35px;
+    top: 20px;
     animation: flicker 0.5s infinite alternate;
 }
 .memory__header {
