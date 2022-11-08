@@ -121,7 +121,8 @@ li {
 .search__wrap .time span {
     color: #fff;
     font-size: 34px;
-    font-weight: 100;
+    line-height: 140px;
+    text-align: center;
 }
 .search__box {
     margin-bottom: 20px;
@@ -307,7 +308,6 @@ li {
     margin: 3px;
 }
 .search__missAnswers {
-    border-bottom: 2px dashed var(--htmlColor);
     padding: 40px 0;
     height: 100px;
 }
