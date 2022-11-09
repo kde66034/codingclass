@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../assets/css/searchGame.css">
     <link rel="stylesheet" href="../assets/css/search_ani.css">
     <link rel="stylesheet" href="../assets/css/memory.css">
+    <link rel="stylesheet" href="../assets/css/tetrisGame.css">
 
 </head>
 
@@ -78,9 +79,9 @@
                     </div>
                     <div class="cont">
                         <div class="active t_iframe">
-                            <iframe
+                            <!-- <iframe
                                 src="https://github1s.com/kde66034/codingclass/blob/HEAD/javascript/effect/gameEffect01.html"
-                                frameborder="0"></iframe>
+                                frameborder="0"></iframe> -->
                         </div>
                     </div>
                 </div>
@@ -702,7 +703,18 @@
             </div>
         </div>
         <!-- // 메모리 게임 -->
-    </div>
+
+        <div class="tetris__wrap">
+            <div class="tetris__inner">
+                <div class="tetris__start"></div>
+                <div class="tetris__restart"></div>
+                <div class="tetris__play">
+                    <div class="playground">
+                        <ul></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     <!-- // 게임 박스 -->
 
     <!-- script -->
@@ -712,6 +724,7 @@
     <script src="../assets/js/music.js"></script>
     <script src="../assets/js/searchGame.js"></script>
     <script src="../assets/js/memory.js"></script>
+    <script src="../assets/js/tetris.js"></script>
     <script>
         $(function () {
             $(".icon0").draggable();
