@@ -62,6 +62,11 @@ const blocks = {
 // 시작하기
 function init() {
     tempMovingItem = { ...movingItem };
+
+    for(let i=0; i<rows; i++){
+        prependNewLine();
+    }
+
     prependNewLine(); //블록 라인 만들기
     // renderBlocks(); //블록 출력하기
     // moveBlock();
@@ -69,16 +74,14 @@ function init() {
 }
 // 블록 만들기
 function prependNewLine() {
-    for (let i = 0; i < rows; i++) {
-        const li = document.createElement("li");
-        const ul = document.createElement("ul");
-        for (let j = 0; j < cols; j++) {
-            const matrix = document.createElement("li");
-            ul.prepend(matrix);
-        }
-        li.prepend(ul);
-        playground.prepend(li);
+    const li = document.createElement("li");
+    const ul = document.createElement("ul");
+    for (let j = 0; j < cols; j++) {
+        const matrix = document.createElement("li");
+        ul.prepend(matrix);
     }
+    li.prepend(ul);
+    playground.prepend(li);
 }
 // 블록 출력하기
 function renderBlocks(moveType = "") {
@@ -125,6 +128,21 @@ checkMatch();
 }
 // 한 줄 제거하기
 function checkMatch(){
+    const childNodes = playground.childNodes;
+    childNodes.forEach(child => {
+        let matched = true;
+        child.children[0].childNodes.forEach(li => {
+            if(!li.classList.contains("seized")){
+                matched = false;
+            }
+        });
+
+        if(matched){
+            child.remove();
+            prependNewLine();
+            // score++;
+        }
+    });
     generateNewBlock();
 }
 //새로운 블록 만들기
