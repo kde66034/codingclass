@@ -8,6 +8,15 @@
     <title>게임 이펙트 01</title>
     <link href="https://webfontworld.github.io/DungGeunMo/DungGeunMo.css" rel="stylesheet">
 
+    <style>
+        body {
+            background-image: url("../assets/img/gameEffectBg.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
     <!-- <link rel="stylesheet" href="../assets/css/bg.css"> -->
     <link rel="stylesheet" href="../assets/css/game.css">
     <link rel="stylesheet" href="../assets/css/music.css">
@@ -707,13 +716,62 @@
         <div class="tetris__wrap">
             <div class="tetris__inner">
                 <div class="tetris__header">
-                    <h2>🕹️ 테트리스 게임 🕹️</h2>
+                    <h2>*** TETRIS GAME ***</h2>
                 </div>
+                <div class="tetris__start show">
+                    <div class="desc">
+                        <div class="tetris__desc__title">SCORE RULES</div>
+                        <div class="tetris__desc__desc">
+                            버틴시간(초) x 1점<br>
+                            +<br>
+                            삭제한 줄 갯수 x 5점
+                        </div>
+                        <div class="tetris__desc__title">조작법</div>
+                        <div class="tetris__desc__desc">
+                            ← → ↓ : 이동<br>
+                            ↑ : 회전<br>
+                            space : 빠르게 내리기
+                        </div>
+                    </div>
+                    <div class="start__btn">START!</div>
+                </div>
+
+                <div class="tetris__restart">
+                    <img src="../assets/img/neonBird.gif" alt="춤추는 앵무새 움직이는 이미지">
+                    <div class="desc">GAME OVER</div>
+                    <div class="tetris__total">
+                        <div class="time"><span>0</span> 초</div>
+                        <div class="line"><span>0</span> 줄</div>
+                    </div>
+                    <div class="tetris__score"><span>0</span> 점</div>
+                    <div class="restart__btn">RESTART !</div>
+                </div>
+
+                <div class="tetris__play">
+                    <img class="neonImg01" src="../assets/img/neonPlant01.png" alt="네온 식물 이미지1">
+                    <img class="neonImg02" src="../assets/img/neonPlant02.png" alt="네온 식물 이미지2">
+                    <img class="neonImg03" src="../assets/img/neonPlant03.png" alt="네온 식물 이미지3">
+                    <img class="neonImg04" src="../assets/img/neonPlant04.png" alt="네온 식물 이미지4">
+                    <img class="neonImg05" src="../assets/img/neonPlant05.png" alt="네온 식물 이미지5">
+                    <div class="playground">
+                        <ul></ul>
+                    </div>
+                </div>
+                <div class="tetris__info">
+                    <div class="tit">TIME :</div>
+                    <div class="time"><span>0</span> 초</div>
+                    <div class="tit">LINE :</div>
+                    <div class="line"><span>0</span> 줄</div>
+                </div>
+                <div class="tetris__gif">
+                    <img src="../assets/img/dance.gif" alt="춤추는 사람의 움직이는 이미지">
+                </div>
+
+
                 <div class="tetris__totalstart">
                     <p class="tetris__score">점수 : <span>0</span>/100</p>
                     <div class="tetris__StartCloseBtn">
-                        <div class="tetris__start">PLAY</div>
-                        <div class="tetris__restart"></div>
+                        <div class="tetris__restart">PLAY</div>
                         <div class="tetris__close">CLOSE</div>
                     </div>
                 </div>
@@ -722,6 +780,7 @@
                         <ul></ul>
                     </div>
                 </div>
+                <div class="tetris__close__btn"></div>
             </div>
         </div>
     <!-- // 게임 박스 -->
@@ -745,6 +804,7 @@
             $(".music__wrap").draggable();
             $(".search__wrap").draggable();
             $(".memory__wrap").draggable();
+            $(".tetris__wrap").draggable();
         });
 
         function printTime() {

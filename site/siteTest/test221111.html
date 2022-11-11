@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인기능사 221111</title>
+
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #666;
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        .clearfix::before,
+        .clearfix::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        /* wrap */
+        #wrap {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* headerType */
+        .header__inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+        }
+        .header__logo {
+            color: #B36A67;
+            font-size: 34px;
+            font-weight: bold;
+        }
+        .header__menu {
+            display: flex;
+            justify-content: space-between;
+        }
+        .header__menu li {
+            padding: 0 40px;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .header__menu li:last-child {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-right: 0;
+            padding-left: 40px;
+        }
+
+        /* sliderType */
+        #sliderType {
+            width: 1000px;
+            height: 378px;
+            overflow: hidden;
+        }
+        #sliderType img {
+            width: 100%;
+        }
+
+        .slideList {
+            position: relative;
+        }
+
+        .slideList .slideImg {
+            position: relative;
+        }
+
+        .slideList .slideImg h2 {
+            position: absolute;
+            left: 120px;
+            top: 40px;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 10px 30px;
+            color: #000;
+        }
+
+        .slideList .slideImg img {
+            display: block;
+        }
+
+        /* contentsType */
+        .contents__wrap {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1000px;
+        }
+        .tab__menu {
+            display: flex;
+        }
+        .tab__menu a {
+            padding: 10px;
+        }
+        .tab__menu a.active {
+            background: #FDF5F5;
+        }
+        .tab__menu a h3 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .noticeBoard {
+            width: 34%;
+        }
+        .board__wrap, .gallery__wrap {
+            padding: 10px;
+            background: #FDF5F5;
+            display: flex;
+            /* width: 300px; */
+        }
+        .gallery__wrap, .board__wrap.remove {
+            display: none;
+        }
+        .gallery__wrap.view {
+            padding: 10px;
+            background: #FDF5F5;
+            display: flex;
+            /* width: 300px; */
+        }
+
+        .board__title {
+            width: 70%;
+            line-height: 2;
+        }
+        .board__date {
+            width: 30%;
+            line-height: 2;
+        }
+
+        .banner__wrap {
+            width: 33%;
+            position: relative;
+        }
+        .banner__wrap .banner__img {
+            /* width: 300px; */
+            height: 197px;
+            background-image: url("assets/img/banner.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        .banner__text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 10px 30px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        .barogagi__wrap {
+            width: 33%;
+            position: relative;
+        }
+        .barogagi__wrap .barogagi__img {
+            /* width: 300px; */
+            height: 197px;
+            background-image: url("assets/img/barogagi.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .barogagi__text {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            padding: 10px 30px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        /* footerType */
+        .footer__inner {
+            background: #EEEEEE;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 10px;
+        }
+        .social__wrap {
+            display: flex;
+        }
+        .social__wrap img {
+            width: 24px;
+            height: 24px;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <section id="headerType">
+            <div class="header__inner">
+                <a href="#"><h1 class="header__logo">JUST 쇼핑몰</h1></a>
+                <ul class="header__menu">
+                    <li><a href="#">탑</a></li>
+                    <li><a href="#">아우터</a></li>
+                    <li><a href="#">팬츠</a></li>
+                    <li><a href="#">악세서리</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- //headerType -->
+    
+        <header id="sliderType">
+            <div class="slideList">
+                <div class="slideImg">
+                    <h2>슬라이드내용1</h2>
+                    <img src="assets/img/slider_img.jpg" alt="슬라이드내용1">
+                </div>
+                <div class="slideImg">
+                    <h2>슬라이드내용2</h2>
+                    <img src="assets/img/slider_img.jpg" alt="슬라이드내용2">
+                </div>
+                <div class="slideImg">
+                    <h2>슬라이드내용3</h2>
+                    <img src="assets/img/slider_img.jpg" alt="슬라이드내용3">
+                </div>
+            </div>
+        </header>
+        <!-- //sliderType -->
+    
+        <section id="contentsType">
+            <div class="contents__wrap">
+                <div class="noticeBoard">
+                    <div class="tab__menu">
+                        <a href="#" class="active" id="NoticeBoardBtn"><h3>공지사항</h3></a>
+                        <a href="#" id="GalleryBoardBtn"><h3>갤러리</h3></a>
+                    </div>
+                    <div class="board__wrap">
+                        <ul class="board__title">
+                            <li>공지사항입니다.</li>
+                            <li>공지사항입니다.</li>
+                            <li>공지사항입니다.</li>
+                            <li>공지사항입니다.</li>
+                        </ul>
+                        <ul class="board__date">
+                            <li>2022-11-11</li>
+                            <li>2022-11-11</li>
+                            <li>2022-11-11</li>
+                            <li>2022-11-11</li>
+                        </ul>
+                    </div>
+                    <div class="gallery__wrap">
+                        <ul class="board__title">
+                            <li>갤러리 입니다.</li>
+                            <li>갤러리 입니다.</li>
+                            <li>갤러리 입니다.</li>
+                            <li>갤러리 입니다.</li>
+                        </ul>
+                        <ul class="board__date">
+                            <li>2022-11-11</li>
+                            <li>2022-11-11</li>
+                            <li>2022-11-11</li>
+                            <li>2022-11-11</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="banner__wrap">
+                    <div class="banner__img">
+                        <!-- <img src="assets/img/banner.jpg" alt="배너"> -->
+                    </div>
+                    <div class="banner__text">
+                        <a href="#"><p>배너</p></a>
+                    </div>
+                </div>
+                <!-- //bannerType -->
+
+                <div class="barogagi__wrap">
+                    <div class="barogagi__img">
+                        <!-- <img src="assets/img/barogagi.jpg" alt="바로가기"> -->
+                    </div>
+                    <div class="barogagi__text">
+                        <a href="#"><p>바로가기</p></a>
+                    </div>
+                </div>
+                <!-- //barogagi -->
+            </div>
+        </section>
+        <!-- //contentsType -->
+    
+        <footer id="footerType">
+            <div class="footer__inner">
+                <a href="#"><h1 class="footer__logo">JUST 쇼핑몰</h1></a>
+
+                <div class="copyright">
+                    <p>Copyright All rights reserved JUST 쇼핑몰</p>
+                </div>
+
+                <div class="social__wrap">
+                    <div class="social__img">
+                        <img src="assets/img/facebook.png" alt="facebook">
+                    </div>
+                    <div class="social__img">
+                        <img src="assets/img/instagram.png" alt="instagram">
+                    </div>
+                    <div class="social__img">
+                        <img src="assets/img/twitter.png" alt="twitter">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footerType -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        // 이미지 슬라이드
+        var currentIndex = 0;       //현재 이미지를 변수에 저장
+
+        setInterval(function () {
+            if (currentIndex < 2) {
+                currentIndex++
+            } else {
+                currentIndex = 0;
+            }
+            var slidePosition = currentIndex * (-670) + "px";
+        
+            //console.log(slidePosition);
+            $(".slideList").animate({ top: slidePosition }, 400);
+        }, 3000);
+
+        //탭메뉴
+        const NoticeBoardBtn = document.querySelector("#NoticeBoardBtn");
+        const GalleryBoardBtn = document.querySelector("#GalleryBoardBtn");
+        const NoticeWrap = document.querySelector(".board__wrap");
+        const GalleryWrap = document.querySelector(".gallery__wrap");
+
+        // 갤러리 버튼 눌렀을 때
+        GalleryBoardBtn.addEventListener("click", () => {
+            NoticeBoardBtn.classList.remove("active");
+            GalleryBoardBtn.classList.add("active");
+            GalleryWrap.classList.add("view");
+            NoticeWrap.classList.add("remove");
+        });
+
+        // 공지사항 버튼 눌렀을 때
+        NoticeBoardBtn.addEventListener("click", () => {
+            NoticeBoardBtn.classList.add("active");
+            GalleryBoardBtn.classList.remove("active");
+            NoticeWrap.classList.remove("remove");
+            GalleryWrap.classList.remove("view");
+        });
+
+        // tabMenu.find("ul > li > ul").hide();
+        // tabMenu.find("ul > li.active > ul").show();
+
+        // function tabList(e) {
+        //     e.preventDefault();
+        //     var target = $(this);
+        //     target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
+        // };
+
+        // tabMenu.find("ul > li > a").click(tabList).focus(tabList);
+    </script>
+</body>
+</html>

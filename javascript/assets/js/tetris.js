@@ -1,7 +1,16 @@
 const tetrisWrap = document.querySelector(".tetris__wrap");
 const playground = tetrisWrap.querySelector(".playground > ul");
 const tetrisStart = tetrisWrap.querySelector(".tetris__start");
-const tetrisClose = tetrisWrap.querySelector(".tetris__close");
+const startBtn = tetrisWrap.querySelector(".start__btn");
+const tetrisRestart = tetrisWrap.querySelector(".tetris__restart");
+const restartBtn = tetrisWrap.querySelector(".restart__btn");
+const resultTime = tetrisWrap.querySelector(".tetris__total .time span");
+const resultLine = tetrisWrap.querySelector(".tetris__total .line span");
+const resultScore = tetrisWrap.querySelector(".tetris__score span");
+const tetrisInfo = tetrisWrap.querySelector(".tetris__info");
+const tetrisIcon2 = document.querySelector(".icon4");
+const tetrisCloseBtn = document.querySelector(".tetris__close__btn");
+const tetrisGif = document.querySelector(".tetris__gif");
 
 // 음악
 let tetrisMusic = new Audio("../assets/audio/RetroGamer.mp3");
@@ -16,17 +25,16 @@ let tetrisScore = 0;
 let duration = 500;
 let downInterval;
 let tempMovingItem;
-
 let tetrisTime = 0;
 let stopTetris = false;
 let setTetrisTime;
 
 // 블록 정보
 const movingItem = {
-    type: "Imino",
+    type: "Tmino",
     direction: 0, //블록 모양
     top: 0,
-    left: 5,
+    left: 6,
 };
 // 블록 좌표값
 const blocks = {
@@ -185,18 +193,19 @@ function checkMatch(){
             if (!li.classList.contains("seized")) {
                 matched = false;
             }
-        })
+        });
+        
+        // match가 true인 경우, 꽉 채운 해당 줄을 삭제하고, 새로 한 줄을 추가합니다.
+        if (matched) {
+            tetrisMatchMusic.play();
+            child.remove();     // 줄 삭제
+            prependNewLine();   // 줄 생성
+            tetrisScore++;
+            document.querySelector(".tetris__info .line span").innerText =
+            tetrisScore;
+        };
     });
 
-    // match가 true인 경우, 꽉 채운 해당 줄을 삭제하고, 새로 한 줄을 추가합니다.
-    if (matched) {
-        tetrisMatchMusic.play();
-        child.remove();     // 줄 삭제
-        prependNewLine();   // 줄 생성
-        tetrisScore++;
-        document.querySelector(".tetris__info .line span").innerText =
-        tetrisScore;
-    };
 
     // 새로운 블록을 생성합니다.
     generateNewBlock();
@@ -238,7 +247,7 @@ function moveBlock(moveType, amount) {
 // 모양 바꾸기
 function changeDirection() {
     const direction = tempMovingItem.direction;
-    direction === 3 ? tempMovingItem.direction=0 : tempMovingItem.direction += 1;
+    direction === 3 ? (tempMovingItem.direction=0) : (tempMovingItem.direction += 1);
     renderBlocks();
 }
 
@@ -322,4 +331,30 @@ document.addEventListener("keydown", (e) => {
             break;
     }
 });
+
+// 클릭 이벤트
+// 게임 시작하기
+startBtn.addEventListener("click", () => {
+    tetrisStartFunc();
+});
+// 게임 재시작하기
+restartBtn.addEventListener("click", () => {
+    resetTetris();
+    tetrisRestart.classList.remove("show");
+    tetrisStart.classList.add("show");
+});
+// 창 끄기
+tetrisIcon2.addEventListener("click", () => {
+    resetTetris();
+    tetrisRestart.classList.remove("show");
+    tetrisStart.classList.add("show");
+})
+tetrisCloseBtn.addEventListener("click", () => {
+    resetTetris();
+    tetrisRestart.classList.remove("show");
+    tetrisStart.classList.add("show");
+})
+
+// 테트리스 만들기
 init();
+
