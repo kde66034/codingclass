@@ -14,7 +14,7 @@ const tetrisGif = document.querySelector(".tetris__gif");
 
 // 음악
 let tetrisMusic = new Audio("../assets/audio/RetroGamer.mp3");
-let tetrisMatchMusic = new Audio("../assets/audio/match2.mp3");
+let tetrisMatchMusic = new Audio("../assets/audio/match.mp3");
 let tetrisEndMusic = new Audio("../assets/audio/up.mp3");
 
 // variables

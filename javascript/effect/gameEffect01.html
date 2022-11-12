@@ -17,7 +17,6 @@
         }
     </style>
 
-    <!-- <link rel="stylesheet" href="../assets/css/bg.css"> -->
     <link rel="stylesheet" href="../assets/css/game.css">
     <link rel="stylesheet" href="../assets/css/music.css">
 
@@ -720,13 +719,13 @@
                 </div>
                 <div class="tetris__start show">
                     <div class="desc">
-                        <div class="tetris__desc__title">SCORE RULES</div>
+                        <div class="tetris__desc__title">점수</div>
                         <div class="tetris__desc__desc">
                             버틴시간(초) x 1점<br>
                             +<br>
                             삭제한 줄 갯수 x 5점
                         </div>
-                        <div class="tetris__desc__title">조작법</div>
+                        <div class="tetris__desc__title">조작 방법</div>
                         <div class="tetris__desc__desc">
                             ← → ↓ : 이동<br>
                             ↑ : 회전<br>
@@ -737,7 +736,6 @@
                 </div>
 
                 <div class="tetris__restart">
-                    <img src="../assets/img/neonBird.gif" alt="춤추는 앵무새 움직이는 이미지">
                     <div class="desc">GAME OVER</div>
                     <div class="tetris__total">
                         <div class="time"><span>0</span> 초</div>
@@ -748,11 +746,11 @@
                 </div>
 
                 <div class="tetris__play">
-                    <img class="neonImg01" src="../assets/img/neonPlant01.png" alt="네온 식물 이미지1">
+                    <!-- <img class="neonImg01" src="../assets/img/neonPlant01.png" alt="네온 식물 이미지1">
                     <img class="neonImg02" src="../assets/img/neonPlant02.png" alt="네온 식물 이미지2">
                     <img class="neonImg03" src="../assets/img/neonPlant03.png" alt="네온 식물 이미지3">
                     <img class="neonImg04" src="../assets/img/neonPlant04.png" alt="네온 식물 이미지4">
-                    <img class="neonImg05" src="../assets/img/neonPlant05.png" alt="네온 식물 이미지5">
+                    <img class="neonImg05" src="../assets/img/neonPlant05.png" alt="네온 식물 이미지5"> -->
                     <div class="playground">
                         <ul></ul>
                     </div>
@@ -764,21 +762,19 @@
                     <div class="line"><span>0</span> 줄</div>
                 </div>
                 <div class="tetris__gif">
-                    <img src="../assets/img/dance.gif" alt="춤추는 사람의 움직이는 이미지">
+                    <!-- <img src="../assets/img/dance.gif" alt="춤추는 사람의 움직이는 이미지"> -->
                 </div>
 
 
-                <div class="tetris__totalstart">
+                <!-- <div class="tetris__totalstart">
                     <p class="tetris__score">점수 : <span>0</span>/100</p>
                     <div class="tetris__StartCloseBtn">
                         <div class="tetris__restart">PLAY</div>
                         <div class="tetris__close">CLOSE</div>
                     </div>
-                </div>
+                </div> -->
                 <div class="tetris__play">
-                    <div class="playground">
-                        <ul></ul>
-                    </div>
+                    <div class="playground"></div>
                 </div>
                 <div class="tetris__close__btn"></div>
             </div>
@@ -939,7 +935,6 @@
                 tabCont.forEach(div => {
                     div.style.display = "none";
                 });
-
 
                 tabCont[index].style.display = "block";
             });
