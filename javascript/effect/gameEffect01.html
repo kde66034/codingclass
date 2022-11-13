@@ -838,11 +838,15 @@
             document.querySelector(".memory__wrap").classList.remove("show");
             soundBgm.pause();
             document.querySelector(".tetris__wrap").classList.remove("show");
+            tetrisMusic.pause();
         });
 
         // 서치 게임 열기/닫기
         document.querySelector(".icon_box .icon2").addEventListener("click", () => {
             document.querySelector(".search__wrap").classList.toggle("show");
+            searchAudio.pause();
+            searchAudioPlay.style.display = "none";
+            searchAudioStop.style.display = "block";
             document.querySelector(".music__wrap").classList.remove("show");
             pauseMusic();
             btnStop.style.display = "none";
@@ -850,6 +854,7 @@
             document.querySelector(".memory__wrap").classList.remove("show");
             soundBgm.pause();
             document.querySelector(".tetris__wrap").classList.remove("show");
+            tetrisMusic.pause();
         });
 
         // 서치 게임 닫기
@@ -873,11 +878,13 @@
             searchAudioPlay.style.display = "none";
             searchAudioStop.style.display = "block";
             document.querySelector(".tetris__wrap").classList.remove("show");
+            tetrisMusic.pause();
         });
 
         // 테트리스 게임 열기/닫기
         document.querySelector(".icon_box .icon4").addEventListener("click", () => {
             document.querySelector(".tetris__wrap").classList.toggle("show");
+            tetrisMusic.pause();
             document.querySelector(".music__wrap").classList.remove("show");
             pauseMusic();
             btnStop.style.display = "none";
