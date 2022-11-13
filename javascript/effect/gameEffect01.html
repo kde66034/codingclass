@@ -10,10 +10,27 @@
 
     <style>
         body {
-            background-image: url("../assets/img/gameEffectBg.png");
+            background-image: url("../assets/img/gameEffectBg4.png");
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+        }
+
+        /* 스크롤바 */
+        ::-webkit-scrollbar {
+        	width: 8px;  /* 세로축 스크롤바 길이 */
+        	height: 8px;  /* 가로축 스크롤바 길이 */
+            border-left: 1px solid #bbb4fd;
+        }
+        ::-webkit-scrollbar-track-piece {
+        	background-color: rgba(255,255,255,0.1);	/*스크롤 바 배경 색상*/
+        }
+        ::-webkit-scrollbar-thumb {
+        	background-color: #aba2fa; /*스크롤 바 색상*/
+            
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: rgb(150, 138, 253);
         }
     </style>
 
@@ -31,7 +48,7 @@
     <div class="mouse__cursor"></div>
 
     <header id="header">
-        <h1>Coding Note's Game World</h1>
+        <h1><span>༼ つ ◕_◕ ༽つ</span> Game Effect</h1>
         <div class="time"></div>
     </header>
     <!-- // header -->
@@ -116,21 +133,21 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M11 3V4H10V5H9V6H8V7H7V8H6V9H5V10H4V11H3V13H4V14H5V15H6V16H7V17H8V18H9V19H10V20H11V21H13V3H11ZM11 16H10V15H9V14H8V13H7V11H8V10H9V9H10V8H11V16ZM16 14H17V10H16V9H15V15H16V14ZM19 6V7H20V17H19V18H15V16H17V15H18V9H17V8H15V6H19Z"
-                            fill="#000" />
+                            fill="#BBB4FD" />
                     </svg>
                 </span>
                 <span class="stop">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd"
                             d="M11 4V3H13V21H11V20H10V19H9V18H8V17H7V16H6V15H5V14H4V13H3V11H4V10H5V9H6V8H7V7H8V6H9V5H10V4H11ZM10 16H11V8H10V9H9V10H8V11H7V13H8V14H9V15H10V16ZM19 11V10H21V12H20V13H21V15H19V14H18V15H16V13H17V12H16V10H18V11H19Z"
-                            fill="#000" />
+                            fill="#BBB4FD" />
                     </svg>
                 </span>
                 <audio id="audio" src="../assets/audio/music-1.mp3" loop="loop"></audio>
                 <div class="icon"></div>
             </div>
     
-            <h2>서치 게임</h2>
+            <h2>SEARCH GAME</h2>
             <span>
                 2분 동안 CSS 속성을 많이 검색하면 점수가 올라갑니다. <br>
                 게임을 시작하시려면 [START!] 버튼을 눌러주세요.
@@ -546,7 +563,7 @@
                 </div>
                 <div class="music__footer">
                     <div class="music__list close">
-                        <h3><span class="list">뮤직 리스트</span> <span class="close-btn" id="control-close"></span></h3>
+                        <h3><span class="list">♪  뮤직 리스트</span> <span class="close-btn" id="control-close"></span></h3>
                         <ul>
                             <!-- <li>
                           <strong>제목</strong>
@@ -746,11 +763,6 @@
                 </div>
 
                 <div class="tetris__play">
-                    <!-- <img class="neonImg01" src="../assets/img/neonPlant01.png" alt="네온 식물 이미지1">
-                    <img class="neonImg02" src="../assets/img/neonPlant02.png" alt="네온 식물 이미지2">
-                    <img class="neonImg03" src="../assets/img/neonPlant03.png" alt="네온 식물 이미지3">
-                    <img class="neonImg04" src="../assets/img/neonPlant04.png" alt="네온 식물 이미지4">
-                    <img class="neonImg05" src="../assets/img/neonPlant05.png" alt="네온 식물 이미지5"> -->
                     <div class="playground">
                         <ul></ul>
                     </div>
@@ -761,18 +773,7 @@
                     <div class="tit">LINE :</div>
                     <div class="line"><span>0</span> 줄</div>
                 </div>
-                <div class="tetris__gif">
-                    <!-- <img src="../assets/img/dance.gif" alt="춤추는 사람의 움직이는 이미지"> -->
-                </div>
 
-
-                <!-- <div class="tetris__totalstart">
-                    <p class="tetris__score">점수 : <span>0</span>/100</p>
-                    <div class="tetris__StartCloseBtn">
-                        <div class="tetris__restart">PLAY</div>
-                        <div class="tetris__close">CLOSE</div>
-                    </div>
-                </div> -->
                 <div class="tetris__play">
                     <div class="playground"></div>
                 </div>
@@ -834,7 +835,7 @@
             agent.innerText = os;
 
             if (os.indexOf("window") >= 0) {
-                agent.innerText = "현재 Windows를 사용하고 있으며, 화면 크기는 " + screen.width + "x" + screen.height + "입니다.";
+                agent.innerText = "OS : Windows | Screen Size : " + screen.width + "x" + screen.height;
                 document.querySelector("body").classList.add("window");
             } else if (os.indexOf("macintosh") >= 0) {
                 agent.innerText = "현재 Mac을 사용하고 있으며, 화면 크기는 " + screen.width + "x" + screen.height + "입니다.";
@@ -862,6 +863,7 @@
             searchAudioPlay.style.display = "none";
             searchAudioStop.style.display = "block";
             document.querySelector(".memory__wrap").classList.remove("show");
+            document.querySelector(".tetris__wrap").classList.remove("show");
         });
 
         // 서치 게임 열기/닫기
@@ -872,6 +874,7 @@
             btnStop.style.display = "none";
             btnPlay.style.display = "block";
             document.querySelector(".memory__wrap").classList.remove("show");
+            document.querySelector(".tetris__wrap").classList.remove("show");
         });
 
         // 서치 게임 닫기
@@ -893,7 +896,23 @@
             searchAudio.pause();
             searchAudioPlay.style.display = "none";
             searchAudioStop.style.display = "block";
+            document.querySelector(".tetris__wrap").classList.remove("show");
         });
+
+        // 테트리스 게임 열기/닫기
+        document.querySelector(".icon_box .icon4").addEventListener("click", () => {
+            document.querySelector(".tetris__wrap").classList.toggle("show");
+            document.querySelector(".music__wrap").classList.remove("show");
+            pauseMusic();
+            btnStop.style.display = "none";
+            btnPlay.style.display = "block";
+            document.querySelector(".search__wrap").classList.remove("show");
+            searchAudio.pause();
+            searchAudioPlay.style.display = "none";
+            searchAudioStop.style.display = "block";
+            document.querySelector(".memory__wrap").classList.remove("show");
+        });
+
     </script>
     <script>
         //모달

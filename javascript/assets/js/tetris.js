@@ -10,7 +10,6 @@ const resultScore = tetrisWrap.querySelector(".tetris__score span");
 const tetrisInfo = tetrisWrap.querySelector(".tetris__info");
 const tetrisIcon2 = document.querySelector(".icon4");
 const tetrisCloseBtn = document.querySelector(".tetris__close__btn");
-const tetrisGif = document.querySelector(".tetris__gif");
 
 // 음악
 let tetrisMusic = new Audio("../assets/audio/RetroGamer.mp3");
@@ -343,17 +342,26 @@ restartBtn.addEventListener("click", () => {
     tetrisRestart.classList.remove("show");
     tetrisStart.classList.add("show");
 });
-// 창 끄기
-tetrisIcon2.addEventListener("click", () => {
-    resetTetris();
-    tetrisRestart.classList.remove("show");
-    tetrisStart.classList.add("show");
-})
+
+// // 창 켜기
+// tetrisIcon2.addEventListener("click", () => {
+//     resetTetris();
+//     tetrisWrap.classList.add("show");
+// });
+
+// // 창 끄기
+// tetrisIcon2.addEventListener("click", () => {
+//     resetTetris();
+//     tetrisRestart.classList.remove("show");
+//     tetrisStart.classList.add("show");
+//     tetrisWrap.classList.remove("show");
+// });
 tetrisCloseBtn.addEventListener("click", () => {
     resetTetris();
     tetrisRestart.classList.remove("show");
     tetrisStart.classList.add("show");
-})
+    tetrisWrap.classList.remove("show");
+});
 
 // 테트리스 만들기
 init();

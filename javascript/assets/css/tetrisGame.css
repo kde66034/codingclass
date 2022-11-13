@@ -1,5 +1,9 @@
 .tetris__wrap {
+    display: none;
+}
+.tetris__wrap.show {
     position: relative;
+    display: block;
 }
 .tetris__inner {
     border: 3px solid rgb(247, 222, 255);
@@ -49,105 +53,6 @@
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;
-}
-
-/* 
-
-.tetris__start {
-    display: none;
-    width: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 10;
-    transform: translate(-50%, -50%);
-    background: #0009;
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-    color: #fff;
-}
-.tetris__start.show {
-    display: block;
-}
-
-.tetris__totalstart {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-}
-.tetris__score {
-    margin-top: 15px;
-    color: #fff;
-}
-.tetris__score span {
-    color: aquamarine;
-}
-.tetris__StartCloseBtn {
-    display: flex;
-}
-.tetris__close {
-    border: 2px solid #fff;
-    border-radius: 50px;
-    padding: 6px 12px;
-    margin-top: 15px;
-    display: inline-block;
-    color: #fff;
-}
-.tetris__close:hover {
-    background: #fff;
-    color: #000;
-    cursor: pointer;
-}
-
-.tetris__restart {}
-.tetris__play {}
-.playground {
-    
-}
-.playground > ul {
-    padding: 30px 40px 40px 40px;
-}
-.playground > ul > li {
-    list-style: none;
-    width: 100%;
-    height: 30px;
-}
-.playground > ul > li > ul {
-    display: flex;
-}
-.playground > ul > li > ul > li {
-    list-style: none;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #fff;
-} */
-
-
-.neonImg06 {
-    width: 100px;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: rotate(10deg);
-    z-index: -1;
-}
-.neonImg07 {
-    width: 100px;
-    position: absolute;
-    top: -50px;
-    left: 40%;
-    z-index: -2;
-}
-.neonImg08 {
-    width: 100px;
-    position: absolute;
-    top: -10px;
-    left: 25%;
-    z-index: -2;
 }
 
 .tetris__header h2 {
@@ -305,56 +210,8 @@
     margin-bottom: 10px;
 }
 .tetris__info .line {}
-.tetris__gif {
-    display: none;
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-    right: -100px;
-}
-.tetris__gif.show {
-    display: block;
-}
-.tetris__gif img {
-    width: 100px;
-}
-/* playground */
-.neonImg01 {
-    width: 100px;
-    position: absolute;
-    bottom: 30px;
-    left: -50px;
-    z-index: 1;
-}
-.neonImg02 {
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-    right: -50px;
-    z-index: 1;
-}
-.neonImg03 {
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-    right: -50px;
-}
-.neonImg04 {
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-    left: -80px;
-    z-index: 1;
-}
-.neonImg05 {
-    width: 100px;
-    position: absolute;
-    bottom: 0;
-    left: -70px;
-}
-.playground {
-    /* border: 3px ridge #fff; */
-}
+
+.playground {}
 .playground > ul {
     padding: 40px;
 }

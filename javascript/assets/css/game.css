@@ -17,7 +17,7 @@ body {
 #header {
     position: fixed;
     width: 100%;
-    background: rgb(85, 63, 90);
+    background: #F285B1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,12 +25,18 @@ body {
 }
 #header h1 {
     color: #fff;
-    font-size: 30px;
+    font-size: 22px;
+    font-weight: 700;
+}
+#header h1 span {
+  font-size: 14px;
 }
 #header .time {
     text-align: right;
     color: #fff;
+    font-size: 15px;
 }
+
 .icon0, .icon1, .icon2, .icon3, .icon4, .icon5 {
     position: absolute;
     width: 70px;
@@ -72,7 +78,7 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: rgb(85, 63, 90);
+    background: #BBB4FD;
     color: #fff;
     display: flex;
     align-items: center;
@@ -80,7 +86,11 @@ body {
     padding: 10px;
 }
 #footer .agent {
-    
+    border-radius: 50px;
+    background: #fff;
+    color: rgb(150, 138, 253);
+    padding: 5px 12px;
+    font-size: 14px;
 }
 
 .mac #footer {}
