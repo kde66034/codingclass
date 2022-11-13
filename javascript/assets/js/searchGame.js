@@ -401,6 +401,10 @@ const searchResult = document.querySelector(".search__result .result");
 const searchResultWrap = document.querySelector(".search__result");
 const searchRestart = document.querySelector(".search__result .restart");
 
+// 음악
+let searchMatchMusic = new Audio("../assets/audio/match.mp3");
+let searchEndMusic = new Audio("../assets/audio/mario64clear.mp3");
+
     let timeReamining = 120,    //남은시간
         timeInterval = "",  //시간 간격
         Score = 0,    //점수
@@ -449,7 +453,7 @@ const searchRestart = document.querySelector(".search__result .restart");
             searchCount.innerHTML = Score;
 
             //정답 사운드
-            // searchAudioC.play();
+            searchMatchMusic.play();
 
             //정답 초기화
             searchInput.value = "";
@@ -513,6 +517,7 @@ const searchRestart = document.querySelector(".search__result .restart");
         searchAudio.pause();
         searchAudioPlay.style.display = "none";
         searchAudioStop.style.display = "block";
+        searchEndMusic.play();
 
         //시간 정지
         clearInterval(timeInterval);

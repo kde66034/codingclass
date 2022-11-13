@@ -16,11 +16,13 @@ let matchedCard = 0;        //매치된카드
 let sound = [
     "../assets/audio/match.mp3",
     "../assets/audio/unmatch.mp3",
-    "../assets/audio/up.mp3"
+    "../assets/audio/mario64clear.mp3",
+    "../assets/audio/mario64bgm2.mp3",
 ];
 let soundMatch = new Audio(sound[0]);
 let soundUnMatch = new Audio(sound[1]);
 let soundSuccess = new Audio(sound[2]);
+let soundBgm = new Audio(sound[3]);
 
 let startTime;
 let endTime;
@@ -29,6 +31,8 @@ let memoryTID2 = 0;
 
 // 카드 뒤집기
 function flipCard(){
+    soundBgm.play();
+
     if (disableDeck) return;
     if (this === cardOne) return;
 
@@ -78,9 +82,11 @@ function matchCards(img1, img2){
 
         // 카드를 모두 클릭한 경우
         if (matchedCard === 8){
+            soundBgm.pause();
+            soundSuccess.play();
             setTimeout(() => {
                 endTime = new Date();
-                soundSuccess.play();
+                
                 let playTime = Math.floor((endTime - startTime) / 1000);
                 alert(`${playTime}초 만에 클리어 하셨습니다! 당신의 점수는 ${100 - playTime}점입니다.`);
                 alert("다시 플레이하고 싶으시다면 [REPLAY] 버튼을 눌러주세요.");
@@ -118,6 +124,8 @@ function shuffledCard(){
     cardTwo = "";
     matchedCard = 0;
 
+    soundBgm.play();
+
     let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
     let result = arr.sort(() => Math.random() > 0.5 ? 1 : -1);
 
@@ -151,4 +159,5 @@ memoryStart.addEventListener("click", shuffledCard);
 // 게임 종료
 memoryClose.addEventListener("click", () => {
     document.querySelector(".memory__wrap").classList.remove("show");
+    soundBgm.pause();
 })

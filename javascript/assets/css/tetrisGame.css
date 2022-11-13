@@ -49,10 +49,17 @@
     background-color: #000;
     animation: flicker2 0.5s infinite alternate;
     cursor: pointer;
-    background-image: url("data:image/svg+xml,%3csvg width='17' height='18' viewBox='0 0 17 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0.569087 16.9239C0.235697 16.5923 0.235697 16.0548 0.569087 15.7232L15.4593 0.915408C15.7927 0.583862 16.3332 0.583861 16.6666 0.915407C17 1.24695 17 1.7845 16.6666 2.11604L1.7764 16.9239C1.44301 17.2554 0.902478 17.2554 0.569087 16.9239Z' fill='white'/%3e%3cpath d='M0.500043 1.0763C0.833434 0.744756 1.37397 0.744756 1.70736 1.0763L16.5976 15.8841C16.931 16.2157 16.931 16.7532 16.5976 17.0848C16.2642 17.4163 15.7237 17.4163 15.3903 17.0848L0.500043 2.27694C0.166653 1.94539 0.166652 1.40785 0.500043 1.0763Z' fill='white'/%3e%3c/svg%3e");
-    background-position: center center;
-    background-repeat: no-repeat;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 24px;
     cursor: pointer;
+    text-shadow: 0 0 0.5rem rgb(138, 36, 255);
+    transition: all 0.3s;
+}
+.tetris__inner > .tetris__close__btn:hover {
+    background: rgb(247, 222, 255);
 }
 
 .tetris__header h2 {
@@ -160,7 +167,7 @@
 .tetris__total {
     display: flex;
     justify-content: space-around;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 20px;
 }
 .tetris__total .time {
@@ -169,6 +176,10 @@
 .tetris__total .line {}
 .tetris__restart .tetris__score {
     margin-bottom: 20px;
+    font-size: 18px;
+}
+.tetris__restart .tetris__score span {
+    font-weight: 700;
     font-size: 24px;
 }
 

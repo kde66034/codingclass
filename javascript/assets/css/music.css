@@ -87,10 +87,11 @@
     font-size: 26px;
     font-weight: 700;
     line-height: 1.2;
-    color: rgb(150, 138, 253);
+    color: #f285b1;
 }
 .music__view .title p {
-    color: rgb(150, 138, 253);
+    color: #bbb4fd;
+    font-weight: 700;
 }
 .music__control {
     width: 100%;

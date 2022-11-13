@@ -114,6 +114,7 @@ li {
     margin: 20px auto 0 auto;
     /* background: #223547; */
     background: linear-gradient(to bottom, #61CFFF, #E9A4D3);
+    box-shadow: 0 0 1rem rgb(150, 138, 253);
 }
 .search__wrap .time span {
     color: #fff;
