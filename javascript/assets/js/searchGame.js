@@ -525,7 +525,7 @@ let searchEndMusic = new Audio("../assets/audio/mario64clear.mp3");
         //메세지 출력
         searchResultWrap.classList.add("show");
         let point = Math.round((Score / cssProperty.length)*100);
-        searchResult.innerHTML = `게임이 끝났습니다.<br> 당신은 ${cssProperty.length}개 중에 ${Score}개를 맟추셨습니다.<br>점수는 ${point}점 입니다.`;
+        searchResult.innerHTML = `게임이 끝났습니다.<br> 당신은 ${cssProperty.length}개 중에 ${Score}개를 맟추셨습니다.<br>점수는 <span>${point}점</span> 입니다.`;
 
     };
 
