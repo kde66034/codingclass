@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #contents > section {
+            min-height: 90vh;
+        }
+        #section1 {
+            background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+        }
+        #section2 {
+            background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+        }
+        #section3 {
+            background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+        }
+        #section4 {
+            background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+        }
+        #section5 {
+            background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+        }
+        #section6 {
+            background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+        }
+        .square {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to top, #d5d4d0 0%, #d5d4d0 1%, #eeeeec 31%, #efeeec 75%, #e9e9e7 100%);
+        }
+        .square2 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+        }
+        .square.red {
+            background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+        }
+
+        /*  */
+        .panel {
+            height: 100vh;
+            background-color: beige;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #8ec5fc;
+        }
+        .box-red {
+            background-color: red;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            transition: all 600ms ease-in-out;
+            background-color: tan;
+            color: #000;
+            text-align: center;
+        }
+        li {
+            padding: 20px;
+            display: inline-block;
+        }
+        .not-active {
+            background: #fff;
+            color: #6a11cb;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li>about</li>
+            <li>work</li>
+            <li>contact</li>
+        </ul>
+    </nav>
+
+    <div class="panel">
+        Creates a new standalone ScrollTrigger instance. You don't need to put ScrollTriggers directly into animations (though that's probably the most common use case). With a standalone ScrollTrigger, you can tap into the rich callback system to do almost anything.
+    </div>
+    <!-- <div class="box"></div>
+    <div class="panel"></div> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.create({
+            trigger: ".panel",
+            start: "top 6%",
+            markers: true,
+            toggleClass: {targets: "nav", className: "not-active"},
+            onEnter: () => console.log("onEnter"),
+            onLeave: () => console.log("onLeave"),
+            onEnterBack: () => console.log("onEnterBack"),
+            onLeaveBack: () => console.log("onLeaveBack"),
+        });
+
+        // gsap.to(".square", {
+        //     // x: 1000,
+        //     duration: 3,
+        //     scrollTrigger: {
+        //         trigger: ".square",
+        //         start: "top 70%",
+        //         end: "top 30%",
+        //         scrub: true,
+        //         // scrub: 4,    // 스무스하게 슬라이드 효과 / 숫자로 쓸 수도 있음.
+        //         markers: {
+        //             startColor: "blue",
+        //             endColor: "purple",
+        //             fontSize: "30px"
+        //         },
+        //         toggleClass: "red",
+        //         toggleActions: "restart none none none",
+        //         pin: true,
+        //         pinSpacing: false,
+        //     },
+        // });
+
+        // gsap.to(".square", {x: 1000, duration: 2, rotation: 100, skewY: 1, borderRadius: 0})
+        // gsap.to(".square", {y: 500, duration: 2, rotation: 0, skewY: 3, borderRadius: 100, delay: 2})
+        // gsap.to(".square", {x: 0, duration: 2, rotation: 300, skewY: 1, width: 400, delay: 4})
+        // gsap.to(".square", {y: 0, duration: 2, rotation: 0, width: 200, delay: 6})
+        
+        // 타임라인 사용법
+        // tl.to 한번 쓰면 그 다음부터는 '.to'만 써도 됨, delay를 쓰지 않아도 된다는 장점
+        // const tl = gsap.timeline({repeat: 2, yoyo: true});
+        // tl.to(".square", {x: 1000, duration: 2, rotation: 100, skewY: 1, ease: "elastic", borderRadius: 0})
+        // .to(".square", {y: 500, duration: 2, rotation: 0, skewY: 3, ease: "elastic", borderRadius: 100})
+        // .to(".square", {x: 0, duration: 2, rotation: 300, skewY: 1, ease: "elastic", width: 400})
+        // .to(".square", {y: 0, duration: 2, rotation: 0, ease: "elastic", width: 200})
+
+        // const tl = gsap.timeline({
+        //     scrollTrigger : {
+        //         trigger: ".square",
+        //         markers: true,
+        //         start: "top 80%",
+        //         end: "top 30%",
+        //         scrub: 1,
+        //     }
+        // })
+        // tl.to(".square", {x: 1000, duration: 2, rotation: 100, skewY: 1, borderRadius: 0})
+        // .to(".square", {y: 500, duration: 2, rotation: 0, skewY: 3, borderRadius: 100})
+        // .to(".square", {x: 0, duration: 2, rotation: 300, skewY: 1, width: 400})
+        // .to(".square", {y: 0, duration: 2, rotation: 0, width: 200})
+    </script>
+    <script>
+        // gsap.registerPlugin(ScrollTrigger);
+
+        // 기본 애니메이션
+        // gsap.to(".square", {
+        //     x: 1000,
+        //     duration: 3,
+        //     scrollTrigger: {
+        //         trigger: ".square",
+        //         start: "top 70%",
+        //         end: "top 30%",
+        //         markers: {
+        //             startColor: "blue",
+        //             endColor: "purple",
+        //             fontSize: "30px"
+        //         },
+        //         toggleClass: "red",
+        //          toggleActions: "restart pause rssume restet",
+        //     },
+        // });
+
+        // 토글 액션
+        // toggleActions: "restart pause rssume restet",
+        // // onEnter / onLeave / onEnterBack / onLeaveBack
+        // // play, pause, resume, reset, restart, complete, revers, none
+
+        // 스크롤 할때마다 움직이기
+        // scrub: true,
+        // scrub: 4,    // 스무스하게 슬라이드 효과 / 숫자로 쓸 수도 있음.
+
+        // 고정
+        // pin: true,
+        // pinSpacing: false,
+
+        // gsap 사용법 더보기 : https://greensock.com/docs/v3/Plugins/ScrollTrigger
+    </script>
+</body>
+</html>
