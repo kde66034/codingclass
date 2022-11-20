@@ -90,7 +90,8 @@ function loadMusic(num){
     musicArtist.innerText = allMusic[num-1].artist;     // 뮤직 아티스트 로드
     musicView.src = `../assets/img/${allMusic[num-1].img}.png`;     // 뮤직 이미지 로드
     musicView.alt = allMusic[num-1].name;       // 뮤직 이미지 alt 태그 로드
-    musicAudio.src = `../assets/audio/${allMusic[num-1].audio}.mp3`;    // 뮤직 파일 로드
+    //musicAudio.src = `../assets/audio/${allMusic[num-1].audio}.mp3`;    // 뮤직 파일 로드
+    musicAudio.src = `https://kde66034.github.io/coding/javascript/assets/audio/${allMusic[num-1].audio}.mp3`;    // 뮤직 파일 로드
 }
 
 // 재생 버튼
@@ -155,7 +156,7 @@ for(let i=0; i<allMusic.length; i++){
         <li data-index="${i+1}">
             <strong>${allMusic[i].name}</strong>
             <em>${allMusic[i].artist}</em>
-            <audio class="${allMusic[i].audio}" src="../assets/audio/${allMusic[i].audio}.mp3"></audio>
+            <audio class="${allMusic[i].audio}" src="https://kde66034.github.io/coding/javascript/assets/audio/${allMusic[i].audio}.mp3"></audio>
             <span class="audio-duration" id="${allMusic[i].audio}">재생시간</span>
         </li>
     `;

@@ -14,10 +14,10 @@ let disableDeck = true;
 let matchedCard = 0;        //매치된카드
 
 let sound = [
-    "../assets/audio/match.mp3",
-    "../assets/audio/unmatch.mp3",
-    "../assets/audio/mario64clear.mp3",
-    "../assets/audio/mario64bgm2.mp3",
+    "https://kde66034.github.io/coding/javascript/assets/audio/match.mp3",
+    "https://kde66034.github.io/coding/javascript/assets/audio/unmatch.mp3",
+    "https://kde66034.github.io/coding/javascript/assets/audio/mario64clear.mp3",
+    "https://kde66034.github.io/coding/javascript/assets/audio/mario64bgm2.mp3",
 ];
 let soundMatch = new Audio(sound[0]);
 let soundUnMatch = new Audio(sound[1]);

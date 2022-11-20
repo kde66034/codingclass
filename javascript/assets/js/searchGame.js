@@ -402,8 +402,10 @@ const searchResultWrap = document.querySelector(".search__result");
 const searchRestart = document.querySelector(".search__result .restart");
 
 // 음악
-let searchMatchMusic = new Audio("../assets/audio/match.mp3");
-let searchEndMusic = new Audio("../assets/audio/mario64clear.mp3");
+// let searchMatchMusic = new Audio("../assets/audio/match.mp3");
+let searchMatchMusic = new Audio("https://kde66034.github.io/coding/javascript/assets/audio/match.mp3");
+// let searchEndMusic = new Audio("../assets/audio/mario64clear.mp3");
+let searchEndMusic = new Audio("https://kde66034.github.io/coding/javascript/assets/audio/mario64clear.mp3");
 
     let timeReamining = 120,    //남은시간
         timeInterval = "",  //시간 간격

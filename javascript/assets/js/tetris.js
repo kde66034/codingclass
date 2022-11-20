@@ -12,9 +12,9 @@ const tetrisIcon2 = document.querySelector(".icon4");
 const tetrisCloseBtn = document.querySelector(".tetris__close__btn");
 
 // 음악
-let tetrisMusic = new Audio("../assets/audio/marioworldbgm.mp3");
-let tetrisMatchMusic = new Audio("../assets/audio/match.mp3");
-let tetrisEndMusic = new Audio("../assets/audio/up.mp3");
+let tetrisMusic = new Audio("https://kde66034.github.io/coding/javascript/assets/audio/marioworldbgm.mp3");
+let tetrisMatchMusic = new Audio("https://kde66034.github.io/coding/javascript/assets/audio/match.mp3");
+let tetrisEndMusic = new Audio("https://kde66034.github.io/coding/javascript/assets/audio/up.mp3");
 
 // variables
 let rows = 20;
