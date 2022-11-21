@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORLD WEATHER</title>
+
+    <!-- SEO (검색엔진최적화) -->
+    <meta name="author" content="WORLD WEATHER">
+    <meta name="description" content="전 세계 주요 도시 20개의 날씨를 확인하세요.">
+    <meta name="keyword" content="사이트, 사이트 만들기, World Weather, weather">
+    <meta name="robots" content="all">
+
+    <!-- CSS -->
+    <!-- fonts가 제일 위에 있어야 적용됨 -->
+    <link rel="stylesheet" href="assets/css/fonts.css"> 
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+
+    <!-- CSS(섹션별) -->
+    <link rel="stylesheet" href="assets/css/card.css">
+    <link rel="stylesheet" href="assets/css/image.css">
+    <link rel="stylesheet" href="assets/css/text.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/imgText.css">
+    <link rel="stylesheet" href="assets/css/banner.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+    
+    <!-- swiper -->
+    <link rel="stylesheet" href="assets/css/swiper.css">
+</head>
+<body>
+    <div id="skip">
+        <a href="#headerType">헤더 영역 바로가기</a>
+        <a href="#sliderType">슬라이드 영역 바로가기</a>
+        <a href="#imageType">이미지 영역 바로가기</a>
+        <a href="#imgTextType">이미지/텍스트 영역 바로가기</a>
+        <a href="#cardType">카드 영역 바로가기</a>
+        <a href="#bannerType">배너 영역 바로가기</a>
+        <a href="#textType">텍스트 영역 바로가기</a>
+        <a href="#footerType">푸터 영역 바로가기</a>
+    </div>
+    <!-- // skip : 웹표준 준수 위해 만들어줌 -->
+
+    <header id="headerType">
+        <h1>web site</h1>
+    </header>
+    <!-- // headerType -->
+
+    <main id="mainType">
+        <section id="headerType" class="header__wrap nexon">
+            <div class="header__inner">
+                <h1 class="header__logo">
+                    <a href="#">WORLD WEATHER</a>
+                </h1>
+                <div class="header__menu">
+                    <ul>
+                        <li class="active"><a href="#headerType">MAIN</a></li>
+                        <li><a href="#imageType">CITY LIST</a></li>
+                        <li><a href="#imgTextType">API INFO</a></li>
+                        <li><a href="#cardType">MORE INFO</a></li>
+                        <li><a href="#bannerType">REFERENCE SITE</a></li>
+                    </ul>
+                </div>
+                <div class="header__member">
+                    <a href="#">날씨 보기</a>
+                </div>
+                <div class="header__ham">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="sliderType" class="slider__wrap scroll">
+            <h2 class="blind">슬라이드 영역</h2>
+            <div class="slider__inner">
+                <!-- <div class="slider">
+                    <div class="slider__img">
+                        <div class="desc container">
+                            <span>BAKING CLASS</span>
+                            <h3>AWESOME BAKING CLASS</h3>
+                            <p>
+                                훌륭한 제빵사가 되고 싶으신가요? <br>
+                                별빛제빵교실에 오신 것을 환영합니다!
+                            </p>
+                            <div class="btn">
+                                <a href="#">자세히 보기</a>
+                                <a href="#" class="black">사이트 보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#" class="left"><span class="ir">이전 이미지</span></a>
+                        <a href="#" class="right"><span class="ir">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="ir">1</span></a>
+                        <a href="#" class="dot"><span class="ir">2</span></a>
+                        <a href="#" class="dot"><span class="ir">3</span></a>
+                        <a href="#" class="play"><span class="ir">플레이</span></a>
+                        <a href="#" class="stop"><span class="ir">정지</span></a>
+                    </div>
+                </div> -->
+                
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="desc container">
+                                <h3>World Weather</h3>
+                                <p>
+                                    World Weather에서는 전 세계의 주요 도시 20개의<br>
+                                    실시간 날씨 및 일기예보 정보 등을 제공합니다.
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히 보러가기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="desc container">
+                                <h3>World Weather</h3>
+                                <p>
+                                    World Weather에서는 전 세계의 주요 도시 20개의<br>
+                                    실시간 날씨 및 일기예보 정보 등을 제공합니다.
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히 보러가기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="desc container">
+                                <h3>World Weather</h3>
+                                <p>
+                                    World Weather에서는 전 세계의 주요 도시 20개의<br>
+                                    실시간 날씨 및 일기예보 정보 등을 제공합니다.
+                                </p>
+                                <div class="btn">
+                                    <a href="#">자세히 보러가기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+        <!-- // sliderType -->
+
+        <section id="imageType" class="image__wrap nexon section scroll container">
+            <h2>전 세계 주요 도시의 날씨를 확인하세요!</h2>
+            <p>World Weather에서는 전 세계의 20개 주요 대도시의 현재 날씨 정보를 상세히 제공합니다.</p>
+            <div class="image__inner">
+                <article class="image img1">
+                    <h3 class="image__title">Class A</h3>
+                    <p class="image__desc">
+                        12월 17일부터 23년 3월 18일까지 약 3개월동안 진행되며, 
+                        입문자 눈높이에 맞춰 제빵의 기초에 포커스를 두고 차근차근 수업이 이루어집니다.
+                    </p>
+                    <a class="image__btn" href="#" title="자세히 보기">
+                        자세히 보기
+                    </a>
+                </article>
+                <article class="image img2">
+                    <h3 class="image__title">Class B</h3>
+                    <p class="image__desc">
+                        12월 22일부터 23년 6월 21일까지 약 6개월동안 진행되며, 
+                        베이킹 입문 제과+제빵 기능사와 실무에서의 기본기, 제조 기술 습득 과정인 디저트 '올베이직',
+                        케이크디자인 자격증 과정까지 실무 끝판왕 '올마스터' 교육을 목표로 하는 파티셰 완성 과정입니다.
+                    </p>
+                    <a class="image__btn" href="#" title="자세히 보기">
+                        자세히 보기
+                    </a>
+                </article>
+            </div>
+        </section>
+        <!-- // imageType -->
+
+        <section id="bannerType" class="banner__wrap nexon section scroll">
+            <h2 class="blind">배너 영역</h2>
+            <div class="banner__inner">
+                <h3 class="title">API 정보</h3>
+                <p class="desc">
+                    World Weather에서는 AccuWeather의 API를 사용합니다.
+                    <a href="https://www.accuweather.com/" title="AccuWeather로 이동">https://www.accuweather.com/</a>
+                </p>
+            </div>
+        </section>
+        <!-- // bannerType -->
+
+        <section id="textType" class="text__wrap nexon section scroll container">
+            <span>GOAL</span>
+            <h2 class="mb70">어떠한 날씨 정보를 제공합니까?</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__title">자외선 지수</h3>
+                    <p class="text__desc">
+                        자외선지수란 피부 손상 가능성을 나타내는 지표이며, 
+                        자외선에 노출될 때 보 호조치를 취해야 할 필요성에 
+                        대해 사람들에게 경고합니다.
+                   </p>
+                    <a class="text__btn" href="https://www.kdca.go.kr/contents.es?mid=a20205110104">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">풍속</h3>
+                    <p class="text__desc">
+                        바람의 세기(강도)를 나타내는 풍속에 대해 제공해드립니다. 
+                        바람의 세기에 따라 체감 온도가 낮아지거나 인명·재산 피해가 
+                        발생할 우려가 있어 각별히 주의해야 합니다.
+                    </p>
+                    <a class="text__btn" href="https://www.data.jma.go.jp/multi/cyclone/cyclone_wind_advisory.html?lang=kr">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">일출·일몰 시간</h3>
+                    <p class="text__desc">
+                        계절에 따라 해가 뜨는 시간과 지는 시간이 달라집니다. 
+                        저희 World Weather에서 정확한 일출, 일몰 시간을 제공해드립니다.
+                    </p>
+                    <a class="text__btn" href="https://astro.kasi.re.kr/life/pageView/9">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">습도</h3>
+                    <p class="text__desc">
+                        여름철의 체감 온도를 크게 좌우하는 습도는 
+                        공기의 건습 정도를 나타내는 것으로 공기 속에 
+                        포함되어 있는 수증기를 그 질량으로 나타냅니다.
+                    </p>
+                    <a class="text__btn" href="http://www.climate.go.kr/home/09_monitoring/vapor/relativehumidity">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">가시거리</h3>
+                    <p class="text__desc">
+                        양호한 가시거리는 5~10km로, 안개가 짙거나
+                        미세먼지 농도가 높은 날 등으로 인해 
+                        가시거리 범위가 지나치게 짧아지는 경우 안전운전에 
+                        각별히 유의하여야 합니다.
+                    </p>
+                    <a class="text__btn" href="https://ko.wikipedia.org/wiki/%EC%8B%9C%EC%A0%95">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">대기오염 지수</h3>
+                    <p class="text__desc">
+                        환경부는 대기오염으로 인한 국민 건강 피해를 최소화 
+                        하기 위해 대기오염 농도를 예보하고 있습니다. 
+                        시시각각으로 변하는 대기질 정보를 제공합니다.
+                    </p>
+                    <a class="text__btn" href="https://ko.wikipedia.org/wiki/%EB%8C%80%EA%B8%B0%EC%A7%88_%EC%A7%80%EC%88%98">더보기</a>
+                </div>
+            </div>
+        </section>
+        <!-- // textType -->
+    </main>
+    <!-- // mainType -->
+
+    <footer id="footerType" class="footer__wrap nexon section gray">
+        <h2 class="blind">푸터 영역</h2>
+        <div class="footer__inner container">
+            <div class="footer__menu">
+                <div>
+                    <h3>각국 기상청</h3>
+                    <ul>
+                        <li><a href="https://www.weather.go.kr/w/index.do">한국 기상청</a></li>
+                        <li><a href="http://www.nws.noaa.gov/">미국 기상청</a></li>
+                        <li><a href="http://www.metoffice.gov.uk/">영국 기상청</a></li>
+                        <li><a href="http://www.jma.go.jp/">일본 기상청</a></li>
+                        <li><a href="http://www.meteo.fr/e_index.html">프랑스 기상청</a></li>
+                    </ul>    
+                </div>
+                <div>
+                    <h3>API 정보</h3>
+                    <ul>
+                        <li><a href="https://developer.accuweather.com/">AccuWeather APIs</a></li>
+                        <li><a href="http://data.kma.go.kr/">기상자료개방포털</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>기후 정보</h3>
+                    <ul>
+                        <li><a href="http://earth52.dothome.co.kr/php/main/main.php">지구ON</a></li>
+                        <li><a href="https://blog.naver.com/kma_131">기상청 네이버 블로그</a></li>
+                        <li><a href="https://www.youtube.com/@KMA0365best">기상청 YouTube</a></li>
+                        <li><a href="https://twitter.com/kma_skylove">기상청 Twitter</a></li>
+                        <li><a href="http://www.climate.go.kr/">기후정보포털</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>자연 재해</h3>
+                    <ul>
+                        <li><a href="https://www.weather.go.kr/w/typhoon/ko/weather/typhoon_02.jsp">태풍 정보</a></li>
+                        <li><a href="https://www.weather.go.kr/pews/">지진·화산</a></li>
+                        <li><a href="https://www.weather.go.kr/w/dust/image.do">황사</a></li>
+                        <li><a href="https://www.weather.go.kr/w/eqk-vol/tsunami.do">지진해일</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__right">
+                ⓒ2022 World Weather<br>
+                All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <!-- // footerType -->
+
+
+
+    <!-- SCRIPT -->
+    <script src="assets/js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: false
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+          }
+        });
+
+        const btnStart = document.querySelector(".swiper-button-play");
+        const btnStop = document.querySelector(".swiper-button-stop");
+
+        btnStart.style.display = "none";
+
+        btnStop.addEventListener("click", () => {
+            swiper.autoplay.stop();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+        });
+
+        btnStart.addEventListener("click", () => {
+            swiper.autoplay.start();
+            btnStart.style.display = "none";
+            btnStop.style.display = "block";
+        });
+        
+    </script>
+
+    <script>
+        window.addEventListener("scroll", () => {
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
+
+            document.querySelectorAll(".scroll").forEach((element, index) => {
+                if(scrollTop >= element.offsetTop-500){
+                    document.querySelectorAll(".header__menu li").forEach(li => {
+                        li.classList.remove("active");
+                    });
+                    document.querySelector(".header__menu li:nth-child("+(index+1)+")").classList.add("active");
+                };
+            });
+        });
+
+        // 스크롤 이동
+        document.querySelectorAll("#headerType .header__inner .header__menu li a").forEach(li => {
+            li.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(li.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"  // 이동 부드럽게
+                });
+            });
+        });
+
+        // 메뉴 버튼 (반응형) - 舊
+        // const menuBtn = document.querySelector(".menu__bar .ico");  // 메뉴 아이콘
+        // const menu = document.querySelector(".header__menu");   // 메뉴
+
+        // menuBtn.addEventListener("mouseover", () => {
+        //     menu.classList.add("on");   // 메뉴 아이콘에 마우스 커서 올려놓으면 메뉴 보이기
+        // });
+        // menu.addEventListener("mouseleave", () => {
+        //     menu.classList.remove("on");    // 메뉴 아이콘에 마우스 커서 벗어나면 메뉴 사라지기
+        // });
+
+        // 메뉴 버튼 (반응형)
+        const btnHam = document.querySelector(".header__ham");
+        const btnMenu = document.querySelector(".header__menu");
+        const btnMenuList = btnMenu.querySelectorAll(".header__menu ul li a");
+
+        btnHam.addEventListener("click", () => {
+            btnHam.classList.toggle("active");
+            btnMenu.classList.toggle("active");
+            document.body.classList.toggle("fixed");
+        });
+
+        // 반응형에서 메뉴 버튼 누르는 즉시 메뉴창 닫히게 하기
+        btnMenuList.forEach((list) => {
+            list.addEventListener("click", () => {
+                document.body.classList.remove("fixed");
+                btnHam.classList.remove("active");
+                btnMenu.classList.remove("active");
+            });
+        });
+
+        // 사이드 메뉴바가 나오면 스크롤바 없애주기
+        // window.addEventListener("resize", () => {
+        //     let width = window.innerWidth;
+            
+        //     if(width > 1300){
+        //         document.body.classList.remove("fixed");
+        //         btnMenu.classList.remove("active");
+        //         btnHam.classList.remove("active");
+        //     } 
+        // });
+
+        
+    </script>
+</body>
+</html>
