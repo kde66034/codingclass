@@ -13,24 +13,128 @@
     width: 100%;
 }
 .image {
-    width: 49%;
-    height: 370px;
-    padding: 200px 30px 30px 30px;
+    width: 22%;
+    padding: 80px 250px 30px 30px;
     color: #fff;
     box-sizing: border-box;
+    border-radius: 10px;
+    display: inline-block;
 }
-.image.img1 {
-    background-image: url(../img/imageType/imageType01_bg01.jpg);
+.image.img1, 
+.image.img2, 
+.image.img3, 
+.image.img4, 
+.image.img5, 
+.image.img6, 
+.image.img7, 
+.image.img8, 
+.image.img9, 
+.image.img10, 
+.image.img11, 
+.image.img12, 
+.image.img13, 
+.image.img14, 
+.image.img15, 
+.image.img16, 
+.image.img17, 
+.image.img18, 
+.image.img19, 
+.image.img20 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    transition: all 0.3s;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 10px #dcdcdc;
+} 
+
+.image.img1 {
+    background-image: url(../img/cityImg/Beijing.png);
 }
 .image.img2 {
-    background-image: url(../img/imageType/imageType01_bg02.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(../img/cityImg/Berlin.png);
 }
+.image.img3 {
+    background-image: url(../img/cityImg/Cairo.png);
+}
+.image.img4 {
+    background-image: url(../img/cityImg/Cape\ Town.png);
+}
+.image.img5 {
+    background-image: url(../img/cityImg/Hong\ Kong.png);
+}
+.image.img6 {
+    background-image: url(../img/cityImg/Istanbul.png);
+}
+.image.img7 {
+    background-image: url(../img/cityImg/London.png);
+}
+.image.img8 {
+    background-image: url(../img/cityImg/Los\ Angeles.png);
+}
+.image.img9 {
+    background-image: url(../img/cityImg/Madrid.png);
+}
+.image.img10 {
+    background-image: url(../img/cityImg/Mexico.png);
+}
+.image.img11 {
+    background-image: url(../img/cityImg/Moscow.png);
+}
+.image.img12 {
+    background-image: url(../img/cityImg/Mumbai.png);
+}
+.image.img13 {
+    background-image: url(../img/cityImg/New\ York.png);
+}
+.image.img14 {
+    background-image: url(../img/cityImg/Paris.png);
+}
+.image.img15 {
+    background-image: url(../img/cityImg/Sao\ Paulo.png);
+}
+.image.img16 {
+    background-image: url(../img/cityImg/Seoul.png);
+}
+.image.img17 {
+    background-image: url(../img/cityImg/Singapore.png);
+}
+.image.img18 {
+    background-image: url(../img/cityImg/Sydney.png);
+}
+.image.img19 {
+    background-image: url(../img/cityImg/Tokyo.png);
+}
+.image.img20 {
+    background-image: url(../img/cityImg/Toronto.png);
+}
+
+
+
+.image.img1:hover,
+.image.img2:hover,
+.image.img3:hover,
+.image.img4:hover,
+.image.img5:hover,
+.image.img6:hover,
+.image.img7:hover,
+.image.img8:hover,
+.image.img9:hover,
+.image.img10:hover,
+.image.img11:hover,
+.image.img12:hover,
+.image.img13:hover,
+.image.img14:hover,
+.image.img15:hover,
+.image.img16:hover,
+.image.img17:hover,
+.image.img18:hover,
+.image.img19:hover,
+.image.img20:hover {
+    transform: translateY(-5px);
+}
+
+
 .image__title {
     font-size: 32px;
     margin-bottom: 10px;
