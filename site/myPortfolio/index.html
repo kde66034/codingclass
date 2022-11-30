@@ -19,11 +19,20 @@
         }
 
         /* headerType */
+        #headerType {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 10000;
+            
+        }
         .header__wrap {
             background: #0B130D;
+            backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
-            padding: 20px 40px;
+            padding: 20px 0;
             align-items: center;
         }
         .header__logo a {
@@ -31,6 +40,7 @@
             font-family: 'Poppins';
             font-weight: 300;
             font-size: 30px;
+            padding-left: 30px;
         }
         .header__menu {
             align-items: center;
@@ -38,6 +48,7 @@
         .header__menu ul {
             display: flex;
             flex-wrap: wrap; 
+            padding-right: 30px;
         }
         .header__menu ul li a {
             font-family: 'Poppins';
@@ -49,11 +60,13 @@
 
         /* introType */
         .intro__wrap {
+            margin-top: 86px;
             background: #0B130D;
+            height: 100vh;
         }
         .intro__title__wrap {
-            padding-top: 120px;
-            padding-bottom: 200px;
+            padding-top: 130px;
+            padding-bottom: 80px;
         }
         .intro__title__wrap > h3 {
             color: #fff;
@@ -101,7 +114,7 @@
         .home__figure02 {
             position: absolute;
             left: 44%;
-            top: 80px;
+            top: 90px;
             transform: rotate(-8deg);
         }
         .home__figure03 {
@@ -109,6 +122,17 @@
             left: 180px;
             bottom: 80px;
             transform: rotate(8deg) scale(0.9);
+        }
+
+        .scroll__btn {
+            display: block;
+            width: 48px;
+            height: 110px;
+            background-image: url(assets/img/scroll_down.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -155,9 +179,12 @@
                 <img src="assets/img/home_figure03.png" alt="figure03">
             </figure>
 
-            <div class="scroll__btn">
-                
-            </div>
+            <a href="#" class="scroll__btn"><span class="ir">Scroll Down / 스크롤다운</span></a>
+        </section>
+        <!-- //introType -->
+
+        <section id="webglType" class="webgl__wrap">
+
         </section>
     </main>
 </body>

@@ -103,3 +103,12 @@ body.fixed {
         width: 96%;
     }
 }
+
+/* ir효과 */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
