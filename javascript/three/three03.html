@@ -51,8 +51,10 @@
                 this._setCamera();
                 this._setMesh();
                 this._setFog();
+
                 this._update();
                 this._render();
+                
                 onresize = this._resize.bind(this);
             }
             _setScene() {

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDE's Portfolio</title>
+
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+
+    <style>
+        #header {
+            display: none;
+        }
+
+        /* headerType */
+        .header__wrap {
+            background: #0B130D;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+        }
+        .header__logo a {
+            color: #D2E3C0;
+        }
+        .header__menu {
+            align-items: center;
+        }
+        .header__menu ul {
+            display: flex;
+            flex-wrap: wrap; 
+        }
+        .header__menu ul li a {
+            color: #D2E3C0;
+            padding-left: 20px;
+        }
+
+        /* introType */
+        .intro__wrap {
+            background: #0B130D;
+        }
+        .intro__title__wrap {
+            padding-top: 120px;
+            padding-bottom: 200px;
+        }
+        .intro__title__wrap > h3 {
+            color: #fff;
+            font-size: 150px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+        .intro__title1 {
+            font-family: 'PP Eiko Italic';
+            font-weight: 300;
+        }
+        .intro__title1 > em {
+            font-family: 'PP Writer';
+            font-weight: 500;
+        }
+        .intro__title2 {
+            font-family: 'Poppins';
+            font-weight: 300;
+            color: #D2E3C0 !important;
+        }
+        .intro__title2 > em, .intro__title3 {
+            font-family: 'PP Neue World';
+            font-weight: 100;
+        }
+
+        .home__figure01,
+        .home__figure02,
+        .home__figure03 {
+            width: 240px;
+            height: 228px;
+        }
+        .home__figure01 {
+            position: absolute;
+            right: 185px;
+            bottom: 120px;
+            transform: rotate(-10deg);
+        }
+        .home__figure02 {
+            position: absolute;
+            left: 44%;
+            top: 80px;
+            transform: rotate(-8deg);
+        }
+        .home__figure03 {
+            position: absolute;
+            left: 180px;
+            bottom: 80px;
+            transform: rotate(8deg) scale(0.9);
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1>KDE's PORTFOLIO</h1>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <section id="headerType" class="header__wrap">
+            <h2 class="header__logo">
+                <a href="#">KDE's PORTFOLIO</a>
+            </h2>
+            <div class="header__menu">
+                <ul>
+                    <li><a href="#">WORK</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- //headerType -->
+
+        <section id="introType" class="intro__wrap">
+            <div class="intro__title__wrap">
+                <h3 class="intro__title1">
+                    let's <em>introduce</em>
+                </h3>
+                <h3 class="intro__title2">
+                    frontend <em><strong>developer</strong>’s</em>
+                </h3>
+                <h3 class="intro__title3">
+                    <strong>all</strong> works <strong>of</strong> portfolio
+                </h3>
+            </div>
+
+            <figure class="home__figure01">
+                <img src="assets/img/home_figure01.png" alt="figure01">
+            </figure>
+            <figure class="home__figure02">
+                <img src="assets/img/home_figure02.png" alt="figure02">
+            </figure>
+            <figure class="home__figure03">
+                <img src="assets/img/home_figure03.png" alt="figure03">
+            </figure>
+
+            <div class="scroll__btn">
+                
+            </div>
+        </section>
+    </main>
+</body>
+</html>
