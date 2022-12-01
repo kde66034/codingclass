@@ -18,6 +18,10 @@
             display: none;
         }
 
+        body {
+            /* background: #0B130D; */
+        }
+
         /* headerType */
         #headerType {
             position: fixed;
@@ -25,10 +29,9 @@
             top: 0;
             width: 100%;
             z-index: 10000;
-            
         }
         .header__wrap {
-            background: #0B130D;
+            background: #0b130dbb;
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
@@ -58,80 +61,66 @@
         .header__menu ul li a {
             font-family: 'Poppins';
             color: #D2E3C0;
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 200;
         }
 
         /* introType */
         .intro__wrap {
-            margin-top: 65px;
+            /* padding-top: 65px; */
             background: #0B130D;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
-        .intro__title__wrap {
-            padding-top: 130px;
-            padding-bottom: 80px;
-        }
-        .intro__title__wrap > h3 {
+        .intro__title__wrap {}
+        .intro__title {
             color: #fff;
-            font-size: 150px;
+            font-size: 8vw;
             text-align: center;
-            position: relative;
             z-index: 2;
+            line-height: 1.1;
+            position: relative;
         }
-        .intro__title1 {
-            font-family: 'pp_eiko_italiclight';
+        .intro__title:nth-child(2) {
+            color: #D2E3C0;
         }
-        .intro__title1 > em {
-            font-family: 'pp_writerbook';
-        }
-        .intro__title2 {
-            font-family: 'Poppins';
-            font-weight: 100;
-            color: #D2E3C0 !important;
-        }
-        .intro__title2 > em {
-            font-family: 'pp_neue_worldthin';
-        }
-        .intro__title2 > span {
+
+        .neue_world_semiultra {
             font-family: 'pp_neue_worldsemiultra';
         }
-        .intro__title3 {
+        .pp_write_book {
+            font-family: 'pp_writerbook';
+        }
+        .neue_world_thin {
             font-family: 'pp_neue_worldthin';
         }
-        .intro__title3 > em {
-            font-family: 'pp_neue_worldCnRg';
-        }
 
-        .home__figure01,
-        .home__figure02,
-        .home__figure03 {
-            width: 240px;
-            height: 228px;
-        }
-        .home__figure01 {
+        .figureImg__inner {}
+        .figureImg__inner .img1 {
+            width: 10vw;
             position: absolute;
-            right: 185px;
-            bottom: 120px;
-            transform: rotate(-10deg);
+            right: 15%;
+            bottom: 25%;
         }
-        .home__figure02 {
+        .figureImg__inner .img2 {
+            width: 10vw;
             position: absolute;
-            left: 44%;
-            top: 90px;
-            transform: rotate(-8deg);
+            left: 43%;
+            top: 8%;
         }
-        .home__figure03 {
+        .figureImg__inner .img3 {
+            width: 10vw;
             position: absolute;
-            left: 180px;
-            bottom: 80px;
-            transform: rotate(8deg) scale(0.9);
+            left: 15%;
+            bottom: 15%;
         }
-
         .scroll__btn {
             display: block;
-            width: 48px;
-            height: 110px;
+            width: 2vw;
+            height: 4.7vw;
             background-image: url(assets/img/scroll_down.svg);
             background-position: center center;
             background-repeat: no-repeat;
@@ -149,12 +138,12 @@
         }
         .webgl__title__wrap > h3 {
             color: #D2E3C0;
-            font-size: 140px;
+            font-size: 8vw;
             z-index: 2;
             position: absolute;
-            left: 50%;
-            bottom: 50%;
-            transform: translate(-50%, -50%);
+            left: 50vh;
+            bottom: 50vh;
+            /* transform: translate(-50%, -50%); */
         }
         .webgl__title, .webgl__title2 {
             font-family: 'pp_eiko_italiclight';
@@ -305,17 +294,6 @@
             bottom: 100px;
             transform: rotate(8deg) scale(0.9);
         }
-
-        /* .scrollRight__btn {
-            display: block;
-            width: 48px;
-            height: 110px;
-            background-image: url(assets/img/scroll_down.svg);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            margin: 0 auto;
-        } */
     </style>
 </head>
 <body>
@@ -340,33 +318,29 @@
 
         <section id="introType" class="intro__wrap">
             <div class="intro__title__wrap">
-                <h3 class="intro__title1">
-                    let’s <em>introduce</em>
-                </h3>
-                <h3 class="intro__title2">
-                    frontend <span>developer</span><em>’s</em>
-                </h3>
-                <h3 class="intro__title3">
-                    <em>all</em> works <em>of</em> portfolio
-                </h3>
+                <div class="intro__title pp_write_book">
+                    let’s introduce
+                </div>
+                <div class="intro__title neue_world_semiultra">
+                    frontend developer’s
+                </div>
+                <div class="intro__title neue_world_thin">
+                    <strong>all</strong> works <strong>of</strong> portfolio
+                </div>
             </div>
 
-            <figure class="home__figure01">
-                <img src="assets/img/home_figure01.png" alt="figure01">
-            </figure>
-            <figure class="home__figure02">
-                <img src="assets/img/home_figure02.png" alt="figure02">
-            </figure>
-            <figure class="home__figure03">
-                <img src="assets/img/home_figure03.png" alt="figure03">
-            </figure>
+            <div class="figureImg__inner">
+                <img class="img1" src="assets/img/home_figure01.png" alt="figure01">
+                <img class="img2" src="assets/img/home_figure02.png" alt="figure02">
+                <img class="img3" src="assets/img/home_figure03.png" alt="figure03">
+            </div>
 
             <a href="#" class="scroll__btn"><span class="ir">Scroll Down / 스크롤다운</span></a>
         </section>
         <!-- //introType -->
 
         <section id="webglType" class="webgl__wrap">
-            <iframe class="webgl__iframe" src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index78.html" frameborder="0" allowfullscreen=""></iframe>
+            <iframe class="webgl__iframe" src="webGL/webGL01.html" frameborder="0" allowfullscreen=""></iframe>
             <div class="webgl__title__wrap">
                 <h3 class="webgl__title">
                     all site <em>works</em>
