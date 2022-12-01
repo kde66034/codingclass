@@ -164,17 +164,61 @@
         .myWorkPhp__wrap {
             height: 100vh;
             background: #fff;
+        }
+        .myWorkPhp__inner {
+            margin-top: 180px;
             display: flex;
         }
         .myWorkPhp__wrap figure {
             width: 55%;
-            margin-top: 180px;
+            margin-right: 80px;
         }
         .myWork__titleDescWrap {
-            margin-top: 180px;
-            margin-left: 80px;
+            margin-top: 220px;
             position: relative;
         }
+        /* myWorkWebStan */
+        .myWorkWebStan__wrap {
+            height: 100vh;
+            background: #fff;
+        }
+        .myWorkWebStan__inner {
+            margin-top: 180px;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .myWorkWebStan__wrap figure {
+            width: 55%;
+            margin-left: 80px;
+        }
+        /* myWorkRefer */
+        .myWorkRefer__wrap {
+            height: 100vh;
+            background: #fff;
+        }
+        .myWorkRefer__inner {
+            margin-top: 180px;
+            display: flex;
+        }
+        .myWorkRefer__wrap figure {
+            width: 45%;
+            margin-right: 80px;
+        }
+        /* myWorkReactVue */
+        .myWorkReactVue__wrap {
+            height: 100vh;
+            background: #fff;
+        }
+        .myWorkReactVue__inner {
+            margin-top: 380px;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .myWorkReactVue__inner figure {
+            width: 50%;
+            margin-left: 80px;
+        }
+
         .myWork__bigtitle {
             font-family: 'pp_eiko_italiclight';
             color: rgba(0,0,0,15%);
@@ -186,6 +230,7 @@
             position: absolute;
             left: 0;
             top: 35px;
+            z-index: 2;
         }
         .myWork__desc {
             margin-top: 50px;
@@ -251,20 +296,77 @@
         <!-- //webglType - all site works -->
 
         <section id="myWorkPhp" class="myWorkPhp__wrap">
-            <figure>
-                <img src="assets/img/mywork01.png" alt="PHP">
-            </figure>
-            <div class="myWork__titleDescWrap">
-                <h2 class="myWork__bigtitle">PHP</h2>
-                <h3 class="myWork__title">PHP Team Project</h3>
-                <p class="myWork__desc">
-                    기후위기에 대한 심각성을 알리고 기후<br>
-                    행동을 장려하는 웹 사이트 ‘지구ON’을<br>
-                    팀 프로젝트로 제작하였습니다.
-                </p>
+            <div class="myWorkPhp__inner">
+                <figure>
+                    <img src="assets/img/mywork01.png" alt="PHP Team Project / PHP 팀 프로젝트 : 지구ON">
+                </figure>
+                <div class="myWork__titleDescWrap">
+                    <h2 class="myWork__bigtitle">PHP</h2>
+                    <h3 class="myWork__title">PHP Team Project</h3>
+                    <p class="myWork__desc">
+                        기후위기에 대한 심각성을 알리고 기후<br>
+                        행동을 장려하는 웹 사이트 ‘지구ON’을<br>
+                        팀 프로젝트로 제작하였습니다.
+                    </p>
+                </div>
             </div>
         </section>
         <!-- //myWorkPhp -->
+
+        <section id="myWorkWebStan" class="myWorkWebStan__wrap">
+            <div class="myWorkWebStan__inner">
+                <figure>
+                    <img src="assets/img/mywork02.png" alt="Web Standard Site / 웹 표준을 준수하여 제작한 웹사이트 : 별빛제빵교실">
+                </figure>
+                <div class="myWork__titleDescWrap">
+                    <h2 class="myWork__bigtitle">Standard</h2>
+                    <h3 class="myWork__title">Web Standard Site</h3>
+                    <p class="myWork__desc">
+                        Alt 속성과 IR 효과 등을 활용하여 시각<br>
+                        장애인을 포함한 누구나 웹서핑을 할 수<br>
+                        있도록 웹 표준을 준수한 사이트입니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- //myWorkWebStan -->
+
+        <section id="myWorkRefer" class="myWorkRefer__wrap">
+            <div class="myWorkRefer__inner">
+                <figure>
+                    <img src="assets/img/mywork03.png" alt="Coding Reference Book / 코딩 레퍼런스 북">
+                </figure>
+                <div class="myWork__titleDescWrap">
+                    <h2 class="myWork__bigtitle">Reference</h2>
+                    <h3 class="myWork__title">Coding Reference Book</h3>
+                    <p class="myWork__desc">
+                        코딩을 처음 배웠던 시절 저에게 큰 도움이<br>
+                        되었던 온라인 상의 레퍼런스 북입니다.<br>
+                        HTML과 CSS, JS의 기초를 다뤘습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- //myWorkRefer -->
+
+        <section id="myWorkReactVue" class="myWorkReactVue__wrap">
+            <div class="myWorkReactVue__inner">
+                <figure>
+                    <img src="assets/img/mywork04.png" alt="React/Vue Site / 리액트 & 뷰 사이트">
+                </figure>
+                <div class="myWork__titleDescWrap">
+                    <h2 class="myWork__bigtitle">React/Vue</h2>
+                    <h3 class="myWork__title">React/Vue Site</h3>
+                    <p class="myWork__desc">
+                        React와 Vue로 각종 정보들을 API로 가져오는 웹 사이트를 만들어 보았습니다.<br>
+                        YouTube의 인기 영상들을 불러오고, 최근 개봉한 영화 정보를 불러오고, Unsplash에서<br>
+                        새로운 이미지들을 불러오는 등 다양하고 유용한 기능들을 제공합니다. 동일한 내용의<br>
+                        사이트를 React와 Vue라는 비슷하면서도 서로 엄연히 다른 언어로 코딩해보는 과정은<br>
+                        마크업만 해왔던 제게 낯선 이 두 언어를 익힐 수 있었던 귀중한 시간이었습니다.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>
