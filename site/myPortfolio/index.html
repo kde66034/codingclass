@@ -52,10 +52,12 @@
             flex-wrap: wrap; 
             padding-right: 30px;
         }
+        .header__menu ul li {
+            padding-left: 20px;
+        }
         .header__menu ul li a {
             font-family: 'Poppins';
             color: #D2E3C0;
-            padding-left: 20px;
             font-size: 20px;
             font-weight: 200;
         }
@@ -176,6 +178,7 @@
         .myWorkPhp__wrap figure {
             width: 55%;
             margin-right: 80px;
+            margin-left: 40px;
         }
         .myWork__titleDescWrap {
             margin-top: 220px;
@@ -192,8 +195,8 @@
             flex-direction: row-reverse;
         }
         .myWorkWebStan__wrap figure {
-            width: 55%;
-            margin-left: 80px;
+            width: 60%;
+            margin-left: 180px;
         }
         /* myWorkRefer */
         .myWorkRefer__wrap {
@@ -245,6 +248,11 @@
         }
         .myWork__desc {
             margin-top: 50px;
+            line-height: 160%;
+        }
+        .myWork__desc2 {
+            margin-top: 400px;
+            margin-left: 400px;
             line-height: 160%;
         }
 
@@ -416,6 +424,12 @@
                         되었던 온라인 상의 레퍼런스 북입니다.<br>
                         HTML과 CSS, JS의 기초를 다뤘습니다.
                     </p>
+                    <p class="myWork__desc2">
+                        HTML 태그 총 134개, CSS 속성 총 382개, 그리고 자바스크립트의 수많은 공식들…,<br>
+                        어찌나 공부해야 할 것이 많은지, 정리해두지 않으면 시간이 아무리 지나도 저의 코딩<br>
+                        울렁증은 도저히 극복할 수 없을 것 같았어요. 코딩 초보시절 직접 공부하고 정리하며<br>
+                        만든 레퍼런스 북은 더 이상 코딩이 두렵지 않은 지금의 저를 만들어주었습니다.
+                    </p>
                 </div>
             </div>
         </section>
@@ -457,8 +471,6 @@
             <figure class="intro2__figure02">
                 <img src="assets/img/home_figure03.png" alt="Intro2 figure02">
             </figure>
-
-            <!-- <a href="#" class="scrollRight__btn"><span class="ir">Scroll Right / 스크롤 라이트 : 오른쪽 방향으로 스크롤하세요!</span></a> -->
         </section>
         <!-- //intro2Type -->
 
@@ -467,10 +479,19 @@
             <div class="webgl__title__wrap">
                 <h3 class="webgl__title2">
                     all script <em>works</em>
+                    <!-- <a href="#" class="scrollRight__btn"><span class="ir">Scroll Right / 스크롤 라이트 : 오른쪽 방향으로 스크롤하세요!</span></a> -->
                 </h3>
             </div>
         </section>
         <!-- //webglType - all site works -->
     </main>
+
+    <!-- JAVASCRIPT -->
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script>
+        
+    </script>
 </body>
 </html>
