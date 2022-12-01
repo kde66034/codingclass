@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/fonts/eng_fonts.css">
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/locomotive-scroll.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -18,8 +19,24 @@
             display: none;
         }
 
-        body {
-            /* background: #0B130D; */
+        .scrollTop {
+            position: fixed;
+            left: 10px;
+            bottom: 10px;
+            width: 50px;
+            height: 50px;
+            background: #000;
+            border-radius: 50px;
+            text-align: center;
+            line-height: 50px;
+            z-index: 100000;
+            color: #fff;
+        }
+        .fixed {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
         }
 
         /* headerType */
@@ -69,6 +86,7 @@
         .intro__wrap {
             /* padding-top: 65px; */
             background: #0B130D;
+            width: 100%;
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -130,6 +148,7 @@
 
         /* webglType */
         .webgl__wrap {
+            width: 100%;
             position: relative;
         }
         .webgl__iframe {
@@ -157,6 +176,7 @@
 
         /* myWorkPhp */
         .myWorkPhp__wrap {
+            width: 100%;
             height: 100vh;
             background: #fff;
         }
@@ -175,6 +195,7 @@
         }
         /* myWorkWebStan */
         .myWorkWebStan__wrap {
+            width: 100%;
             height: 100vh;
             background: #fff;
         }
@@ -189,6 +210,7 @@
         }
         /* myWorkRefer */
         .myWorkRefer__wrap {
+            width: 100%;
             height: 100vh;
             background: #fff;
         }
@@ -202,6 +224,7 @@
         }
         /* myWorkReactVue */
         .myWorkReactVue__wrap {
+            width: 100%;
             height: 100vh;
             background: #fff;
         }
@@ -302,6 +325,9 @@
     </header>
     <!-- //header -->
 
+    <div class="scrollTop">0</div>
+    <!-- //scrollTop -->
+
     <main id="main">
         <section id="headerType" class="header__wrap">
             <h2 class="header__logo">
@@ -339,7 +365,8 @@
         </section>
         <!-- //introType -->
 
-        <section id="webglType" class="webgl__wrap">
+        <section id="webglType" class="webgl__wrap"
+        >
             <iframe class="webgl__iframe" src="webGL/webGL01.html" frameborder="0" allowfullscreen=""></iframe>
             <div class="webgl__title__wrap">
                 <h3 class="webgl__title">
@@ -349,7 +376,11 @@
         </section>
         <!-- //webglType - all site works -->
 
-        <section id="myWorkPhp" class="myWorkPhp__wrap">
+        <section id="myWorkPhp" class="myWorkPhp__wrap fixed"
+                data-900=  "opacity: 1;   left: -50%;   transform: translate(-50%, -50%);"
+                data-1400=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
+                data-2400=  "opacity: 1;   left: 150%;   transform: translate(-50%, -50%);"
+        >
             <div class="myWorkPhp__inner">
                 <figure>
                     <img src="assets/img/mywork01.png" alt="PHP Team Project / PHP 팀 프로젝트 : 지구ON">
@@ -367,7 +398,11 @@
         </section>
         <!-- //myWorkPhp -->
 
-        <section id="myWorkWebStan" class="myWorkWebStan__wrap">
+        <section id="myWorkWebStan" class="myWorkWebStan__wrap fixed"
+                data-1900=  "opacity: 1;   left: -50%;   transform: translate(-50%, -50%);"
+                data-2400=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
+                data-3400=  "opacity: 1;   left: 150%;   transform: translate(-50%, -50%);"
+        >
             <div class="myWorkWebStan__inner">
                 <figure>
                     <img src="assets/img/mywork02.png" alt="Web Standard Site / 웹 표준을 준수하여 제작한 웹사이트 : 별빛제빵교실">
@@ -385,7 +420,11 @@
         </section>
         <!-- //myWorkWebStan -->
 
-        <section id="myWorkRefer" class="myWorkRefer__wrap">
+        <section id="myWorkRefer" class="myWorkRefer__wrap fixed"
+                data-2900=  "opacity: 1;   left: -50%;   transform: translate(-50%, -50%);"
+                data-3400=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
+                data-4400=  "opacity: 1;   left: 150%;   transform: translate(-50%, -50%);"
+        >
             <div class="myWorkRefer__inner">
                 <figure>
                     <img src="assets/img/mywork03.png" alt="Coding Reference Book / 코딩 레퍼런스 북">
@@ -409,7 +448,11 @@
         </section>
         <!-- //myWorkRefer -->
 
-        <section id="myWorkReactVue" class="myWorkReactVue__wrap">
+        <section id="myWorkReactVue" class="myWorkReactVue__wrap fixed"
+                data-3900=  "opacity: 1;   left: -50%;   transform: translate(-50%, -50%);"
+                data-4400=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
+                data-5400=  "opacity: 1;   left: 150%;   transform: translate(-50%, -50%);"
+        >
             <div class="myWorkReactVue__inner">
                 <figure>
                     <img src="assets/img/mywork04.png" alt="React/Vue Site / 리액트 & 뷰 사이트">
@@ -429,7 +472,7 @@
         </section>
         <!-- //myWorkReactVue -->
 
-        <section id="intro2Type" class="intro2__type">
+        <!-- <section id="intro2Type" class="intro2__type">
             <div class="intro2__title__wrap">
                 <h3 class="intro2__title1">
                     frontend <em>developer</em>
@@ -445,27 +488,51 @@
             <figure class="intro2__figure02">
                 <img src="assets/img/home_figure03.png" alt="Intro2 figure02">
             </figure>
-        </section>
+        </section> -->
         <!-- //intro2Type -->
 
-        <section id="webglType" class="webgl__wrap">
+        <!-- <section id="webglType" class="webgl__wrap">
             <iframe class="webgl__iframe" src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index72.html" frameborder="0" allowfullscreen=""></iframe>
             <div class="webgl__title__wrap">
                 <h3 class="webgl__title2">
                     all script <em>works</em>
-                    <!-- <a href="#" class="scrollRight__btn"><span class="ir">Scroll Right / 스크롤 라이트 : 오른쪽 방향으로 스크롤하세요!</span></a> -->
                 </h3>
             </div>
-        </section>
+        </section> -->
         <!-- //webglType - all site works -->
     </main>
 
     <!-- JAVASCRIPT -->
-    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <!-- <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
     <script>
         
+    </script>
+    <script src="assets/js/locomotive-scroll.min.js"></script>
+    <script>
+        import LocomotiveScroll from 'locomotive-scroll';
+
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
+        });
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script>
+        const s = skrollr.init();
+
+        function scroll() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            document.querySelector(".scrollTop").innerText = Math.ceil(scrollTop);
+
+            // document.querySelector(".sec1_text1").style.marginLeft = scrollTop + "px";
+
+            requestAnimationFrame(scroll);
+        }
+        scroll();
     </script>
 </body>
 </html>
