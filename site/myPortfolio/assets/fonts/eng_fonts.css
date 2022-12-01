@@ -273,6 +273,20 @@
 
 
 
+@font-face {
+    font-family: 'pp_neue_worldsemiultra';
+    src: url('ppneueworld-semicondensedultrabold-webfont.eot');
+    src: url('ppneueworld-semicondensedultrabold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ppneueworld-semicondensedultrabold-webfont.woff2') format('woff2'),
+         url('ppneueworld-semicondensedultrabold-webfont.woff') format('woff'),
+         url('ppneueworld-semicondensedultrabold-webfont.ttf') format('truetype'),
+         url('ppneueworld-semicondensedultrabold-webfont.svg#pp_neue_worldsemiultra') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 
 @font-face {
     font-family: 'pp_writerblack_italic';
