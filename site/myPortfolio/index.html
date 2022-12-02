@@ -40,6 +40,20 @@
             z-index: 3;
         }
 
+        /* 폰트 */
+        .neue_world_semiultra {
+            font-family: 'pp_neue_worldsemiultra';
+        }
+        .pp_write_book {
+            font-family: 'pp_writerbook';
+        }
+        .neue_world_thin {
+            font-family: 'pp_neue_worldthin';
+        }
+        .neue_worldCnRg {
+            font-family: 'pp_neue_worldCnRg';
+        }
+
         /* headerType */
         #headerType {
             position: fixed;
@@ -85,7 +99,6 @@
 
         /* introType */
         .intro__wrap {
-            /* padding-top: 65px; */
             background: #0B130D;
             width: 100%;
             height: 100vh;
@@ -105,19 +118,6 @@
         }
         .intro__title:nth-child(2) {
             color: #D2E3C0;
-        }
-
-        .neue_world_semiultra {
-            font-family: 'pp_neue_worldsemiultra';
-        }
-        .pp_write_book {
-            font-family: 'pp_writerbook';
-        }
-        .neue_world_thin {
-            font-family: 'pp_neue_worldthin';
-        }
-        .neue_worldCnRg {
-            font-family: 'pp_neue_worldCnRg';
         }
 
         .figureImg__inner {}
@@ -175,65 +175,88 @@
         /* myWorkPhp */
         .myWorkPhp__wrap {
             width: 100%;
-            height: 100vh;
             background: #fff;
         }
         .myWorkPhp__inner {
-            margin-top: 180px;
+            height: 100vh;
             display: flex;
+            align-items: center;
         }
         .myWorkPhp__wrap figure {
-            width: 55%;
-            margin-right: 80px;
-            margin-left: 40px;
+            width: 60%;
+            margin-right: 5vw;
+            margin-left: 2vw;
         }
         .myWork__titleDescWrap {
-            margin-top: 220px;
             position: relative;
         }
+        .myWorkPhp__wrap .myWork__titleDescWrap {
+            margin-top: 5vw;
+        }
+
         /* myWorkWebStan */
         .myWorkWebStan__wrap {
             width: 100%;
-            height: 100vh;
             background: #fff;
         }
         .myWorkWebStan__inner {
-            margin-top: 180px;
+            height: 100vh;
             display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
         }
         .myWorkWebStan__wrap figure {
-            width: 55%;
-            margin-right: 80px;
-            margin-left: 40px;
+            width: 62%;
+            /* margin-right: 40px; */
+            margin-left: 4vw;
         }
+        .myWorkWebStan__wrap .myWork__titleDescWrap {
+            margin-top: 15vw;
+            margin-left: 2vw;
+        }
+
         /* myWorkRefer */
         .myWorkRefer__wrap {
             width: 100%;
-            height: 100vh;
             background: #fff;
         }
         .myWorkRefer__inner {
-            margin-top: 180px;
+            height: 100vh;
             display: flex;
+            align-items: center;
         }
         .myWorkRefer__wrap figure {
-            width: 40%;
-            margin-right: 80px;
+            width: 42%;
+            margin-right: 4vw;
+            margin-left: 2vw;
         }
+        .myWorkRefer__wrap .myWork__titleDescWrap {
+            margin-top: 1vw;
+        }
+        .myWork__desc2 {
+            margin-top: 16vw;
+            margin-left: 15vw;
+            line-height: 160%;
+        }
+
         /* myWorkReactVue */
         .myWorkReactVue__wrap {
             width: 100%;
-            height: 100vh;
             background: #fff;
         }
         .myWorkReactVue__inner {
-            margin-top: 180px;
+            height: 100vh;
             display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin-left: 35vw;
         }
         .myWorkReactVue__inner figure {
-            width: 55%;
-            margin-right: 80px;
-            margin-left: 40px;
+            width: 70%;
+        }
+        .myWorkReactVue__wrap .myWork__titleDescWrap {
+            margin-top: 2vw;
         }
 
         /* 제목&부제&설명 영역 */
@@ -251,63 +274,44 @@
             z-index: 2;
         }
         .myWork__desc {
-            margin-top: 50px;
-            line-height: 160%;
-        }
-        .myWork__desc2 {
-            margin-top: 400px;
-            margin-left: 400px;
+            margin-top: 40px;
             line-height: 160%;
         }
 
         /* intro2Type */
         .intro2__type {
-            margin-top: 65px;
             background: #0B130D;
+            width: 100%;
             height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             position: relative;
         }
-        .intro2__title__wrap {
-            padding-top: 260px;
-            padding-bottom: 80px;
-        }
-        .intro2__title__wrap > h3 {
+        .intro2__title__wrap {}
+        .intro2__title {
             color: #fff;
             font-size: 150px;
             text-align: center;
             z-index: 2;
         }
-        .intro2__title1 {
-            font-family: 'Poppins';
-            font-weight: 100;
+        .intro2__title:nth-child(1) {
             color: #D2E3C0 !important;
         }
-        .intro2__title1 > em {
-            font-family: 'pp_neue_worldsemiultra';
-        }
-        .intro2__title2 {
-            font-family: 'pp_neue_worldthin';
-        }
-        .intro2__title2 > em {
-            font-family: 'pp_neue_worldCnRg';
-        }
 
-        .intro2__figure01,
-        .intro2__figure02 {
-            width: 240px;
-            height: 228px;
-        }
-        .intro2__figure01 {
+        .figureImg2__inner {}
+        .figureImg2__inner .img1 {
+            width: 10vw;
             position: absolute;
-            right: 140px;
-            top: 90px;
-            transform: rotate(-10deg);
+            right: 11%;
+            top: 16%;
         }
-        .intro2__figure02 {
+        .figureImg2__inner .img2 {
+            width: 10vw;
             position: absolute;
-            left: 140px;
-            bottom: 100px;
-            transform: rotate(8deg) scale(0.9);
+            left: 11%;
+            bottom: 11%;
         }
     </style>
 </head>
@@ -368,11 +372,7 @@
         </section>
         <!-- //webglType - all site works -->
 
-        <section id="myWorkPhp" class="myWorkPhp__wrap fixed"
-                data-1400=  "opacity: 0;   left: -50%;   transform: translate(-50%, -50%);"
-                data-1900=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
-                data-2900=  "opacity: 1;   left: 150%;   transform: translate(-50%, -50%);"
-        >
+        <section id="myWorkPhp" class="myWorkPhp__wrap">
             <div class="myWorkPhp__inner">
                 <figure>
                     <img src="assets/img/mywork01.png" alt="PHP Team Project / PHP 팀 프로젝트 : 지구ON">
@@ -390,11 +390,7 @@
         </section>
         <!-- //myWorkPhp -->
 
-        <section id="myWorkWebStan" class="myWorkWebStan__wrap fixed"
-                data-2400=  "opacity: 1;   left: -50%;   transform: translate(-50%, -50%);"
-                data-2900=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
-                data-3900=  "opacity: 1;   left: 150%;   transform: translate(-50%, -50%);"
-        >
+        <section id="myWorkWebStan" class="myWorkWebStan__wrap">
             <div class="myWorkWebStan__inner">
                 <figure>
                     <img src="assets/img/mywork02.png" alt="Web Standard Site / 웹 표준을 준수하여 제작한 웹사이트 : 별빛제빵교실">
@@ -412,11 +408,7 @@
         </section>
         <!-- //myWorkWebStan -->
 
-        <section id="myWorkRefer" class="myWorkRefer__wrap fixed"
-                data-3400=  "opacity: 1;   left: -50%;   transform: translate(-50%, -50%);"
-                data-3900=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
-                data-4900=  "opacity: 1;   left: 150%;   transform: translate(-50%, -50%);"
-        >
+        <section id="myWorkRefer" class="myWorkRefer__wrap">
             <div class="myWorkRefer__inner">
                 <figure>
                     <img src="assets/img/mywork03.png" alt="Coding Reference Book / 코딩 레퍼런스 북">
@@ -440,11 +432,7 @@
         </section>
         <!-- //myWorkRefer -->
 
-        <section id="myWorkReactVue" class="myWorkReactVue__wrap fixed"
-                data-4400=  "opacity: 1;   left: -50%;   transform: translate(-50%, -50%);"
-                data-4900=  "opacity: 1;   left: 50%;   transform: translate(-50%, -50%);"
-                data-5900=  "opacity: 1;   left: 150%;   transform: translate(-50%, -50%);"
-        >
+        <section id="myWorkReactVue" class="myWorkReactVue__wrap">
             <div class="myWorkReactVue__inner">
                 <figure>
                     <img src="assets/img/mywork04.png" alt="React/Vue Site / 리액트 & 뷰 사이트">
@@ -464,23 +452,21 @@
         </section>
         <!-- //myWorkReactVue -->
 
-        <!-- <section id="intro2Type" class="intro2__type">
+        <section id="intro2Type" class="intro2__type">
             <div class="intro2__title__wrap">
-                <h3 class="intro2__title1">
-                    frontend <em>developer</em>
-                </h3>
-                <h3 class="intro2__title2">
-                    portfolio <em>all</em> walks <em>of</em> life
-                </h3>
+                <div class="intro2__title neue_world_semiultra">
+                    frontend developer
+                </div>
+                <div class="intro2__title neue_world_thin">
+                    portfolio <em class="neue_worldCnRg">all</em> walks <em class="neue_worldCnRg">of</em> life
+                </div>
             </div>
 
-            <figure class="intro2__figure01">
-                <img src="assets/img/home_figure02.png" alt="Intro2 figure01">
-            </figure>
-            <figure class="intro2__figure02">
-                <img src="assets/img/home_figure03.png" alt="Intro2 figure02">
-            </figure>
-        </section> -->
+            <div class="figureImg2__inner">
+                <img class="img1" src="assets/img/home_figure02.png" alt="figure01">
+                <img class="img2" src="assets/img/home_figure03.png" alt="figure02">
+            </div>
+        </section>
         <!-- //intro2Type -->
 
         <!-- <section id="webglType" class="webgl__wrap">
