@@ -153,6 +153,7 @@
         /* webglType */
         .webgl__wrap {
             width: 100%;
+            height: 100vh;
             position: relative;
         }
         .webgl__iframe {
@@ -324,16 +325,50 @@
         }
         .horizontalSection {
             overscroll-behavior: none;
-            width: 200%;
+            width: 600%;
             display: flex;
             flex-wrap: nowrap;
         }
         .section {
-            background: #000;
-            backdrop-filter: blur(10px);
+            background: #0B130D;
             width: 100%;
             height: 100vh;
             color: #fff;
+            z-index: 4;
+        }
+
+        /* 제목&부제&설명 영역 */
+        .section__bigtitle {
+            font-family: 'pp_eiko_italiclight';
+            color: rgba(210,227,192,15%);
+            font-size: 100px;
+            margin-left: 80px;
+        }
+        .section__title {
+            font-size: 24px;
+            position: absolute;
+            left: 0;
+            top: 35px;
+            z-index: 2;
+        }
+        .section__desc {
+            margin-top: 40px;
+            line-height: 160%;
+        }
+
+        /* section01 */
+        .section__inner {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .section__inner figure {
+            width: 60%;
+            margin-right: 5vw;
+            margin-left: 2vw;
+        }
+        .section__titleDescWrap {
+            position: relative;
         }
     </style>
 </head>
@@ -491,24 +526,53 @@
         </section>
         <!-- //intro2Type -->
 
-        <section id="webglType" class="webgl__wrap">
-            <iframe class="webgl__iframe" src="webGL/webGL01.html" frameborder="0" allowfullscreen=""></iframe>
-            <div class="webgl__title__wrap">
-                <h3 class="webgl__title neue_world_semiultra">
-                    all script works
-                </h3>
-            </div>
-        </section>
-        <!-- //webglType - all site works -->
+        
 
         <div class="horizontalWrap">
             <div class="horizontalSection">
-                <section id="section01" class="section section01">
-                    <h4>테스트</h4>
+                <section id="webglType" class="webgl__wrap">
+                    <iframe class="webgl__iframe" src="webGL/webGL01.html" frameborder="0" allowfullscreen=""></iframe>
+                    <div class="webgl__title__wrap">
+                        <h3 class="webgl__title neue_world_semiultra">
+                            all script works
+                        </h3>
+                    </div>
                 </section>
+                <!-- //webglType - all site works -->
+
+                <section id="section01" class="section section01">
+                    <div class="section__inner">
+                        <figure>
+                            <img src="assets/img/mywork02.png" alt="PHP Team Project / PHP 팀 프로젝트 : 지구ON">
+                        </figure>
+                        <div class="section__titleDescWrap">
+                            <h2 class="section__bigtitle">Game</h2>
+                            <h3 class="section__title">Game Effect</h3>
+                            <p class="section__desc">
+                                첫 페이지는 컴퓨터 바탕화면 GUI처럼 디자인하였고, 바탕화면에 배치된 각각의<br>
+                                아이콘을 클릭하여 음악을 듣거나 게임을 플레이 할 수 있도록 코딩하였습니다.<br>
+                                게임에는 3가지가 있으며 테트리스 게임, CSS 속성을 검색하여 점수를 얻는 서치<br>
+                                게임, 그리고 재미있는 카드 게임이 준비되어 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- //section01 -->
 
                 <section id="section02" class="section section02">
                     <h4>테스트2</h4>
+                </section>
+
+                <section id="section03" class="section section03">
+                    <h4>테스트3</h4>
+                </section>
+
+                <section id="section04" class="section section04">
+                    <h4>테스트4</h4>
+                </section>
+                
+                <section id="section05" class="section section05">
+                    <h4>테스트5</h4>
                 </section>
             </div>
         </div>
