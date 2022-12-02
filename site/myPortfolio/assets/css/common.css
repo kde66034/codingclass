@@ -25,40 +25,18 @@
     box-sizing: border-box;
 }
 
-/* 섹션 공통 요소 */
-.section {
-    padding: 120px 0;
-}
-.section > h2 {
-    font-size: 50px;
-    line-height: 1;
-    text-align: center;
-    margin-bottom: 20px;
-}
-.section > p {
-    font-size: 22px;
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 70px;
-    color: #666;
-}
-.section > span {
-    display: block;
-    text-align: center;
-    font-size: 16px;
-    text-decoration: underline;
-    text-underline-position: under;
-    margin-bottom: 20px;
-}
-
 /* 폰트 */
-.nexon {
-    font-family: 'NexonLv1Gothic';
-    font-weight: 400;
+.neue_world_semiultra {
+    font-family: 'pp_neue_worldsemiultra';
 }
-.gmarket {
-    font-family: 'GmarketSans';
-    font-weight: 500;
+.pp_write_book {
+    font-family: 'pp_writerbook';
+}
+.neue_world_thin {
+    font-family: 'pp_neue_worldthin';
+}
+.neue_worldCnRg {
+    font-family: 'pp_neue_worldCnRg';
 }
 
 /* 배경 */

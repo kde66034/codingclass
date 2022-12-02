@@ -40,20 +40,6 @@
             z-index: 3;
         }
 
-        /* 폰트 */
-        .neue_world_semiultra {
-            font-family: 'pp_neue_worldsemiultra';
-        }
-        .pp_write_book {
-            font-family: 'pp_writerbook';
-        }
-        .neue_world_thin {
-            font-family: 'pp_neue_worldthin';
-        }
-        .neue_worldCnRg {
-            font-family: 'pp_neue_worldCnRg';
-        }
-
         /* headerType */
         #headerType {
             position: fixed;
@@ -275,7 +261,7 @@
             z-index: 2;
         }
         .myWork__desc {
-            margin-top: 40px;
+            margin-top: 2vw;
             line-height: 160%;
         }
 
@@ -325,17 +311,18 @@
         }
         .horizontalSection {
             overscroll-behavior: none;
-            width: 600%;
+            width: 800%;
             display: flex;
             flex-wrap: nowrap;
         }
         .section {
-            background: #0B130D;
+            background: rgba(11,19,13,90%);
+            backdrop-filter: blur(10px);
             width: 100%;
             height: 100vh;
             color: #fff;
-            z-index: 4;
         }
+        
 
         /* 제목&부제&설명 영역 */
         .section__bigtitle {
@@ -356,7 +343,7 @@
             line-height: 160%;
         }
 
-        /* section01 */
+        /* section common */
         .section__inner {
             height: 100vh;
             display: flex;
@@ -364,11 +351,69 @@
         }
         .section__inner figure {
             width: 60%;
-            margin-right: 5vw;
-            margin-left: 2vw;
         }
         .section__titleDescWrap {
             position: relative;
+        }
+
+        /* section01 */
+        .section01 .section__inner {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 30%;
+        }
+        .section01 .section__inner figure {
+            width: 60%;
+        }
+        .section01 .section__titleDescWrap {
+            margin-top: 2vw;
+        }
+        /* section02 */
+        .section02 .section__inner {
+            height: 100vh;
+            display: flex;
+            align-content: flex-start;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .section02 .section__inner figure {
+            width: 30%;
+        }
+        .section02 .section__titleDescWrap {
+            margin-top: 25%;
+            margin-left: 4vw;
+        }
+        /* section03 */
+        .section03 .section__inner {
+            height: 100vh;
+            display: flex;
+            align-content: flex-end;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .section03 .section__inner figure {
+            width: 42%;
+        }
+        .section03 .section__titleDescWrap {
+            margin-left: 4vw;
+            padding-bottom: 25%;
+        }
+        /* section04 */
+        .section04 .section__inner {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .section04 .section__inner figure {
+            width: 42%;
+        }
+        .section04 .section__titleDescWrap {
+            margin-top: 25%;
+            margin-left: 4vw;
         }
     </style>
 </head>
@@ -532,18 +577,19 @@
             <div class="horizontalSection">
                 <section id="webglType" class="webgl__wrap">
                     <iframe class="webgl__iframe" src="webGL/webGL01.html" frameborder="0" allowfullscreen=""></iframe>
-                    <div class="webgl__title__wrap">
-                        <h3 class="webgl__title neue_world_semiultra">
-                            all script works
-                        </h3>
-                    </div>
                 </section>
                 <!-- //webglType - all site works -->
+
+                <div class="webgl__title__wrap section">
+                    <h3 class="webgl__title neue_world_semiultra">
+                        all script works
+                    </h3>
+                </div>
 
                 <section id="section01" class="section section01">
                     <div class="section__inner">
                         <figure>
-                            <img src="assets/img/mywork02.png" alt="PHP Team Project / PHP 팀 프로젝트 : 지구ON">
+                            <img src="assets/img/mywork02.png" alt="Game Effect / 게임 이펙트">
                         </figure>
                         <div class="section__titleDescWrap">
                             <h2 class="section__bigtitle">Game</h2>
@@ -560,23 +606,88 @@
                 <!-- //section01 -->
 
                 <section id="section02" class="section section02">
-                    <h4>테스트2</h4>
+                    <div class="section__inner">
+                        <figure>
+                            <img src="assets/img/mywork03.png" alt="Parallax Effect / 패럴랙스 이펙트">
+                        </figure>
+                        <div class="section__titleDescWrap">
+                            <h2 class="section__bigtitle">Parallax</h2>
+                            <h3 class="section__title">Parallax Effect</h3>
+                            <p class="section__desc">
+                                시차를 두고 부드러운 애니메이션 움직임을 주는 패럴럭스 이펙트입니다.<br>
+                                특정 섹션 이동 시의 움직임을 스무스하게 해주었고, 콘텐츠(내용물)의 제목과<br>
+                                본문, 이미지가 각각 다른 시차를 두고 독특한 방식으로 등장하여 웹서핑을 하면서<br>
+                                생동감을 느낄 수 있도록 총 7가지의 유형으로 열심히 만들어보았습니다. 
+                            </p>
+                        </div>
+                    </div>
                 </section>
+                <!-- //section02 -->
 
                 <section id="section03" class="section section03">
-                    <h4>테스트3</h4>
+                    <div class="section__inner">
+                        <figure>
+                            <img src="assets/img/mywork04.png" alt="Slider Effect / 슬라이드 이펙트">
+                        </figure>
+                        <div class="section__titleDescWrap">
+                            <h2 class="section__bigtitle">Slider</h2>
+                            <h3 class="section__title">Slider Effect</h3>
+                            <p class="section__desc">
+                                슬라이드 이펙트는 기본 트랜지션 효과와 좌측으로 이동하는 유형, 연속적으로<br>
+                                이동하는 유형, 좌우 이동 버튼이 있는 유형, 버튼과 닷메뉴가 있는 유형 등 총<br>
+                                7가지의 유형을 만들어보았습니다. 처음에는 많이 어려웠지만 차근차근 스크립트<br>
+                                에 대한 설명을 적어가며 공부하면서 열심히 만들었습니다.
+                            </p>
+                        </div>
+                    </div>
                 </section>
+                <!-- //section03 -->
 
                 <section id="section04" class="section section04">
-                    <h4>테스트4</h4>
+                    <div class="section__inner">
+                        <figure>
+                            <img src="assets/img/mywork05.png" alt="Mouse Effect / 마우스 이펙트">
+                        </figure>
+                        <div class="section__titleDescWrap">
+                            <h2 class="section__bigtitle">Mouse</h2>
+                            <h3 class="section__title">Mouse Effect</h3>
+                            <p class="section__desc">
+                                마우스 커서를 올려놓는 요소에 따라 커서의 모양을 다르게 하거나,<br>
+                                마우스 커서의 움직임을 조금 더 부드럽고 스무스하게 만들고, 마우스 커서의 동작을<br>
+                                독특한 애니메이션으로 생동감을 주는 등의 다양한 마우스 이펙트를 자바스크립트와<br>
+                                GSAP을 통해 만들어 보았습니다.
+                            </p>
+                        </div>
+                    </div>
                 </section>
+                <!-- //section04 -->
                 
-                <section id="section05" class="section section05">
-                    <h4>테스트5</h4>
-                </section>
+                <div class="webgl__title__wrap section">
+                    <h3 class="webgl__title neue_world_semiultra">
+                        all works details
+                    </h3>
+                </div>
+                <!-- //webgltitle -->
             </div>
         </div>
         <!-- //horizontalWrap -->
+
+        <section id="listOfMyWork" class="listOfMyWork__wrap">
+            <div class="titleDesc">
+                <h3 class="listOfMyWork__title">LIST OF MY WORK</h3>
+                <hr>
+                <p class="listOfMyWork__desc">
+                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                </p>
+            </div>
+            <div class="workList">
+                
+            </div>
+        </section>
     </main>
 
     <!-- JAVASCRIPT -->
@@ -602,8 +713,9 @@
         gsap.registerPlugin(ScrollTrigger);
 
         const sections = gsap.utils.toArray(".section");
+
         gsap.to(sections, {
-            xPercent: -100 * (sections.length - 1),
+            xPercent: -100 * (sections.length),
             ease: "none",
             scrollTrigger: {
                 trigger: ".horizontalWrap",
