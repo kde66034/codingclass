@@ -292,9 +292,11 @@
         .intro2__title__wrap {}
         .intro2__title {
             color: #fff;
-            font-size: 150px;
+            font-size: 8vw;
             text-align: center;
             z-index: 2;
+            line-height: 1.1;
+            /* position: relative; */
         }
         .intro2__title:nth-child(1) {
             color: #D2E3C0 !important;
@@ -312,6 +314,26 @@
             position: absolute;
             left: 11%;
             bottom: 11%;
+        }
+
+        /* horizontalWrap */
+        .horizontalWrap {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .horizontalSection {
+            overscroll-behavior: none;
+            width: 200%;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .section {
+            background: #000;
+            backdrop-filter: blur(10px);
+            width: 100%;
+            height: 100vh;
+            color: #fff;
         }
     </style>
 </head>
@@ -469,34 +491,31 @@
         </section>
         <!-- //intro2Type -->
 
-        <!-- <section id="webglType" class="webgl__wrap">
-            <iframe class="webgl__iframe" src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index72.html" frameborder="0" allowfullscreen=""></iframe>
+        <section id="webglType" class="webgl__wrap">
+            <iframe class="webgl__iframe" src="webGL/webGL01.html" frameborder="0" allowfullscreen=""></iframe>
             <div class="webgl__title__wrap">
-                <h3 class="webgl__title2">
-                    all script <em>works</em>
+                <h3 class="webgl__title neue_world_semiultra">
+                    all script works
                 </h3>
             </div>
-        </section> -->
+        </section>
         <!-- //webglType - all site works -->
+
+        <div class="horizontalWrap">
+            <div class="horizontalSection">
+                <section id="section01" class="section section01">
+                    <h4>테스트</h4>
+                </section>
+
+                <section id="section02" class="section section02">
+                    <h4>테스트2</h4>
+                </section>
+            </div>
+        </div>
+        <!-- //horizontalWrap -->
     </main>
 
     <!-- JAVASCRIPT -->
-    <!-- <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-    <script>
-        
-    </script>
-    <script src="assets/js/locomotive-scroll.min.js"></script>
-    <script>
-        import LocomotiveScroll from 'locomotive-scroll';
-
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true
-        });
-    </script> -->
-
     <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
     <script>
         const s = skrollr.init();
@@ -511,6 +530,25 @@
             requestAnimationFrame(scroll);
         }
         scroll();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        const sections = gsap.utils.toArray(".section");
+        gsap.to(sections, {
+            xPercent: -100 * (sections.length - 1),
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".horizontalWrap",
+                pin: true,
+                scrub: 1,
+                end: "+=4000",
+                markers: true,
+            },
+        });
     </script>
 </body>
 </html>
