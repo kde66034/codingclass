@@ -80,7 +80,7 @@
             var deltaMsec = Math.min(200, nowMsec - lastTimeMsec)
             lastTimeMsec = nowMsec
             onRenderFcts.forEach(function (onRenderFct) {
-                onRenderFct(deltaMsec / 3000, nowMsec / 1000)
+                onRenderFct(deltaMsec / 5000, nowMsec / 1000)
             })
         })
     </script>
