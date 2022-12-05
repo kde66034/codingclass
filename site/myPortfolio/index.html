@@ -40,13 +40,45 @@
             z-index: 3;
         }
 
+        /* 마우스 커서 */
+        .mouse__cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            z-index: 9999;
+            border-radius: 50%;
+            background: #fff;
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.3s, opacity 0.2s;
+        }
+        .mouse__cursor.active {
+            transform: scale(5);
+            background: rgba(0, 0, 0, 50%);
+        }
+        .mouse__cursor.black {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 30px;
+            height: 30px;
+            z-index: 9999;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 50%);
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.3s, opacity 0.2s;
+        }
+
         /* headerType */
         #headerType {
             position: fixed;
             left: 0;
             top: 0;
             width: 100%;
-            z-index: 10000;
+            z-index: 9997;
         }
         .header__wrap {
             background: #0b130dbb;
@@ -574,12 +606,12 @@
             background-position: center center;
             background-repeat: no-repeat;
             background-size: contain;
-            width: 12vw;
-            height: 12vw;
+            width: 18vw;
+            height: 18vw;
             position: absolute;
             padding-right: 45vh;
             right: 20vh;
-            top: 28vh;
+            top: 16vh;
         }
 
         /* outro */
@@ -633,6 +665,10 @@
     <div class="scrollTop">0</div>
     <!-- //scrollTop -->
 
+    <div class="mouse__cursor"></div>
+    <div class="mouse__cursor2"></div>
+    <!-- //mouse__cursor -->
+
     <main id="main">
         <section id="headerType" class="header__wrap">
             <h2 class="header__logo">
@@ -670,96 +706,97 @@
         </section>
         <!-- //introType -->
 
-        <section id="webglType" class="webgl__wrap"
-        >
-            <iframe class="webgl__iframe" src="webGL/webGL01.html" frameborder="0" allowfullscreen=""></iframe>
-            <div class="webgl__title__wrap">
-                <h3 class="webgl__title neue_world_semiultra">
-                    all site works
-                </h3>
-            </div>
-        </section>
-        <!-- //webglType - all site works -->
-
-        <section id="myWorkPhp" class="myWorkPhp__wrap">
-            <div class="myWorkPhp__inner">
-                <figure>
-                    <img src="assets/img/mywork01.png" alt="PHP Team Project / PHP 팀 프로젝트 : 지구ON">
-                </figure>
-                <div class="myWork__titleDescWrap">
-                    <h2 class="myWork__bigtitle">PHP</h2>
-                    <h3 class="myWork__title">PHP Team Project</h3>
-                    <p class="myWork__desc">
-                        기후위기에 대한 심각성을 알리고 기후<br>
-                        행동을 장려하는 웹 사이트 ‘지구ON’을<br>
-                        팀 프로젝트로 제작하였습니다.
-                    </p>
+        <div class="black">
+            <section id="webglType" class="webgl__wrap">
+                <iframe class="webgl__iframe" src="webGL/webGL01.html" frameborder="0" allowfullscreen=""></iframe>
+                <div class="webgl__title__wrap">
+                    <h3 class="webgl__title neue_world_semiultra">
+                        all site works
+                    </h3>
                 </div>
-            </div>
-        </section>
-        <!-- //myWorkPhp -->
-
-        <section id="myWorkWebStan" class="myWorkWebStan__wrap">
-            <div class="myWorkWebStan__inner">
-                <figure>
-                    <img src="assets/img/mywork02.png" alt="Web Standard Site / 웹 표준을 준수하여 제작한 웹사이트 : 별빛제빵교실">
-                </figure>
-                <div class="myWork__titleDescWrap">
-                    <h2 class="myWork__bigtitle">Standard</h2>
-                    <h3 class="myWork__title">Web Standard Site</h3>
-                    <p class="myWork__desc">
-                        Alt 속성과 IR 효과 등을 활용하여 시각<br>
-                        장애인을 포함한 누구나 웹서핑을 할 수<br>
-                        있도록 웹 표준을 준수한 사이트입니다.
-                    </p>
+            </section>
+            <!-- //webglType - all site works -->
+    
+            <section id="myWorkPhp" class="myWorkPhp__wrap">
+                <div class="myWorkPhp__inner">
+                    <figure>
+                        <img src="assets/img/mywork01.png" alt="PHP Team Project / PHP 팀 프로젝트 : 지구ON">
+                    </figure>
+                    <div class="myWork__titleDescWrap">
+                        <h2 class="myWork__bigtitle">PHP</h2>
+                        <h3 class="myWork__title">PHP Team Project</h3>
+                        <p class="myWork__desc">
+                            기후위기에 대한 심각성을 알리고 기후<br>
+                            행동을 장려하는 웹 사이트 ‘지구ON’을<br>
+                            팀 프로젝트로 제작하였습니다.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- //myWorkWebStan -->
-
-        <section id="myWorkRefer" class="myWorkRefer__wrap">
-            <div class="myWorkRefer__inner">
-                <figure>
-                    <img src="assets/img/mywork03.png" alt="Coding Reference Book / 코딩 레퍼런스 북">
-                </figure>
-                <div class="myWork__titleDescWrap">
-                    <h2 class="myWork__bigtitle">Reference</h2>
-                    <h3 class="myWork__title">Coding Reference Book</h3>
-                    <p class="myWork__desc">
-                        코딩을 처음 배웠던 시절 저에게 큰 도움이<br>
-                        되었던 온라인 상의 레퍼런스 북입니다.<br>
-                        HTML과 CSS, JS의 기초를 다뤘습니다.
-                    </p>
-                    <p class="myWork__desc2">
-                        HTML 태그 총 134개, CSS 속성 총 382개, 그리고 자바스크립트의 수많은 공식들…,<br>
-                        어찌나 공부해야 할 것이 많은지, 정리해두지 않으면 시간이 아무리 지나도 저의 코딩<br>
-                        울렁증은 도저히 극복할 수 없을 것 같았어요. 코딩 초보시절 직접 공부하고 정리하며<br>
-                        만든 레퍼런스 북은 더 이상 코딩이 두렵지 않은 지금의 저를 만들어주었습니다.
-                    </p>
+            </section>
+            <!-- //myWorkPhp -->
+    
+            <section id="myWorkWebStan" class="myWorkWebStan__wrap">
+                <div class="myWorkWebStan__inner">
+                    <figure>
+                        <img src="assets/img/mywork02.png" alt="Web Standard Site / 웹 표준을 준수하여 제작한 웹사이트 : 별빛제빵교실">
+                    </figure>
+                    <div class="myWork__titleDescWrap">
+                        <h2 class="myWork__bigtitle">Standard</h2>
+                        <h3 class="myWork__title">Web Standard Site</h3>
+                        <p class="myWork__desc">
+                            Alt 속성과 IR 효과 등을 활용하여 시각<br>
+                            장애인을 포함한 누구나 웹서핑을 할 수<br>
+                            있도록 웹 표준을 준수한 사이트입니다.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- //myWorkRefer -->
-
-        <section id="myWorkReactVue" class="myWorkReactVue__wrap">
-            <div class="myWorkReactVue__inner">
-                <figure>
-                    <img src="assets/img/mywork04.png" alt="React/Vue Site / 리액트 & 뷰 사이트">
-                </figure>
-                <div class="myWork__titleDescWrap">
-                    <h2 class="myWork__bigtitle">React/Vue</h2>
-                    <h3 class="myWork__title">React/Vue Site</h3>
-                    <p class="myWork__desc">
-                        React와 Vue로 각종 정보들을 API로 가져오는 웹 사이트를 만들어 보았습니다.<br>
-                        YouTube의 인기 영상들을 불러오고, 최근 개봉한 영화 정보를 불러오고, Unsplash에서<br>
-                        새로운 이미지들을 불러오는 등 다양하고 유용한 기능들을 제공합니다. 동일한 내용의<br>
-                        사이트를 React와 Vue라는 비슷하면서도 서로 엄연히 다른 언어로 코딩해보는 과정은<br>
-                        마크업만 해왔던 제게 낯선 이 두 언어를 익힐 수 있었던 귀중한 시간이었습니다.
-                    </p>
+            </section>
+            <!-- //myWorkWebStan -->
+    
+            <section id="myWorkRefer" class="myWorkRefer__wrap">
+                <div class="myWorkRefer__inner">
+                    <figure>
+                        <img src="assets/img/mywork03.png" alt="Coding Reference Book / 코딩 레퍼런스 북">
+                    </figure>
+                    <div class="myWork__titleDescWrap">
+                        <h2 class="myWork__bigtitle">Reference</h2>
+                        <h3 class="myWork__title">Coding Reference Book</h3>
+                        <p class="myWork__desc">
+                            코딩을 처음 배웠던 시절 저에게 큰 도움이<br>
+                            되었던 온라인 상의 레퍼런스 북입니다.<br>
+                            HTML과 CSS, JS의 기초를 다뤘습니다.
+                        </p>
+                        <p class="myWork__desc2">
+                            HTML 태그 총 134개, CSS 속성 총 382개, 그리고 자바스크립트의 수많은 공식들…,<br>
+                            어찌나 공부해야 할 것이 많은지, 정리해두지 않으면 시간이 아무리 지나도 저의 코딩<br>
+                            울렁증은 도저히 극복할 수 없을 것 같았어요. 코딩 초보시절 직접 공부하고 정리하며<br>
+                            만든 레퍼런스 북은 더 이상 코딩이 두렵지 않은 지금의 저를 만들어주었습니다.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <!-- //myWorkReactVue -->
+            </section>
+            <!-- //myWorkRefer -->
+    
+            <section id="myWorkReactVue" class="myWorkReactVue__wrap">
+                <div class="myWorkReactVue__inner">
+                    <figure>
+                        <img src="assets/img/mywork04.png" alt="React/Vue Site / 리액트 & 뷰 사이트">
+                    </figure>
+                    <div class="myWork__titleDescWrap">
+                        <h2 class="myWork__bigtitle">React/Vue</h2>
+                        <h3 class="myWork__title">React/Vue Site</h3>
+                        <p class="myWork__desc">
+                            React와 Vue로 각종 정보들을 API로 가져오는 웹 사이트를 만들어 보았습니다.<br>
+                            YouTube의 인기 영상들을 불러오고, 최근 개봉한 영화 정보를 불러오고, Unsplash에서<br>
+                            새로운 이미지들을 불러오는 등 다양하고 유용한 기능들을 제공합니다. 동일한 내용의<br>
+                            사이트를 React와 Vue라는 비슷하면서도 서로 엄연히 다른 언어로 코딩해보는 과정은<br>
+                            마크업만 해왔던 제게 낯선 이 두 언어를 익힐 수 있었던 귀중한 시간이었습니다.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- //myWorkReactVue -->
+        </div>
 
         <section id="intro2Type" class="intro2__type">
             <div class="intro2__title__wrap">
@@ -876,332 +913,334 @@
             </div>
         </div>
         <!-- //horizontalWrap -->
-
-        <section id="listOfMyWork" class="listOfMyWork__wrap">
-            <div class="titleDesc">
-                <h3 class="listOfMyWork__title pp_eiko_medium">LIST OF MY WORK</h3>
-                <hr>
-                <p class="listOfMyWork__desc">
-                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.<br>
-                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,<br>
-                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                </p>
-            </div>
-            <div class="workList">
-                <details>
-                    <summary class="first_summary">
-                        <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
-                        <div class="work__btn">
-                            <span class="ir">자세히 보기</span>
+        
+        <div class="black">
+            <section id="listOfMyWork" class="listOfMyWork__wrap">
+                <div class="titleDesc">
+                    <h3 class="listOfMyWork__title pp_eiko_medium">LIST OF MY WORK</h3>
+                    <hr>
+                    <p class="listOfMyWork__desc">
+                        국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.<br>
+                        6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,<br>
+                        코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                        성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                        열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                    </p>
+                </div>
+                <div class="workList">
+                    <details>
+                        <summary class="first_summary">
+                            <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
+                            <div class="work__btn">
+                                <span class="ir">자세히 보기</span>
+                            </div>
+                        </summary>
+                        <div class="work__desc__wrap">
+                            <figure class="work__img">
+                                <img src="assets/img/mywork01.png" alt="Standard Web Site">
+                            </figure>
+                            <div class="work__desc">
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                            </div>
                         </div>
-                    </summary>
-                    <div class="work__desc__wrap">
-                        <figure class="work__img">
-                            <img src="assets/img/mywork01.png" alt="Standard Web Site">
-                        </figure>
-                        <div class="work__desc">
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
+                    </details>
+                    <!-- //작품01 -->
+    
+                    <details>
+                        <summary>
+                            <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
+                            <div class="work__btn">
+                                <span class="ir">자세히 보기</span>
+                            </div>
+                        </summary>
+                        <div class="work__desc__wrap">
+                            <figure class="work__img">
+                                <img src="assets/img/mywork01.png" alt="Standard Web Site">
+                            </figure>
+                            <div class="work__desc">
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </details>
-                <!-- //작품01 -->
-
-                <details>
-                    <summary>
-                        <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
-                        <div class="work__btn">
-                            <span class="ir">자세히 보기</span>
+                    </details>
+                    <!-- //작품02 -->
+    
+                    <details>
+                        <summary>
+                            <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
+                            <div class="work__btn">
+                                <span class="ir">자세히 보기</span>
+                            </div>
+                        </summary>
+                        <div class="work__desc__wrap">
+                            <figure class="work__img">
+                                <img src="assets/img/mywork01.png" alt="Standard Web Site">
+                            </figure>
+                            <div class="work__desc">
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                            </div>
                         </div>
-                    </summary>
-                    <div class="work__desc__wrap">
-                        <figure class="work__img">
-                            <img src="assets/img/mywork01.png" alt="Standard Web Site">
-                        </figure>
-                        <div class="work__desc">
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
+                    </details>
+                    <!-- //작품03 -->
+    
+                    <details>
+                        <summary>
+                            <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
+                            <div class="work__btn">
+                                <span class="ir">자세히 보기</span>
+                            </div>
+                        </summary>
+                        <div class="work__desc__wrap">
+                            <figure class="work__img">
+                                <img src="assets/img/mywork01.png" alt="Standard Web Site">
+                            </figure>
+                            <div class="work__desc">
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </details>
-                <!-- //작품02 -->
-
-                <details>
-                    <summary>
-                        <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
-                        <div class="work__btn">
-                            <span class="ir">자세히 보기</span>
+                    </details>
+                    <!-- //작품04 -->
+    
+                    <details>
+                        <summary>
+                            <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
+                            <div class="work__btn">
+                                <span class="ir">자세히 보기</span>
+                            </div>
+                        </summary>
+                        <div class="work__desc__wrap">
+                            <figure class="work__img">
+                                <img src="assets/img/mywork01.png" alt="Standard Web Site">
+                            </figure>
+                            <div class="work__desc">
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                            </div>
                         </div>
-                    </summary>
-                    <div class="work__desc__wrap">
-                        <figure class="work__img">
-                            <img src="assets/img/mywork01.png" alt="Standard Web Site">
-                        </figure>
-                        <div class="work__desc">
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
+                    </details>
+                    <!-- //작품05 -->
+    
+                    <details>
+                        <summary>
+                            <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
+                            <div class="work__btn">
+                                <span class="ir">자세히 보기</span>
+                            </div>
+                        </summary>
+                        <div class="work__desc__wrap">
+                            <figure class="work__img">
+                                <img src="assets/img/mywork01.png" alt="Standard Web Site">
+                            </figure>
+                            <div class="work__desc">
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </details>
-                <!-- //작품03 -->
-
-                <details>
-                    <summary>
-                        <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
-                        <div class="work__btn">
-                            <span class="ir">자세히 보기</span>
+                    </details>
+                    <!-- //작품06 -->
+    
+                    <details>
+                        <summary>
+                            <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
+                            <div class="work__btn">
+                                <span class="ir">자세히 보기</span>
+                            </div>
+                        </summary>
+                        <div class="work__desc__wrap">
+                            <figure class="work__img">
+                                <img src="assets/img/mywork01.png" alt="Standard Web Site">
+                            </figure>
+                            <div class="work__desc">
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                            </div>
                         </div>
-                    </summary>
-                    <div class="work__desc__wrap">
-                        <figure class="work__img">
-                            <img src="assets/img/mywork01.png" alt="Standard Web Site">
-                        </figure>
-                        <div class="work__desc">
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
+                    </details>
+                    <!-- //작품07 -->
+    
+                    <details>
+                        <summary>
+                            <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
+                            <div class="work__btn">
+                                <span class="ir">자세히 보기</span>
+                            </div>
+                        </summary>
+                        <div class="work__desc__wrap">
+                            <figure class="work__img">
+                                <img src="assets/img/mywork01.png" alt="Standard Web Site">
+                            </figure>
+                            <div class="work__desc">
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </details>
-                <!-- //작품04 -->
-
-                <details>
-                    <summary>
-                        <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
-                        <div class="work__btn">
-                            <span class="ir">자세히 보기</span>
+                    </details>
+                    <!-- //작품08 -->
+    
+                    <details>
+                        <summary>
+                            <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
+                            <div class="work__btn">
+                                <span class="ir">자세히 보기</span>
+                            </div>
+                        </summary>
+                        <div class="work__desc__wrap">
+                            <figure class="work__img">
+                                <img src="assets/img/mywork01.png" alt="Standard Web Site">
+                            </figure>
+                            <div class="work__desc">
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                            </div>
                         </div>
-                    </summary>
-                    <div class="work__desc__wrap">
-                        <figure class="work__img">
-                            <img src="assets/img/mywork01.png" alt="Standard Web Site">
-                        </figure>
-                        <div class="work__desc">
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
+                    </details>
+                    <!-- //작품09 -->
+    
+                    <details>
+                        <summary>
+                            <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
+                            <div class="work__btn">
+                                <span class="ir">자세히 보기</span>
+                            </div>
+                        </summary>
+                        <div class="work__desc__wrap">
+                            <figure class="work__img">
+                                <img src="assets/img/mywork01.png" alt="Standard Web Site">
+                            </figure>
+                            <div class="work__desc">
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                                <p>
+                                    국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
+                                    6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
+                                    코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
+                                    성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
+                                    열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                </details>
-                <!-- //작품05 -->
-
-                <details>
-                    <summary>
-                        <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
-                        <div class="work__btn">
-                            <span class="ir">자세히 보기</span>
-                        </div>
-                    </summary>
-                    <div class="work__desc__wrap">
-                        <figure class="work__img">
-                            <img src="assets/img/mywork01.png" alt="Standard Web Site">
-                        </figure>
-                        <div class="work__desc">
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                        </div>
-                    </div>
-                </details>
-                <!-- //작품06 -->
-
-                <details>
-                    <summary>
-                        <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
-                        <div class="work__btn">
-                            <span class="ir">자세히 보기</span>
-                        </div>
-                    </summary>
-                    <div class="work__desc__wrap">
-                        <figure class="work__img">
-                            <img src="assets/img/mywork01.png" alt="Standard Web Site">
-                        </figure>
-                        <div class="work__desc">
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                        </div>
-                    </div>
-                </details>
-                <!-- //작품07 -->
-
-                <details>
-                    <summary>
-                        <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
-                        <div class="work__btn">
-                            <span class="ir">자세히 보기</span>
-                        </div>
-                    </summary>
-                    <div class="work__desc__wrap">
-                        <figure class="work__img">
-                            <img src="assets/img/mywork01.png" alt="Standard Web Site">
-                        </figure>
-                        <div class="work__desc">
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                        </div>
-                    </div>
-                </details>
-                <!-- //작품08 -->
-
-                <details>
-                    <summary>
-                        <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
-                        <div class="work__btn">
-                            <span class="ir">자세히 보기</span>
-                        </div>
-                    </summary>
-                    <div class="work__desc__wrap">
-                        <figure class="work__img">
-                            <img src="assets/img/mywork01.png" alt="Standard Web Site">
-                        </figure>
-                        <div class="work__desc">
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                        </div>
-                    </div>
-                </details>
-                <!-- //작품09 -->
-
-                <details>
-                    <summary>
-                        <h4 class="work__title pp_neue_montreal">Standard Web Site</h4>
-                        <div class="work__btn">
-                            <span class="ir">자세히 보기</span>
-                        </div>
-                    </summary>
-                    <div class="work__desc__wrap">
-                        <figure class="work__img">
-                            <img src="assets/img/mywork01.png" alt="Standard Web Site">
-                        </figure>
-                        <div class="work__desc">
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                            <p>
-                                국비 코딩학원에서 수강하던 시절 부지런히 만든 작품들입니다.
-                                6개월이 넘는 기간동안 열심히 공부하며 만든 저의 보물같은 존재들이며,
-                                코딩 초보시절 ‘코딩 울렁증’을 앓고 있던 제게 이 작품들은 뿌듯함과 
-                                성취감을 안겨주고 두려워했던 코딩과 친해질 수 있는 계기를 만들어주었습니다. 
-                                열심히 만든 만큼 꼼꼼히 봐주셨으면 좋겠습니다. 감사합니다!
-                            </p>
-                        </div>
-                    </div>
-                </details>
-                <!-- //작품10 -->
-            </div>
-        </section>
-        <!-- //listOfMyWork -->
+                    </details>
+                    <!-- //작품10 -->
+                </div>
+            </section>
+            <!-- //listOfMyWork -->
+        </div>
     </main>
     <!-- //main -->
     
@@ -1251,7 +1290,7 @@
         </section>
     </footer>
 
-    <!-- JAVASCRIPT -->
+    <!-- JAVASCRIPT - 스크롤탑값 표시 -->
     <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
     <script>
         const s = skrollr.init();
@@ -1268,6 +1307,7 @@
         scroll();
     </script>
 
+    <!-- 가로모드 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script>
@@ -1285,6 +1325,39 @@
                 end: "+=4000",
                 markers: false,
             },
+        });
+    </script>
+
+    <!-- 마우스 커서 -->
+    <script>
+        const cursor = document.querySelector(".mouse__cursor");
+        const figure = document.querySelectorAll("figure");
+        const black = document.querySelectorAll(".black")
+
+        window.addEventListener("mousemove", e => {
+            // GSAP
+            gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top:e.pageY -5});
+        
+            // 오버 효과
+            // mouseenter / mouseover / 이벤트 버블링
+            figure.forEach(figure => {
+                figure.addEventListener("mouseenter", () => {
+                    cursor.classList.add("active");
+                });
+                figure.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("active");
+                });
+            });
+
+            // 오버 효과 2 - 흰색배경에서 블랙 커서로
+            black.forEach(black => {
+                black.addEventListener("mouseenter", () => {
+                    cursor.classList.add("black");
+                });
+                black.addEventListener("mouseleave", () => {
+                    cursor.classList.remove("black");
+                });
+            });
         });
     </script>
 </body>
