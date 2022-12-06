@@ -15,6 +15,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+        * {
+            cursor: none;
+        }
+
         #header {
             display: none;
         }
@@ -1344,7 +1348,7 @@
 
         window.addEventListener("mousemove", e => {
             // GSAP
-            gsap.to(cursor, {duration: 0.3, left: e.pageX -5, top:e.pageY -5});
+            gsap.to(cursor, {duration: 0.3, left: e.pageX -15, top:e.pageY -15});
         
             // 오버 효과
             // mouseenter / mouseover / 이벤트 버블링
