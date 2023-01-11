@@ -133,10 +133,10 @@
                 <div class="blog__aside">
                     <div class="blog__aside__intro">
                         <div class="img">
-                            <img src="../assets/blog/card_bg_01.png" alt="나">
+                            <img src="../assets/img/banner_bg01.jpg" alt="프로필 이미지">
                         </div>
                         <div class="intro">
-                            오늘도 희망찬 하루!
+                            오늘도 희망찬 하루를 보내자 :)
                         </div>
                     </div>
                     <div class="blog__aside__cate">
@@ -279,10 +279,6 @@
                 })
             }
         })
-
-
-
-
         
         // 댓글 쓰기 버튼
         $("#commentBtn").click(function(){

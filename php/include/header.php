@@ -20,12 +20,21 @@
             <?php } ?>
         </div>
         <nav class="nav">
-            <ul>
-                <li><a href="../join/join.php"><span>회원가입</span></a></li>
-                <li><a href="../login/login.php"><span>로그인</span></a></li>
-                <li><a href="../board/board.php"><span>게시판</span></a></li>
-                <li><a href="../blog/blog.php"><span>블로그</span></a></li>
-            </ul>
+            <?php if(isset($_SESSION['memberID'])){ ?>
+                <ul>
+                    <li><a href="../mypage/mypage.php"><span>마이 페이지</span></a></li>
+                    <li><a href="../login/logout.php"><span>로그아웃</span></a></li>
+                    <li><a href="../board/board.php"><span>게시판</span></a></li>
+                    <li><a href="../blog/blog.php"><span>블로그</span></a></li>
+                </ul>
+            <?php } else { ?>
+                <ul>
+                    <li><a href="../join/join.php"><span>회원가입</span></a></li>
+                    <li><a href="../login/login.php"><span>로그인</span></a></li>
+                    <li><a href="../board/board.php"><span>게시판</span></a></li>
+                    <li><a href="../blog/blog.php"><span>블로그</span></a></li>
+                </ul>
+            <?php } ?>
         </nav>
     </div>
 </header>

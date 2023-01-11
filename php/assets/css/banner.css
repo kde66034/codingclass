@@ -5,6 +5,7 @@
     justify-content: space-between;
     height: inherit;
     position: relative;
+    padding: 4vh 0;
 }
 .banner__inner.under {
     border-bottom: 3px solid #000;

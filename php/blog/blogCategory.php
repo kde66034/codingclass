@@ -24,8 +24,10 @@
         <a href="#footer">푸터 영역 바로가기</a>
     </div>
     <!-- //skip -->
+
     <?php include "../include/header.php" ?>
     <!-- //header -->
+
     <main id="main">
         <section id="blog" class="container">
             <div class="blog__inner ">
@@ -35,19 +37,23 @@
                 </div>
                 <div class="blog__contents">
                     <div class="blog__contents__card">
-                        <div class="card__inner horizon">
+                        <div class="card__inner horizontal">
                             <?php foreach($categoryResult as $blog) { ?>
                                 <div class="card">
-                                    <figure>
-                                    <img src="../assets/img/blog/<?=$blog['blogImgFile']?>" alt="사진">
-                                        <a href="blogView.php?blogID=<?=$blog['myBlogID']?>" class="go" title="컨텐츠 바로가기"></a>
+                                    <figure class="card__header">
+                                        <img src="../assets/blog/<?=$blog['blogImgSrc']?>" alt="<?=$blog['blogTitle']?>">
+                                        <a href="blogView.php?blogID=<?=$blog['myBlogID']?>" class="go"></a>
                                         <span class="cate"><?=$blog['blogCategory']?></span>
                                     </figure>
-                                    <div>
-                                        <a href="blogView.php?blogID=<?=$blog['myBlogID']?>">
-                                            <h3><?=$blog['blogTitle']?></h3>
+                                    <div class="card__contents">
+                                        <div class="title">
+                                            <h3><a href="blogView.php?blogID=<?=$blog['blogID']?>"><?=$blog['blogTitle']?></a></h3>
                                             <p><?=$blog['blogContents']?></p>
-                                        </a>
+                                        </div>
+                                        <div class="info">
+                                            <em class="author"><?=$blog['blogAuthor']?></em>
+                                            <span class="time"><?=date('Y-m-d', $blog['blogRegTime'])?></span>
+                                        </div>
                                     </div>
                                 </div>
                             <?php } ?>
@@ -58,11 +64,10 @@
                 <div class="blog__aside">
                     <div class="aside__intro">
                         <div class="img">
-                            <img src="../assets/blog/card_bg_01.png" alt="프로필 이미지">
-                            <!-- <img src="../assets/img/banner_bg01.jpg" alt="배너 이미지"> -->
+                            <img src="../assets/img/banner_bg01.jpg" alt="프로필 이미지">
                         </div>
                         <div class="desc">
-                            어떤 일이라도 <em>노력</em>하고 즐기면 그 결과는 <em>빛</em>을 바란다고 생각합니다.
+                            어떤 일이라도 <em>노력</em>하고 즐기면 그 결과는 <em>빛</em>을 발한다고 생각합니다.
                         </div>
                     </div>
                     <div class="blog__aside__cate">
@@ -96,8 +101,7 @@
     <!-- //main -->
     <?php include "../include/footer.php" ?>
     <!-- //footer -->
-    <?php include "../login/login.php" ?>
-    <!-- //login -->
+
     <script src="../assets/js/custom.js"></script>
     <!-- //script -->
 </body>

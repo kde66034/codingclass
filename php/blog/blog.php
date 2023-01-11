@@ -9,6 +9,13 @@
     }
     $viewNum = 10;
     $viewLimit = ($viewNum * $page) - $viewNum;
+
+    $sql = "SELECT count(blogID) FROM myBlog";
+    $result = $connect -> query($sql);
+    $blogCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $totalCount = $result -> num_rows;
+
+    $blogCount = $blogCount['count(blogID)'];
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -30,8 +37,8 @@
     <!-- //header -->
     <main id="main">
     <section id="blog" class="container section">
-            <h2>개발과 관련된 게시글입니다.</h2>
-            <p>개발과 관련된 글을 모았어요~</p>
+            <h2>개발과 관련된 게시글을 모았어요!</h2>
+            <p>총 <em><?=$blogCount?></em>건의 게시물이 등록되어 있습니다.</p>
             <div class="blog__search">
                 <form action="blogSearch.php">
                     <legend class="blind">블로그 서치</legend>
@@ -57,7 +64,7 @@
 <?php foreach($result as $blog){ ?>
     <div class="card">
         <figure class="card__header">
-            <img src="../assets/blog/<?=$blog['blogImgSrc']?>" alt="vscode에 scss설치하기">
+            <img src="../assets/blog/<?=$blog['blogImgSrc']?>" alt="<?=$blog['blogTitle']?>">
             <a href="blogView.php?blogID=<?=$blog['blogID']?>" class="go"></a>
             <span class="cate"><?=$blog['blogCategory']?></span>
         </figure>
@@ -147,10 +154,10 @@
                 <div class="blog__aside">
                     <div class="aside__intro">
                         <div class="img">
-                            <img src="../assets/img/banner_bg01.jpg" alt="배너 이미지">
+                            <img src="../assets/img/banner_bg01.jpg" alt="프로필 이미지">
                         </div>
                         <div class="desc">
-                            어떤 일이라도 <em>노력</em>하고 즐기면 그 결과는 <em>빛</em>을 바란다고 생각합니다.
+                            어떤 일이라도 <em>노력</em>하고 즐기면 그 결과는 <em>빛</em>을 발한다고 생각합니다.
                         </div>
                     </div>
                     <div class="blog__aside__cate">

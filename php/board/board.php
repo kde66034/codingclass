@@ -1,7 +1,7 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
-    var_dump($_SESSION['memberID']);
+    // var_dump($_SESSION['memberID']);
 
     if(isset($_GET['page'])){
         $page = (int) $_GET['page'];
@@ -48,7 +48,7 @@
     <main id="main">
     <section id="board" class="container section">
             <h2>게시판</h2>
-            <p>웹디자이너, 웹퍼블리셔, 프론트앤드 개발자를 위한 게시판입니다.</p>
+            <p>웹디자이너, 웹퍼블리셔, 프론트엔드·백엔드 개발자들을 위한 게시판입니다.</p>
             <div class="board__inner">
                 <div class="board__search">
                     <div class="left">
@@ -141,11 +141,11 @@
     if($endPage >= $boardCount) $endPage = $boardCount;
 
     //테스트
-    if($totalCount=1){
-        $boardCount = 1;   
-    } else {
-        alert("dd");
-    }
+    // if($totalCount=1){
+    //     $boardCount = 1;   
+    // } else {
+    //     alert("dd");
+    // }
     // var_dump($result);
 
     // 이전 페이지, 처음 페이지

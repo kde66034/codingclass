@@ -4,7 +4,7 @@
     $blogNewResult = $connect -> query($blogNewSql);
     foreach( $blogNewResult as $blogNew ){
 ?>
-        <li>
+        <li class="aside__newcomment">
             <a href="blogView.php?blogID=<?=$blogNew['blogID']?>">
                 <!-- <span><img src="../assets/blog/card_bg_01.png" alt="<?=$blogNew['blogTitle']?>"></span> -->
                 <em><?=$blogNew['commentMsg']?></em>
