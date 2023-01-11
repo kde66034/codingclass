@@ -68,9 +68,8 @@
                     <div class="btn">
                         <a href="mypageModify.php">수정하기</a>   
                         <a href="mypageRemove.php">탈퇴하기</a>   
-                        <a href="mypageRemove.php">로그아웃</a>   
+                        <a href="../login/logout.php">로그아웃</a>   
                     </div>
-                   
                 </div>
             </div>
         </section>
